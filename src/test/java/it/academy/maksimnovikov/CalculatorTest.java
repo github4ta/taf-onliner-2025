@@ -96,6 +96,7 @@ public class CalculatorTest {
             double expected = -2.11111111111;
             Assertions.assertEquals(expected, Calculator.sum(0, -2.11111111111));
         }
+
         @Test
         public void testCalculatorSumDoubleAndIntPositiveNumbers() {
             double expected = 6.15;
@@ -125,6 +126,7 @@ public class CalculatorTest {
             double expected = -2147483648;
             Assertions.assertEquals(expected, Calculator.sum(0.0, -2147483648));
         }
+
         @Test
         public void testCalculatorSumStringIntegerPositiveNumbers() {
             String expected = "6";
@@ -139,7 +141,7 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorSumStringIntegerPositiveAndNegativeNumbers() {
-            String expected = "3";
+            String expected = "-3";
             Assertions.assertEquals(expected, Calculator.sum("2", "-5"));
         }
 
@@ -153,6 +155,36 @@ public class CalculatorTest {
         public void testCalculatorSumStringIntegerNegativeNumberAndZero() {
             String expected = "-10000000000000000000000000000000000";
             Assertions.assertEquals(expected, Calculator.sum("0", "-10000000000000000000000000000000000"));
+        }
+
+        @Test
+        public void testCalculatorSumStringDecimalPositiveNumbers() {
+            String expected = "6.7";
+            Assertions.assertEquals(expected, Calculator.sum("2.5", "4.2"));
+        }
+
+        @Test
+        public void testCalculatorSumStringDecimalNegativeNumbers() {
+            String expected = "-7.7";
+            Assertions.assertEquals(expected, Calculator.sum("-2.5", "-5.2"));
+        }
+
+        @Test
+        public void testCalculatorSumStringDecimalPositiveAndNegativeNumbers() {
+            String expected = "-3.1";
+            Assertions.assertEquals(expected, Calculator.sum("2.2", "-5.3"));
+        }
+
+        @Test
+        public void testCalculatorSumStringDecimalPositiveNumberAndZero() {
+            String expected = "0.10000000000000000000000000000000000";
+            Assertions.assertEquals(expected, Calculator.sum("0.0", "0.10000000000000000000000000000000000"));
+        }
+
+        @Test
+        public void testCalculatorSumStringDecimalNegativeNumberAndZero() {
+            String expected = "-0.123456789123456789";
+            Assertions.assertEquals(expected, Calculator.sum("0.0", "-0.123456789123456789"));
         }
     }
 }
