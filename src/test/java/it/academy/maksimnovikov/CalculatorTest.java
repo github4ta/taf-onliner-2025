@@ -232,5 +232,34 @@ public class CalculatorTest {
             Assertions.assertEquals(expected, Calculator.subtract(0, -2147483647));
         }
 
+        @Test
+        public void testCalculatorSubtractTwoDoublePositiveNumbers() {
+            double expected = 1;
+            Assertions.assertEquals(expected, Calculator.subtract(4.15, 3.15));
+        }
+
+        @Test
+        public void testCalculatorSubtractTwoDoubleNegativeNumbers() {
+            double expected = 1;
+            Assertions.assertEquals(expected, Calculator.subtract(-2.5, -3.5));
+        }
+
+        @Test
+        public void testCalculatorSubtractTwoDoublePositiveAndNegativeNumbers() {
+            double expected = -7;
+            Assertions.assertEquals(expected, Calculator.subtract(-2.5, 4.5));
+        }
+
+        @Test
+        public void testCalculatorSubtractTwoDoublePositiveNumberAndZero() {
+            double expected = -2.12345;
+            Assertions.assertEquals(expected, Calculator.subtract(0.0, 2.12345));
+        }
+
+        @Test
+        public void testCalculatorSubtractTwoDoubleNegativeNumberAndZero() {
+            double expected = 2.12345;
+            Assertions.assertEquals(expected, Calculator.subtract(0.0, -2.12345));
+        }
     }
 }
