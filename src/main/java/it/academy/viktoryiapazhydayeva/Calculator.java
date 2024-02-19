@@ -2,9 +2,8 @@ package it.academy.viktoryiapazhydayeva;
 
 import org.jetbrains.annotations.NotNull;
 
-//
 public class Calculator {
-// INTEGERS
+    // INTEGERS
     public static int sumIntegers(int a, int b) {
         return a + b;
     }
@@ -21,12 +20,36 @@ public class Calculator {
         return a / b;
     }
 
-    // STRINGS
+    // STRINGS TO INTEGERS
     @NotNull
     public static String sumStrings(String a, String b) {
-        int x = Integer.parseInt(String.valueOf(a));
-        int y = Integer.parseInt(String.valueOf(b));
+        int x = Integer.parseInt(java.lang.String.valueOf(a));
+        int y = Integer.parseInt(java.lang.String.valueOf(b));
         int sumStrings = x + y;
         return Integer.toString(sumStrings);
+    }
+
+    @NotNull
+    public static String subtractStrings(String a, String b) {
+        int x = Integer.parseInt(java.lang.String.valueOf(a));
+        int y = Integer.parseInt(java.lang.String.valueOf(b));
+        int subtractionStrings = x - y;
+        return Integer.toString(subtractionStrings);
+    }
+
+    @NotNull
+    public static String multiplyStrings(String a, String b) {
+        int x = Integer.parseInt(java.lang.String.valueOf(a));
+        int y = Integer.parseInt(java.lang.String.valueOf(b));
+        int multiplicationStrings = x * y;
+        return Integer.toString(multiplicationStrings);
+    }
+
+    @NotNull
+    public static String divideStrings(String a, String b) {
+        int x = Integer.parseInt(java.lang.String.valueOf(a));
+        int y = Integer.parseInt(java.lang.String.valueOf(b));
+        int divisionStrings = x / y;
+        return Integer.toString(divisionStrings);
     }
 }
