@@ -18,6 +18,22 @@ public class Calculator {
         return a / b;
     }
 
+    public static double sum(int a, double b) {
+        return a + b;
+    }
+
+    public static double subtract(int a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(int a, double b) {
+        return a * b;
+    }
+
+    public static double divide(int a, double b) {
+        return a / b;
+    }
+
     public static double sum(double a, double b) {
         return a + b;
     }
