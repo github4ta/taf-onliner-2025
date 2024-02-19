@@ -125,5 +125,34 @@ public class CalculatorTest {
             double expected = -2147483648;
             Assertions.assertEquals(expected, Calculator.sum(0.0, -2147483648));
         }
+        @Test
+        public void testCalculatorSumStringIntegerPositiveNumbers() {
+            String expected = "6";
+            Assertions.assertEquals(expected, Calculator.sum("2", "4"));
+        }
+
+        @Test
+        public void testCalculatorSumStringIntegerNegativeNumbers() {
+            String expected = "-7";
+            Assertions.assertEquals(expected, Calculator.sum("-2", "-5"));
+        }
+
+        @Test
+        public void testCalculatorSumStringIntegerPositiveAndNegativeNumbers() {
+            String expected = "3";
+            Assertions.assertEquals(expected, Calculator.sum("2", "-5"));
+        }
+
+        @Test
+        public void testCalculatorSumStringIntegerPositiveNumberAndZero() {
+            String expected = "10000000000000000000000000000000000";
+            Assertions.assertEquals(expected, Calculator.sum("0", "10000000000000000000000000000000000"));
+        }
+
+        @Test
+        public void testCalculatorSumStringIntegerNegativeNumberAndZero() {
+            String expected = "-10000000000000000000000000000000000";
+            Assertions.assertEquals(expected, Calculator.sum("0", "-10000000000000000000000000000000000"));
+        }
     }
 }
