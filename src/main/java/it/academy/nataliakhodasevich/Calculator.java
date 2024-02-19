@@ -49,4 +49,20 @@ public class Calculator {
     public static double divide(double a, double b) {
         return a / b;
     }
+
+    public static double sum(double a, int b) {
+        return a + b;
+    }
+
+    public static double subtract(double a, int b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, int b) {
+        return a * b;
+    }
+
+    public static double divide(double a, int b) {
+        return a / b;
+    }
 }
