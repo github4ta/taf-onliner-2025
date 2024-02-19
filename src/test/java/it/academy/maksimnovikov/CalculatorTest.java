@@ -186,5 +186,15 @@ public class CalculatorTest {
             String expected = "-0.123456789123456789";
             Assertions.assertEquals(expected, Calculator.sum("0.0", "-0.123456789123456789"));
         }
+        @Test
+        public void testSumStringIncorrectNumber(){
+            String expected="Enter the correct number";
+            Assertions.assertEquals(expected,Calculator.sum("FF1234","12"));
+        }
+        @Test
+        public void testSumStringEmptyString(){
+            String expected="Enter the correct number";
+            Assertions.assertEquals(expected,Calculator.sum("",""));
+        }
     }
 }
