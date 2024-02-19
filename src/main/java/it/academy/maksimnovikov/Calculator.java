@@ -50,19 +50,19 @@ public class Calculator {
     public static double subtract(double a, double b) {
         BigDecimal numA = new BigDecimal(a);
         BigDecimal numB = new BigDecimal(b);
-        return (numA.subtract(numB).setScale(5, RoundingMode.DOWN)).doubleValue();
+        return (numA.subtract(numB).setScale(5, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double subtract(int a, double b) {
         BigDecimal numA = new BigDecimal(a);
         BigDecimal numB = new BigDecimal(b);
-        return (numA.subtract(numB).setScale(5, RoundingMode.DOWN)).doubleValue();
+        return (numA.subtract(numB).setScale(5, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double subtract(double a, int b) {
         BigDecimal numA = new BigDecimal(a);
         BigDecimal numB = new BigDecimal(b);
-        return (numA.subtract(numB).setScale(5, RoundingMode.DOWN)).doubleValue();
+        return (numA.subtract(numB).setScale(5, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static String subtract(String a, String b) {
