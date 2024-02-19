@@ -186,19 +186,50 @@ public class CalculatorTest {
             String expected = "-0.123456789123456789";
             Assertions.assertEquals(expected, Calculator.sum("0.0", "-0.123456789123456789"));
         }
+
         @Test
-        public void testSumStringIncorrectNumber(){
-            String expected="Enter the correct number";
-            Assertions.assertEquals(expected,Calculator.sum("FF1234","12"));
+        public void testSumStringIncorrectNumber() {
+            String expected = "Enter the correct number";
+            Assertions.assertEquals(expected, Calculator.sum("FF1234", "12"));
         }
+
         @Test
-        public void testSumStringEmptyString(){
-            String expected="Enter the correct number";
-            Assertions.assertEquals(expected,Calculator.sum("",""));
+        public void testSumStringEmptyString() {
+            String expected = "Enter the correct number";
+            Assertions.assertEquals(expected, Calculator.sum("", ""));
         }
     }
+
     @Nested
     class TestCalculatorSubtract {
+        @Test
+        public void testCalculatorSubtractTwoIntPositiveNumbers() {
+            int expected = 6;
+            Assertions.assertEquals(expected, Calculator.subtract(12, 6));
+        }
 
+        @Test
+        public void testCalculatorSubtractTwoIntNegativeNumbers() {
+            int expected = 1;
+            Assertions.assertEquals(expected, Calculator.subtract(-2, -3));
+        }
+
+        @Test
+        public void testCalculatorSubtractTwoIntPositiveAndNegativeNumbers() {
+            int expected = 60;
+            Assertions.assertEquals(expected, Calculator.subtract(20, -40));
+        }
+
+        @Test
+        public void testCalculatorSubtractTwoIntPositiveNumberAndZero() {
+            int expected = -2147483647;
+            Assertions.assertEquals(expected, Calculator.subtract(0, 2147483647));
+        }
+
+        @Test
+        public void testCalculatorSubtractTwoIntNegativeNumberAndZero() {
+            int expected = 2147483647;
+            Assertions.assertEquals(expected, Calculator.subtract(0, -2147483647));
+        }
     }
 }
