@@ -30,7 +30,7 @@ public class Calculator {
         String errorMessage = "Enter the correct number";
         String regex = "[0-9.-]+";
         if (a.matches(regex) && b.matches(regex)) {
-            if (a.compareTo(".") > 0 || b.compareTo(".") > 0) {
+            if (a.indexOf(".") > 0 || b.indexOf(".") > 0) {
                 BigDecimal numA = new BigDecimal(a);
                 BigDecimal numB = new BigDecimal(b);
                 return (numA.add(numB)).toString();
