@@ -36,5 +36,35 @@ public class CalculatorTest {
             int expected = -2147483648;
             Assertions.assertEquals(expected, Calculator.sum(0, -2147483648));
         }
+
+        @Test
+        public void testCalculatorSumTwoDoublePositiveNumbers() {
+            double expected = 5.30;
+            Assertions.assertEquals(expected, Calculator.sum(2.15, 3.15));
+        }
+
+        @Test
+        public void testCalculatorSumTwoDoubleNegativeNumbers() {
+            double expected = -5.450222;
+            Assertions.assertEquals(expected, Calculator.sum(-2.225111, -3.225111));
+        }
+
+        @Test
+        public void testCalculatorSumTwoDoublePositiveAndNegativeNumbers() {
+            double expected = 2.01;
+            Assertions.assertEquals(expected, Calculator.sum(-2.01, 4.02));
+        }
+
+        @Test
+        public void testCalculatorSumTwoDoublePositiveNumberAndZero() {
+            double expected = 2.147483647;
+            Assertions.assertEquals(expected, Calculator.sum(0.0, 2.147483647));
+        }
+
+        @Test
+        public void testCalculatorSumTwoDoubleNegativeNumberAndZero() {
+            double expected = -2.147483648;
+            Assertions.assertEquals(expected, Calculator.sum(0.0, -2.147483648));
+        }
     }
 }
