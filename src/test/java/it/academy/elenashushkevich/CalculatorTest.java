@@ -27,4 +27,16 @@ public class CalculatorTest {
         Assertions.assertEquals(-1, calc.add(-2147483648,2147483647));
     }
 
+
+
+    @Test
+    public void testStringAddEmptyNull(){
+        Assertions.assertEquals(null, calc.add("",null));
+    }
+
+    @Test
+    public void testStringSubtractNulls(){
+        Assertions.assertEquals("a or b is null!" , calc.substract(null,null));
+    }
+
 }

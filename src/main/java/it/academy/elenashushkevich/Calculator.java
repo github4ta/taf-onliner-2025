@@ -76,7 +76,10 @@ public class Calculator {
     }
 
     public String substract(String a, String b) {
-        return a;
+        if (a == null || b == null) {
+            return "a or b is null!";
+        }
+        return a.replace(b, "");
     }
 
     public String multiple(String a, String b) {
