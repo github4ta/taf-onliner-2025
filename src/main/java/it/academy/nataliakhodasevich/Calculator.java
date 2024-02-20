@@ -85,27 +85,27 @@ public class Calculator {
 
     //String (String, String)
     public static String sumString(String a, String b) {
-        int result = Integer.parseInt(a) + Integer.parseInt(b);
-        return Integer.toString(result);
+       double result = Integer.parseInt(a) + Double.parseDouble(b);
+        return Double.toString(result);
     }
 
     public static String subtractString(String a, String b) {
-        int result = Integer.parseInt(a) - Integer.parseInt(b);
-        return Integer.toString(result);
+        double result = Integer.parseInt(a) - Double.parseDouble(b);
+        return Double.toString(result);
     }
 
     public static String divideString(String a, String b) {
         int strA = Integer.parseInt(a);
-        int strB = Integer.parseInt(b);
+        double strB = Double.parseDouble(b);
         if (strB == 0) {
             throw new IllegalArgumentException("Деление на ноль невозможно!");
         }
-        int result = strA / strB;
-        return Integer.toString(result);
+       double result = strA / strB;
+        return Double.toString(result);
     }
 
     public static String multiplyString(String a, String b) {
-        int result = Integer.parseInt(a) * Integer.parseInt(b);
-        return Integer.toString(result);
+        double result = Integer.parseInt(a) * Double.parseDouble(b);
+        return Double.toString(result);
     }
 }
