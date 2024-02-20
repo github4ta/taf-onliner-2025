@@ -142,7 +142,7 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("Strings-sum: Max allowed value of integer sum is out or range")    // LEAVE AS IS
+    @DisplayName("Strings-sum: Max allowed value of integer sum is out or range")
     public void testMaxSumExceededStrings() {
         Assertions.assertEquals("2147483647", Calculator.add("1", "2147483647"));
     }
@@ -154,15 +154,63 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("Strings-sum: Min allowed value of integer sum is out of range")   // LEAVE AS IS
+    @DisplayName("Strings-sum: Min allowed value of integer sum is out of range")
     public void testMinSumExceededStrings() {
         Assertions.assertEquals("-2147483648", Calculator.add("-2147483600", "-200"));
+    }
+
+    @Test
+    @DisplayName("Strings-subtract: equals integers")
+    public void testZeroSubtractionStrings() {
+        Assertions.assertEquals("0", Calculator.subtract("4", "4"));
+    }
+
+    @Test
+    @DisplayName("Strings-subtract: empty string")
+    public void testSubtractionEmptyStrings() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> Calculator.subtract("", "7"));
+    }
+
+    @Test
+    @DisplayName("Strings-subtract: incorrect data format (String exceeded Max integer)")
+    public void testSubtractionMaxExceededStrings() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> Calculator.subtract("2", "214748360"));
+    }
+
+    @Test
+    @DisplayName("Strings-multiply: Max integer*0")
+    public void testZeroMultiplicationStrings() {
+        Assertions.assertEquals("0", Calculator.multiply("2147483647", "0"));
+    }
+
+    @Test
+    @DisplayName("String- multiply: negative*negative")
+    public void testMultiplicationNegativeStrings() {
+        Assertions.assertEquals("2147483646", Calculator.multiply("-357913941", "-6"));
+    }
+
+    @Test
+    @DisplayName("String- multiply: incorrect data format (input = String)")
+    public void testMultiplicationStringStrings() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> Calculator.add("325", "18i"));
     }
 
     @Test
     @DisplayName("String-divide: Negative integer/0")
     public void testDivisionByZeroStrings() {
         Assertions.assertThrows(ArithmeticException.class, () -> Calculator.divide("-74", "0"));
+    }
+
+    @Test
+    @DisplayName("String-divide: positive/positive (odd numbers)")
+    public void testDivisionPositiveStrings() {
+        Assertions.assertEquals("2", Calculator.divide("7", "3"));
+    }
+
+    @Test
+    @DisplayName("String-divide: positive/positive (even numbers)")
+    public void testDivisionPositiveNegativeStrings() {
+        Assertions.assertEquals("-2", Calculator.divide("24", "-12"));
     }
 
     /**
@@ -181,20 +229,48 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("Double, double- divide: Positive/0.0")
+    @DisplayName("Double double- subtract: positive - negative")
+    public void testSubtractionDoubleDpuble() {
+        Assertions.assertEquals(200.246, Calculator.subtract(100.123, -100.123));
+    }
+
+    @Test
+    @DisplayName("Double, double- multiply: Min double * 0")
+    public void testZeroMultiplicationDoubleDouble() {
+        Assertions.assertEquals(0.0, Calculator.multiply(Double.MIN_VALUE, 0.0));
+    }
+
+    @Test
+    @DisplayName("Double, double- divide: Positive number/0.0")
     public void testDivisionByZeroDoubleDouble() {
         Assertions.assertEquals(Double.POSITIVE_INFINITY, Calculator.divide(12.2, 0.0));
     }
 
     @Test
-    @DisplayName("Double, double- divide: 0.0/negative")
+    @DisplayName("Double, double- divide: 0.0/negative number")
     public void testDivisionZeroDoubleDouble() {
         Assertions.assertEquals(-0.0, Calculator.divide(0.0, -14.2587));
     }
 
     @Test
-    @DisplayName("Double, double- divide: Negative/0.0")
+    @DisplayName("Double, double- divide: Negative number/0.0")
     public void testDivisionByNegativeZeroDoubleDouble() {
         Assertions.assertEquals(Double.NEGATIVE_INFINITY, Calculator.divide(-1874.2369, 0.0));
+    }
+
+    /**
+     * String (int, double)
+     */
+
+    @Test
+    @DisplayName("Int, double: sum positive numbers")
+    public void testSumPositiveIntDouble() {
+        Assertions.assertEquals(20.123, Calculator.add(1, 19.123));
+    }
+
+    @Test
+    @DisplayName("Int, double: subtract Min double")
+    public void testSubtractionIntDouble() {
+        Assertions.assertEquals(1.0, Calculator.subtract(1, Double.MIN_VALUE));
     }
 }

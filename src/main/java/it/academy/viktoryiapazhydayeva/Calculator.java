@@ -40,22 +40,40 @@ public class Calculator {
     }
 
     public static String subtract(String a, String b) {
-        int x = Integer.parseInt(java.lang.String.valueOf(a));
-        int y = Integer.parseInt(java.lang.String.valueOf(b));
+        int x;
+        int y;
+        try {
+            x = Integer.parseInt(java.lang.String.valueOf(a));
+            y = Integer.parseInt(java.lang.String.valueOf(b));
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Input data can not be parsed to integer");
+        }
         int subtractionStrings = subtract(x, y);
         return Integer.toString(subtractionStrings);
     }
 
     public static String multiply(String a, String b) {
-        int x = Integer.parseInt(java.lang.String.valueOf(a));
-        int y = Integer.parseInt(java.lang.String.valueOf(b));
+        int x;
+        int y;
+        try {
+            x = Integer.parseInt(java.lang.String.valueOf(a));
+            y = Integer.parseInt(java.lang.String.valueOf(b));
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Input data can not be parsed to integer");
+        }
         int multiplicationStrings = multiply(x, y);
         return Integer.toString(multiplicationStrings);
     }
 
     public static String divide(String a, String b) {
-        int x = Integer.parseInt(java.lang.String.valueOf(a));
-        int y = Integer.parseInt(java.lang.String.valueOf(b));
+        int x;
+        int y;
+        try {
+            x = Integer.parseInt(java.lang.String.valueOf(a));
+            y = Integer.parseInt(java.lang.String.valueOf(b));
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Input data can not be parsed to integer");
+        }
         int divisionStrings = divide(x, y);
         return Integer.toString(divisionStrings);
     }
