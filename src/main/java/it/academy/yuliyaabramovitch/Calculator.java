@@ -6,15 +6,8 @@ import java.math.BigInteger;
 public class Calculator {
     //    ***Sum
     public static int calculateSum(int valueA, int valueB) {
-        BigInteger numberA = BigInteger.valueOf(valueA);
-        BigInteger numberB = BigInteger.valueOf(valueB);
-        BigInteger preliminarySum = numberA.add(numberB);
-        int sum=0;
-        if ((preliminarySum.compareTo(BigInteger.valueOf(Util.MAX_INT)) > 0) || (preliminarySum.compareTo(BigInteger.valueOf(Util.MIN_INT)) < 0)) {
-            return sum;
-        } else {
-            return sum= preliminarySum.intValue();
-        }
+        BigInteger preliminarySum = BigInteger.valueOf(valueA).add(BigInteger.valueOf(valueB));
+        return Util.getValue(preliminarySum);
     }
 
     public static double calculateSum(double valueA, double valueB) {
@@ -45,7 +38,8 @@ public class Calculator {
 //    ***Subtraction
 
     public static int calculateSubtraction(int valueA, int valueB) {
-        return valueA - valueB;
+        BigInteger preliminarySubtraction = BigInteger.valueOf(valueA).add(BigInteger.valueOf(valueB));
+        return Util.getValue(preliminarySubtraction);
     }
 
     public static double calculateSubtraction(double valueA, double valueB) {
