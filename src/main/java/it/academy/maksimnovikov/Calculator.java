@@ -80,6 +80,7 @@ public class Calculator {
             }
         } else return errorMessage;
     }
+
     public static int multiply(int a, int b) {
         return a * b;
     }
@@ -114,6 +115,44 @@ public class Calculator {
                 BigInteger numC = new BigInteger(a);
                 BigInteger numD = new BigInteger(b);
                 return (numC.multiply(numD)).toString();
+            }
+        } else return errorMessage;
+    }
+
+    public static int divide(int h, int g) {
+        return h / g;
+    }
+
+    public static double divide(double a, double b) {
+        BigDecimal numA = new BigDecimal(a);
+        BigDecimal numB = new BigDecimal(b);
+        return (numA.divide(numB, 3, RoundingMode.HALF_UP)).doubleValue();
+    }
+
+    public static double divide(int a, double b) {
+        BigDecimal numA = new BigDecimal(a);
+        BigDecimal numB = new BigDecimal(b);
+        return (numA.divide(numB, 3, RoundingMode.HALF_UP)).doubleValue();
+    }
+
+    public static double divide(double a, int b) {
+        BigDecimal numA = new BigDecimal(a);
+        BigDecimal numB = new BigDecimal(b);
+        return (numA.divide(numB, 3, RoundingMode.HALF_UP)).doubleValue();
+    }
+
+    public static String divide(String a, String b) {
+        String errorMessage = "Enter the correct number";
+        String regex = "[0-9.-]+";
+        if (a.matches(regex) && b.matches(regex)) {
+            if (a.indexOf(".") > 0 || b.indexOf(".") > 0) {
+                BigDecimal numA = new BigDecimal(a);
+                BigDecimal numB = new BigDecimal(b);
+                return (numA.divide(numB, 3, RoundingMode.HALF_UP)).toString();
+            } else {
+                BigInteger numC = new BigInteger(a);
+                BigInteger numD = new BigInteger(b);
+                return (numC.divide(numD)).toString();
             }
         } else return errorMessage;
     }
