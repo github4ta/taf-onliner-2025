@@ -4,13 +4,13 @@ import java.math.BigDecimal;
 
 public class Calculator {
 
-    public static int calculateSum(int a, int b) {
+    public static Integer calculateSum(int a, int b) {
         Long l = (long) a + b;
         int sum = 0;
         if (l > 2147483647) {
-            System.out.println("Сумма чисел " + a + " и " + b + " превышает 2 147 483 647 .");
+            return null;
         } else if (l < -2147483648) {
-            System.out.println("Сумма чисел " + a + " и " + b + " меньше -2 147 483 648");
+            return null;
         } else {
             sum = a + b;
         }
@@ -42,13 +42,13 @@ public class Calculator {
         return str1 + str2;
     }
 
-    public static int calculateSubtraction(int a, int b) {
+    public static Integer calculateSubtraction(int a, int b) {
         Long l = (long) a - b;
         int result = 0;
         if (l > 2147483647) {
-            System.out.println("Разница превышает 2 147 483 647");
+            return null;
         } else if (l < -2147483648) {
-            System.out.println("Разница меньше -2 147 483 648");
+            return null;
         } else {
             result = a - b;
         }
