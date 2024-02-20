@@ -19,7 +19,6 @@ public class Calculator {
         return a / b;
     }
 
-    ///////////////////////////////////
     public double add(double a, double b) {
         return a + b;
     }
@@ -36,7 +35,6 @@ public class Calculator {
         return a / b;
     }
 
-    ///////////////////////////////////
     public double add(int a, double b) {
         return a + b;
     }
@@ -53,7 +51,6 @@ public class Calculator {
         return a / b;
     }
 
-    ///////////////////////////////////
     public double add(double a, int b) {
         return a + b;
     }
@@ -70,7 +67,6 @@ public class Calculator {
         return a / b;
     }
 
-    ///////////////////////////////////
     public String add(String a, String b) {
         return a + b;
     }
@@ -89,6 +85,5 @@ public class Calculator {
     public String divide(String a, String b) {
         return a;
     }
-
 }
 
