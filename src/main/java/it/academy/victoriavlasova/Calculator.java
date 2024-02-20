@@ -23,7 +23,7 @@ public class Calculator {
             Integer str2 = Integer.valueOf(b);
             return Integer.toString(str1 + str2);
         } catch (NumberFormatException e) {
-            return "???????????? ?????? ??????!";
+            return "Wrong format!";
         }
     }
 
@@ -49,7 +49,7 @@ public class Calculator {
             Integer str2 = Integer.valueOf(b);
             return Integer.toString(str1 - str2);
         } catch (NumberFormatException e) {
-            return "???????????? ?????? ??????!";
+            return "Wrong format!";
         }
     }
 
@@ -75,7 +75,7 @@ public class Calculator {
             Integer str2 = Integer.valueOf(b);
             return Integer.toString(str1 * str2);
         } catch (NumberFormatException e) {
-            return "???????????? ?????? ??????!";
+            return "Wrong format!";
         }
     }
 
@@ -102,10 +102,10 @@ public class Calculator {
             if (str2 != 0) {
                 return Integer.toString(str1 / str2);
             } else {
-                return "?????? ?????? ?? 0!";
+                return "?an not be divided by zero!";
             }
         } catch (NumberFormatException e) {
-            return "???????????? ?????? ??????!";
+            return "Wrong format!";
         }
     }
 }
