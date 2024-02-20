@@ -546,6 +546,35 @@ public class CalculatorTest {
             String expected = "0";
             Assertions.assertEquals(expected, Calculator.multiply("0", "-10000000000000000000000000000000000"));
         }
+        @Test
+        public void testCalculatorMultiplyStringDecimalPositiveNumbers() {
+            String expected = "30.25";
+            Assertions.assertEquals(expected, Calculator.multiply("5.5", "5.5"));
+        }
 
+        @Test
+        public void testCalculatorMultiplyStringDecimalNegativeNumbers() {
+            String expected = "2.25";
+            Assertions.assertEquals(expected, Calculator.multiply("-1.5", "-1.5"));
+        }
+
+        @Test
+        public void testCalculatorMultiplyStringDecimalPositiveAndNegativeNumbers() {
+            String expected = "2.25";
+            Assertions.assertEquals(expected, Calculator.multiply("1.5", "1.5"));
+        }
+
+        @Test
+        public void testCalculatorMultiplyStringDecimalPositiveNumberAndZero() {
+            String expected = "0.00";
+            Assertions.assertEquals(expected, Calculator.multiply("0.0", "5.5"));
+        }
+
+        @Test
+        public void testCalculatorMultiplyStringDecimalNegativeNumberAndZero() {
+            String expected = "0.00";
+            Assertions.assertEquals(expected, Calculator.multiply("0.0", "-0.2"));
+        }
+        
     }
 }
