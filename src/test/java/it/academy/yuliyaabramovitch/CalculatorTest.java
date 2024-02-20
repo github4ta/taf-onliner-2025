@@ -31,14 +31,15 @@ public class CalculatorTest {
     }
     @Test
     public void testDoubleValuesSum(){
-        Assertions.assertEquals(-0.7117, Calculator.calculateSum(-2, 1.2883));
+        Assertions.assertEquals(-0.7117, Calculator.calculateSum(-2, 1.2883), 0.000001);
+
     }
     @Test
     public void testIntAndDoubleValuesSum(){
-        Assertions.assertEquals(-2.22, Calculator.calculateSum(-2, -0.22));
+        Assertions.assertEquals(-2.22, Calculator.calculateSum(-2, -0.22), 0.000001);
     }
     @Test
     public void testDoubleAndIntValuesSum(){
-        Assertions.assertEquals(-0.78, Calculator.calculateSum(-2, 1.22));
+        Assertions.assertEquals(-0.78, Calculator.calculateSum(-2, 1.22), 0.000001);
     }
 }
