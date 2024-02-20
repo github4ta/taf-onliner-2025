@@ -496,19 +496,19 @@ public class CalculatorTest {
         @Test
         public void testCalculatorMultiplyDoubleAndIntNegativeNumbers() {
             double expected = 5;
-            Assertions.assertEquals(expected, Calculator.multiply(-2, -2.5));
+            Assertions.assertEquals(expected, Calculator.multiply(-2.5, -2));
         }
 
         @Test
         public void testCalculatorMultiplyDoubleAndIntPositiveAndNegativeNumbers() {
             double expected = -25;
-            Assertions.assertEquals(expected, Calculator.multiply(10, -2.5));
+            Assertions.assertEquals(expected, Calculator.multiply(-2.5, 10));
         }
 
         @Test
         public void testCalculatorMultiplyDoubleAndIntPositiveNumberAndZero() {
             double expected = 0;
-            Assertions.assertEquals(expected, Calculator.multiply(0, 1.5));
+            Assertions.assertEquals(expected, Calculator.multiply(1.5, 0));
         }
 
         @Test
@@ -549,31 +549,31 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorMultiplyStringDecimalPositiveNumbers() {
-            String expected = "30.25";
+            String expected = "30.250";
             Assertions.assertEquals(expected, Calculator.multiply("5.5", "5.5"));
         }
 
         @Test
         public void testCalculatorMultiplyStringDecimalNegativeNumbers() {
-            String expected = "2.25";
+            String expected = "2.250";
             Assertions.assertEquals(expected, Calculator.multiply("-1.5", "-1.5"));
         }
 
         @Test
         public void testCalculatorMultiplyStringDecimalPositiveAndNegativeNumbers() {
-            String expected = "2.25";
+            String expected = "2.250";
             Assertions.assertEquals(expected, Calculator.multiply("1.5", "1.5"));
         }
 
         @Test
         public void testCalculatorMultiplyStringDecimalPositiveNumberAndZero() {
-            String expected = "0.00";
+            String expected = "0.000";
             Assertions.assertEquals(expected, Calculator.multiply("0.0", "5.5"));
         }
 
         @Test
         public void testCalculatorMultiplyStringDecimalNegativeNumberAndZero() {
-            String expected = "0.00";
+            String expected = "0.000";
             Assertions.assertEquals(expected, Calculator.multiply("0.0", "-0.2"));
         }
 
