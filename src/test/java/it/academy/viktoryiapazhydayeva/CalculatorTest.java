@@ -63,6 +63,7 @@ public class CalculatorTest {
 
     // INTEGERS SUBTRACT
     @Test
+    @DisplayName("Integers-subtraction: Positive integers")
     public void testSubtractionPositiveIntegers() {
         Assertions.assertEquals(-96, Calculator.subtract(20, 116));
     }

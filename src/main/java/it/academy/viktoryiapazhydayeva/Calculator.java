@@ -21,9 +21,6 @@ public class Calculator {
     // STRINGS TO INTEGERS
 
     public static String add(String a, String b) {  // REFACTOR: NumberFormatExcpt, null, letters, sum/input min/max exceeded
-       /* if (a == null || b == null) {
-            throw new NumberFormatException("String(s) are empty");
-        }*/
         int x;
         int y;
         try {
