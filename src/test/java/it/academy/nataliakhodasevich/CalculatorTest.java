@@ -105,6 +105,106 @@ public class CalculatorTest {
         Assertions.assertEquals(-1,Calculator.divide(-1,0));
     }
 
+    @Test
+    public void testSumDoublePositiveNegative(){
+        Assertions.assertEquals(0.0,Calculator.sum(-1.0,1.0));
+    }
+
+    @Test
+    public void testSumDoubleNegativeNegative(){
+        Assertions.assertEquals(-2.0,Calculator.sum(-1.0,-1.0));
+    }
+
+    @Test
+    public void testSumDoublePositivePositive(){
+        Assertions.assertEquals(2.0,Calculator.sum(1.0,1.0));
+    }
+
+    @Test
+    public void testSumDoublePositiveZero(){
+        Assertions.assertEquals(1.0,Calculator.sum(1.0,0));
+    }
+
+    @Test
+    public void testSumDoubleNegativeZero(){
+        Assertions.assertEquals(-1.0,Calculator.sum(-1.0,0));
+    }
+
+    @Test
+    public void testSubtractDoublePositiveNegative(){
+        Assertions.assertEquals(-2.0,Calculator.subtract(-1.0,1.0));
+    }
+
+    @Test
+    public void testSubtractDoubleNegativeNegative(){
+        Assertions.assertEquals(0,Calculator.subtract(-1.1,-1.1));
+    }
+
+    @Test
+    public void testSubtractDoublePositivePositive(){
+        Assertions.assertEquals(0,Calculator.subtract(1.1,1.1));
+    }
+
+    @Test
+    public void testSubtractDoublePositiveZero(){
+        Assertions.assertEquals(1.1,Calculator.subtract(1.1,0));
+    }
+
+    @Test
+    public void testSubtractDoubleNegativeZero(){
+        Assertions.assertEquals(-1.1,Calculator.subtract(-1.1,0));
+    }
+
+
+    @Test
+    public void testMultiplyDoublePositiveNegative(){
+        Assertions.assertEquals(-1.2100000000000002,Calculator.multiply(-1.1,1.1));
+    }
+
+    @Test
+    public void testMultiplyDoubleNegativeNegative(){
+        Assertions.assertEquals(1.2100000000000002,Calculator.multiply(-1.1,-1.1));
+    }
+
+    @Test
+    public void testMultiplyDoublePositivePositive(){
+        Assertions.assertEquals(1.2100000000000002,Calculator.multiply(1.1,1.1));
+    }
+
+    @Test
+    public void testMultiplyDoublePositiveZero(){
+        Assertions.assertEquals(0,Calculator.multiply(1.1,0));
+    }
+
+    @Test
+    public void testMultiplyDoubleNegativeZero(){
+        Assertions.assertEquals(0.0,Calculator.multiply(-1.1,0));
+    }
+
+    @Test
+    public void testDivideDoublePositiveNegative(){
+        Assertions.assertEquals(-1,Calculator.divide(-1.1,1.1));
+    }
+
+    @Test
+    public void testDivideDoubleNegativeNegative(){
+        Assertions.assertEquals(1,Calculator.divide(-1.0,-1.0));
+    }
+
+    @Test
+    public void testDivideDoublePositivePositive(){
+        Assertions.assertEquals(1,Calculator.divide(1.1,1.1));
+    }
+
+    @Test
+    public void testDivideDoublePositiveZero(){
+        Assertions.assertEquals(1,Calculator.divide(1.8,0));
+    }
+
+    @Test
+    public void testDivideDoubleNegativeZero(){
+        Assertions.assertEquals(-1,Calculator.divide(-1.9,0));
+    }
 
 
 }
