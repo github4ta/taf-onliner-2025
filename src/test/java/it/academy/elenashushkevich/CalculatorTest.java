@@ -104,6 +104,72 @@ public class CalculatorTest {
         Assertions.assertEquals(1, calc.subtract(-2147483648, 2147483647));
     }
 
+    @Test
+    public void testDoubleSubtractMax() {
+        Assertions.assertEquals(0.0, calc.subtract(1.7e+308, 1.7e+308));
+    }
+
+    @Test
+    public void testDoubleSubtractMin() {
+        Assertions.assertEquals(0.0, calc.subtract(-1.7e+308, -1.7e+308));
+    }
+
+    @Test
+    public void testDoubleSubtractMaxMin() {
+        Double negativeInfinity = Double.NEGATIVE_INFINITY;
+        Assertions.assertEquals(Double.NEGATIVE_INFINITY, calc.subtract(-1.7e+308, 1.7e+308));
+    }
+
+    @Test
+    public void testIntMaxDoubleMinSubtract() {
+        Double positiveInfinity = Double.POSITIVE_INFINITY;
+        Assertions.assertEquals(1.7E308, calc.subtract(2147483647, -1.7e+308));
+    }
+
+    @Test
+    public void testIntDoubleMaxSubtract() {
+        Assertions.assertEquals(-1.7E308, calc.subtract(2147483647, 1.7e+308));
+    }
+
+    @Test
+    public void testIntDoubleSubtractMin() {
+        Assertions.assertEquals(1.7E308, calc.subtract(-2147483648, -1.7e+308));
+    }
+
+    @Test
+    public void testIntDoubleSubtractMaxMin() {
+        Assertions.assertEquals(1.7E308, calc.subtract(2147483647, -1.7e+308));
+    }
+
+    @Test
+    public void testDoubleMaxIntMinSubtract() {
+        Assertions.assertEquals(1.7E308, calc.subtract(1.7e+308, 2147483647));
+    }
+
+    @Test
+    public void testDoubleIntSubtractMax() {
+        Assertions.assertEquals(1.7E308, calc.subtract(1.7e+308, 2147483647));
+    }
+
+    @Test
+    public void testDoubleIntSubtractMin() {
+        Assertions.assertEquals(-1.7E308, calc.subtract(-1.7e+308, -2147483648));
+    }
+
+    @Test
+    public void testDoubleIntSubtractMaxMin() {
+        Assertions.assertEquals(1.7E308, calc.subtract(1.7e+308, -2147483648));
+    }
+
+    @Test
+    public void testDoubleIntSubtractPositiveNegative() {
+        Assertions.assertEquals(3.4899999999999998, calc.subtract(0.23, -3.26));
+    }
+
+    @Test
+    public void testDoubleIntSubtractNegativePositive() {
+        Assertions.assertEquals(-10.0, calc.subtract(-9.65, 0.35));
+    }
 
     @Test
     public void testStringAddEmptyNull() {
