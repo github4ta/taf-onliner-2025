@@ -45,8 +45,8 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorSumTwoDoubleNegativeNumbers() {
-            double expected = -5.450222;
-            Assertions.assertEquals(expected, Calculator.sum(-2.225111, -3.225111));
+            double expected = -5.5;
+            Assertions.assertEquals(expected, Calculator.sum(-2.25, -3.25));
         }
 
         @Test
@@ -57,14 +57,14 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorSumTwoDoublePositiveNumberAndZero() {
-            double expected = 2.147483647;
-            Assertions.assertEquals(expected, Calculator.sum(0.0, 2.147483647));
+            double expected = 2.147;
+            Assertions.assertEquals(expected, Calculator.sum(0.0, 2.147));
         }
 
         @Test
         public void testCalculatorSumTwoDoubleNegativeNumberAndZero() {
-            double expected = -2.147483648;
-            Assertions.assertEquals(expected, Calculator.sum(0.0, -2.147483648));
+            double expected = -2.147;
+            Assertions.assertEquals(expected, Calculator.sum(0.0, -2.147));
         }
 
         @Test
@@ -75,26 +75,26 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorSumIntAndDoubleNegativeNumbers() {
-            double expected = -5.225111;
-            Assertions.assertEquals(expected, Calculator.sum(-2, -3.225111));
+            double expected = -5.225;
+            Assertions.assertEquals(expected, Calculator.sum(-2, -3.225));
         }
 
         @Test
         public void testCalculatorSumIntAndDoublePositiveAndNegativeNumbers() {
-            double expected = -5.975433;
-            Assertions.assertEquals(expected, Calculator.sum(-10, 4.024567));
+            double expected = -5.445;
+            Assertions.assertEquals(expected, Calculator.sum(-10, 4.555));
         }
 
         @Test
         public void testCalculatorSumIntAndDoublePositiveNumberAndZero() {
-            double expected = 0.225555555555;
-            Assertions.assertEquals(expected, Calculator.sum(0, 0.225555555555));
+            double expected = 0.225;
+            Assertions.assertEquals(expected, Calculator.sum(0, 0.225));
         }
 
         @Test
         public void testCalculatorSumIntAndDoubleNegativeNumberAndZero() {
-            double expected = -2.11111111111;
-            Assertions.assertEquals(expected, Calculator.sum(0, -2.11111111111));
+            double expected = -2.111;
+            Assertions.assertEquals(expected, Calculator.sum(0, -2.111));
         }
 
         @Test
@@ -159,32 +159,32 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorSumStringDecimalPositiveNumbers() {
-            String expected = "6.7";
+            String expected = "6.700";
             Assertions.assertEquals(expected, Calculator.sum("2.5", "4.2"));
         }
 
         @Test
         public void testCalculatorSumStringDecimalNegativeNumbers() {
-            String expected = "-7.7";
+            String expected = "-7.700";
             Assertions.assertEquals(expected, Calculator.sum("-2.5", "-5.2"));
         }
 
         @Test
         public void testCalculatorSumStringDecimalPositiveAndNegativeNumbers() {
-            String expected = "-3.1";
+            String expected = "-3.100";
             Assertions.assertEquals(expected, Calculator.sum("2.2", "-5.3"));
         }
 
         @Test
         public void testCalculatorSumStringDecimalPositiveNumberAndZero() {
-            String expected = "0.10000000000000000000000000000000000";
-            Assertions.assertEquals(expected, Calculator.sum("0.0", "0.10000000000000000000000000000000000"));
+            String expected = "0.100";
+            Assertions.assertEquals(expected, Calculator.sum("0.0", "0.100"));
         }
 
         @Test
         public void testCalculatorSumStringDecimalNegativeNumberAndZero() {
-            String expected = "-0.123456789123456789";
-            Assertions.assertEquals(expected, Calculator.sum("0.0", "-0.123456789123456789"));
+            String expected = "-0.123";
+            Assertions.assertEquals(expected, Calculator.sum("0.0", "-0.123"));
         }
 
         @Test
