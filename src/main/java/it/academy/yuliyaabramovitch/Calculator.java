@@ -1,6 +1,6 @@
 package it.academy.yuliyaabramovitch;
 
-import net.bytebuddy.implementation.bytecode.Multiplication;
+import java.math.BigDecimal;
 
 public class Calculator {
     //    ***Sum
@@ -9,15 +9,24 @@ public class Calculator {
     }
 
     public static double calculateSum(double valueA, double valueB) {
-        return valueA + valueB;
+        BigDecimal numberA = BigDecimal.valueOf(valueA);
+        BigDecimal numberB = BigDecimal.valueOf(valueB);
+        BigDecimal sum = numberA.add(numberB);
+        return sum.doubleValue();
     }
 
     public static double calculateSum(int valueA, double valueB) {
-        return valueA + valueB;
+        BigDecimal numberA = BigDecimal.valueOf(valueA);
+        BigDecimal numberB = BigDecimal.valueOf(valueB);
+        BigDecimal sum = numberA.add(numberB);
+        return sum.doubleValue();
     }
 
     public static double calculateSum(double valueA, int valueB) {
-        return valueA + valueB;
+        BigDecimal numberA = BigDecimal.valueOf(valueA);
+        BigDecimal numberB = BigDecimal.valueOf(valueB);
+        BigDecimal sum = numberA.add(numberB);
+        return sum.doubleValue();
     }
 
     public static String calculateSum(String valueA, String valueB) {
