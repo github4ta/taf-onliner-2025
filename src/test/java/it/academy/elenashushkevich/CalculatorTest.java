@@ -172,7 +172,7 @@ public class CalculatorTest {
     }
     @Test
     public void testDoubleIntSubtractPositive() {
-        Assertions.assertEquals(5.65, calc.subtract(9.65, 4));
+        Assertions.assertEquals(5.65, calc.subtract(9.64, 4));
     }
 
     @Test
