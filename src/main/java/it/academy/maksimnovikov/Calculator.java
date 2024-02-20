@@ -12,19 +12,19 @@ public class Calculator {
     public static double sum(double a, double b) {
         BigDecimal numA = new BigDecimal(a);
         BigDecimal numB = new BigDecimal(b);
-        return (numA.add(numB)).doubleValue();
+        return (numA.add(numB).setScale(3,RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double sum(int a, double b) {
         BigDecimal numA = new BigDecimal(a);
         BigDecimal numB = new BigDecimal(b);
-        return (numA.add(numB)).doubleValue();
+        return (numA.add(numB).setScale(3,RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double sum(double a, int b) {
         BigDecimal numA = new BigDecimal(a);
         BigDecimal numB = new BigDecimal(b);
-        return (numA.add(numB)).doubleValue();
+        return (numA.add(numB).setScale(3,RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static String sum(String a, String b) {
@@ -34,7 +34,7 @@ public class Calculator {
             if (a.indexOf(".") > 0 || b.indexOf(".") > 0) {
                 BigDecimal numA = new BigDecimal(a);
                 BigDecimal numB = new BigDecimal(b);
-                return (numA.add(numB)).toString();
+                return (numA.add(numB).setScale(3,RoundingMode.HALF_UP)).toString();
             } else {
                 BigInteger numC = new BigInteger(a);
                 BigInteger numD = new BigInteger(b);
