@@ -14,7 +14,13 @@ public class Calculator {
         return a+((double)b);
     }
     public String sum(String a, String b){
-        return a+b;
+        try {
+            Integer str1= Integer.valueOf(a);
+            Integer str2= Integer.valueOf(b);
+            return Integer.toString(str1+str2);
+        }catch (NumberFormatException e) {
+            return "???????????? ?????? ??????!";
+        }
     }
     public int subtraction(int a, int b){
         return a-b;
