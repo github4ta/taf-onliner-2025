@@ -517,5 +517,35 @@ public class CalculatorTest {
             Assertions.assertEquals(expected, Calculator.multiply(-2.5, 0));
         }
 
+        @Test
+        public void testCalculatorMultiplyStringIntegerPositiveNumbers() {
+            String expected = "200";
+            Assertions.assertEquals(expected, Calculator.multiply("2", "100"));
+        }
+
+        @Test
+        public void testCalculatorMultiplyStringIntegerNegativeNumbers() {
+            String expected = "2000";
+            Assertions.assertEquals(expected, Calculator.multiply("-20", "-100"));
+        }
+
+        @Test
+        public void testCalculatorMultiplyStringIntegerPositiveAndNegativeNumbers() {
+            String expected = "-5000";
+            Assertions.assertEquals(expected, Calculator.multiply("100", "-50"));
+        }
+
+        @Test
+        public void testCalculatorMultiplyStringIntegerPositiveNumberAndZero() {
+            String expected = "0";
+            Assertions.assertEquals(expected, Calculator.multiply("0", "10000000000000000000000000000000000"));
+        }
+
+        @Test
+        public void testCalculatorMultiplyStringIntegerNegativeNumberAndZero() {
+            String expected = "0";
+            Assertions.assertEquals(expected, Calculator.multiply("0", "-10000000000000000000000000000000000"));
+        }
+
     }
 }
