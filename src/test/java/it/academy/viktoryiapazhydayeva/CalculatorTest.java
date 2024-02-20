@@ -261,11 +261,10 @@ public class CalculatorTest {
     /**
      * String (int, double)
      */
-
     @Test
     @DisplayName("Int, double: sum positive numbers")
     public void testSumPositiveIntDouble() {
-        Assertions.assertEquals(20.123, Calculator.add(1, 19.123));
+        Assertions.assertEquals(30.123, Calculator.add(11, 19.123));
     }
 
     @Test
@@ -273,4 +272,21 @@ public class CalculatorTest {
     public void testSubtractionIntDouble() {
         Assertions.assertEquals(1.0, Calculator.subtract(1, Double.MIN_VALUE));
     }
+
+    @Test
+    @DisplayName("Int, double: multiply negative numbers with delta")
+    public void testMultiplicationIntDouble() {
+        Assertions.assertEquals(41.979, Calculator.multiply(-2, -20.9892585), 0.001);
+    }
+
+    @Test
+    @DisplayName("Int, double: int/0.0")
+    public void testDivisionByZeroIntDouble() {
+        Assertions.assertEquals(Double.POSITIVE_INFINITY, Calculator.divide(5, 0.00));
+    }
+
+    /**
+     * String (double, int)
+     */
+
 }
