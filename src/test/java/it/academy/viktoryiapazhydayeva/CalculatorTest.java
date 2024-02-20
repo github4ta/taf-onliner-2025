@@ -6,7 +6,9 @@ import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
 
-    // INTEGERS SUM
+    /**
+     * int (int, int)
+     */
     @Test
     @DisplayName("Integers-sum: positive digits")
     public void testSumPositiveIntegers() {
@@ -68,7 +70,10 @@ public class CalculatorTest {
         Assertions.assertEquals(-96, Calculator.subtract(20, 116));
     }
 
-    // STRINGS SUM
+
+    /**
+     * String (String, String)
+     */
     @Test
     @DisplayName("Strings-sum: Positive integers")
     public void testSumPositiveStrings() {
