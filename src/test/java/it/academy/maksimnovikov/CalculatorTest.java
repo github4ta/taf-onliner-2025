@@ -456,5 +456,35 @@ public class CalculatorTest {
             double expected = 0;
             Assertions.assertEquals(expected, Calculator.multiply(0.0, -2.1));
         }
+
+        @Test
+        public void testCalculatorMultiplyIntAndDoublePositiveNumbers() {
+            double expected = 5;
+            Assertions.assertEquals(expected, Calculator.multiply(2, 2.5));
+        }
+
+        @Test
+        public void testCalculatorMultiplyIntAndDoubleNegativeNumbers() {
+            double expected = 5;
+            Assertions.assertEquals(expected, Calculator.multiply(-2, -2.5));
+        }
+
+        @Test
+        public void testCalculatorMultiplyIntAndDoublePositiveAndNegativeNumbers() {
+            double expected = -15;
+            Assertions.assertEquals(expected, Calculator.multiply(-10, 1.5));
+        }
+
+        @Test
+        public void testCalculatorMultiplyIntAndDoublePositiveNumberAndZero() {
+            double expected = 0;
+            Assertions.assertEquals(expected, Calculator.multiply(0, 0.5));
+        }
+
+        @Test
+        public void testCalculatorMultiplyIntAndDoubleNegativeNumberAndZero() {
+            double expected = 0;
+            Assertions.assertEquals(expected, Calculator.multiply(0, -2.5));
+        }
     }
 }
