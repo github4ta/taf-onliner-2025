@@ -80,5 +80,31 @@ public class CalculatorTest {
         Assertions.assertEquals(-1,Calculator.multiply(-1,0));
     }
 
+    @Test
+    public void testDivideIntPositiveNegative(){
+        Assertions.assertEquals(0,Calculator.divide(-1,1));
+    }
+
+    @Test
+    public void testDivideIntNegativeNegative(){
+        Assertions.assertEquals(-2,Calculator.divide(-1,-1));
+    }
+
+    @Test
+    public void testDivideIntPositivePositive(){
+        Assertions.assertEquals(2,Calculator.divide(1,1));
+    }
+
+    @Test
+    public void testDivideIntPositiveZero(){
+        Assertions.assertEquals(1,Calculator.divide(1,0));
+    }
+
+    @Test
+    public void testDivideIntNegativeZero(){
+        Assertions.assertEquals(-1,Calculator.divide(-1,0));
+    }
+
+
 
 }
