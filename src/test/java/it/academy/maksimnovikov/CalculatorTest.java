@@ -252,14 +252,14 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorSubtractTwoDoublePositiveNumberAndZero() {
-            double expected = -2.12345;
-            Assertions.assertEquals(expected, Calculator.subtract(0.0, 2.12345));
+            double expected = -2.123;
+            Assertions.assertEquals(expected, Calculator.subtract(0.0, 2.123));
         }
 
         @Test
         public void testCalculatorSubtractTwoDoubleNegativeNumberAndZero() {
-            double expected = 2.12345;
-            Assertions.assertEquals(expected, Calculator.subtract(0.0, -2.12345));
+            double expected = 2.123;
+            Assertions.assertEquals(expected, Calculator.subtract(0.0, -2.123));
         }
 
         @Test
@@ -354,31 +354,31 @@ public class CalculatorTest {
 
         @Test
         public void testCalculatorSubtractStringDecimalPositiveNumbers() {
-            String expected = "0.0";
+            String expected = "0.000";
             Assertions.assertEquals(expected, Calculator.subtract("5.5", "5.5"));
         }
 
         @Test
         public void testCalculatorSubtractStringDecimalNegativeNumbers() {
-            String expected = "3.0";
+            String expected = "3.000";
             Assertions.assertEquals(expected, Calculator.subtract("-2.5", "-5.5"));
         }
 
         @Test
         public void testCalculatorSubtractStringDecimalPositiveAndNegativeNumbers() {
-            String expected = "0.2";
+            String expected = "0.200";
             Assertions.assertEquals(expected, Calculator.subtract("3.5", "3.3"));
         }
 
         @Test
         public void testCalculatorSubtractStringDecimalPositiveNumberAndZero() {
-            String expected = "-5.5";
+            String expected = "-5.500";
             Assertions.assertEquals(expected, Calculator.subtract("0.0", "5.5"));
         }
 
         @Test
         public void testCalculatorSubtractStringDecimalNegativeNumberAndZero() {
-            String expected = "5.5";
+            String expected = "5.500";
             Assertions.assertEquals(expected, Calculator.subtract("0.0", "-5.5"));
         }
 
