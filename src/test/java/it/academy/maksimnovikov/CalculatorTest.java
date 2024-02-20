@@ -742,5 +742,34 @@ public class CalculatorTest {
             Assertions.assertEquals(expected, Calculator.divide("0", "-1"));
         }
 
+        @Test
+        public void testCalculatorDivideStringDecimalPositiveNumbers() {
+            String expected = "2.200";
+            Assertions.assertEquals(expected, Calculator.divide("5.5", "2.5"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringDecimalNegativeNumbers() {
+            String expected = "1.000";
+            Assertions.assertEquals(expected, Calculator.divide("-1.5", "-1.5"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringDecimalPositiveAndNegativeNumbers() {
+            String expected = "1.000";
+            Assertions.assertEquals(expected, Calculator.divide("1.5", "1.5"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringDecimalPositiveNumberAndZero() {
+            String expected = "0.000";
+            Assertions.assertEquals(expected, Calculator.divide("0.0", "5.5"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringDecimalNegativeNumberAndZero() {
+            String expected = "0.000";
+            Assertions.assertEquals(expected, Calculator.divide("0.0", "-0.2"));
+        }
     }
 }
