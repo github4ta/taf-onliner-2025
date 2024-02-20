@@ -32,6 +32,7 @@ public class Calculator {
     public static String calculateSum(String valueA, String valueB) {
         return String.join(" ", valueA, valueB);
     }
+
 //    ***Subtraction
 
     public static int calculateSubtraction(int valueA, int valueB) {
