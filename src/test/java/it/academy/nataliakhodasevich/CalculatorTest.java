@@ -54,4 +54,31 @@ public class CalculatorTest {
         Assertions.assertEquals(-1,Calculator.subtract(-1,0));
     }
 
+
+    @Test
+    public void testMultiplyIntPositiveNegative(){
+        Assertions.assertEquals(0,Calculator.multiply(-1,1));
+    }
+
+    @Test
+    public void testMultiplyIntNegativeNegative(){
+        Assertions.assertEquals(-2,Calculator.multiply(-1,-1));
+    }
+
+    @Test
+    public void testMultiplyIntPositivePositive(){
+        Assertions.assertEquals(2,Calculator.multiply(1,1));
+    }
+
+    @Test
+    public void testMultiplyIntPositiveZero(){
+        Assertions.assertEquals(1,Calculator.multiply(1,0));
+    }
+
+    @Test
+    public void testMultiplyIntNegativeZero(){
+        Assertions.assertEquals(-1,Calculator.multiply(-1,0));
+    }
+
+
 }
