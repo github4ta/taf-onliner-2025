@@ -39,7 +39,12 @@ public class CalculatorTest {
     @Test
     @DisplayName("Max 2 int Sum") //Needs revision
     public void testMaxIntAndIntValuesSum() {
-        Assertions.assertEquals(-1, Calculator.calculateSum(-2147483648, 2147483647));
+        Assertions.assertEquals(0, Calculator.calculateSum(2147483647, 2147483647));
+    }
+    @Test
+    @DisplayName("Min 2 int Sum") //Needs revision
+    public void testMinIntAndIntValuesSum() {
+        Assertions.assertEquals(0, Calculator.calculateSum(-2147483648, -2147483648));
     }
 
     @Test
