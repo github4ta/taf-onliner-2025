@@ -712,5 +712,35 @@ public class CalculatorTest {
             Assertions.assertEquals(expected, Calculator.divide(0.0, -4));
         }
 
+        @Test
+        public void testCalculatorDivideStringIntegerPositiveNumbers() {
+            String expected = "2";
+            Assertions.assertEquals(expected, Calculator.divide("200", "100"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringIntegerNegativeNumbers() {
+            String expected = "2";
+            Assertions.assertEquals(expected, Calculator.divide("-200", "-100"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringIntegerPositiveAndNegativeNumbers() {
+            String expected = "-5";
+            Assertions.assertEquals(expected, Calculator.divide("500", "-100"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringIntegerPositiveNumberAndZero() {
+            String expected = "0";
+            Assertions.assertEquals(expected, Calculator.divide("0", "1"));
+        }
+
+        @Test
+        public void testCalculatorDivideStringIntegerNegativeNumberAndZero() {
+            String expected = "0";
+            Assertions.assertEquals(expected, Calculator.divide("0", "-1"));
+        }
+
     }
 }
