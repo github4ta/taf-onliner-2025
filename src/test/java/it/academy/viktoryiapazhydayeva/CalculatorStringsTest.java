@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 public class CalculatorStringsTest {
 
-    //@ParameterizedTest /////////////////////////////////////////////////////////////////////////////////////////////
     @DisplayName("Strings-sum: Positive integers")
     public void testSumPositiveStrings() {
         Assertions.assertEquals("2510", Calculator.sumStrings("1505", "1005"));
@@ -42,11 +41,11 @@ public class CalculatorStringsTest {
         Assertions.assertThrows(IllegalArgumentException.class, () -> Calculator.sumStrings("", "10"));
     }
 
-    /////////////////////////////////////////// + string ==null  допишу
+    // + string ==null  Add test
     @Test
     @DisplayName("Strings-sum: incorrect data format") // strings
     public void testSumIncorrectDataStrings() {
-        Assertions.assertThrows(IllegalArgumentException.class, () ->  Calculator.sumStrings("Test12", "0"));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> Calculator.sumStrings("Test12", "0"));
     }
 
     @Test
