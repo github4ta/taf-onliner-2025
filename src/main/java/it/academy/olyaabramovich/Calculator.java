@@ -8,9 +8,9 @@ public class Calculator {
         Long l = (long) a + b;
         int sum = 0;
         if (l > 2147483647) {
-            System.out.println("Сумма чисел превышает 2 147 483 647");
+            System.out.println("Сумма чисел " + a + " и " + b + " превышает 2 147 483 647 .");
         } else if (l < -2147483648) {
-            System.out.println("Сумма чисел меньше -2 147 483 648");
+            System.out.println("Сумма чисел " + a + " и " + b + " меньше -2 147 483 648");
         } else {
             sum = a + b;
         }
@@ -43,19 +43,37 @@ public class Calculator {
     }
 
     public static int calculateSubtraction(int a, int b) {
-        return a - b;
+        Long l = (long) a - b;
+        int result = 0;
+        if (l > 2147483647) {
+            System.out.println("Разница превышает 2 147 483 647");
+        } else if (l < -2147483648) {
+            System.out.println("Разница меньше -2 147 483 648");
+        } else {
+            result = a - b;
+        }
+        return result;
     }
 
     public static double calculateSubtraction(double a, double b) {
-        return a - b;
+        BigDecimal num1 = BigDecimal.valueOf(a);
+        BigDecimal num2 = BigDecimal.valueOf(b);
+        BigDecimal result = num1.subtract(num2);
+        return result.doubleValue();
     }
 
     public static double calculateSubtraction(int a, double b) {
-        return a - b;
+        BigDecimal num1 = BigDecimal.valueOf(a);
+        BigDecimal num2 = BigDecimal.valueOf(b);
+        BigDecimal result = num1.subtract(num2);
+        return result.doubleValue();
     }
 
     public static double calculateSubtraction(double a, int b) {
-        return a - b;
+        BigDecimal num1 = BigDecimal.valueOf(a);
+        BigDecimal num2 = BigDecimal.valueOf(b);
+        BigDecimal result = num1.subtract(num2);
+        return result.doubleValue();
     }
 
     public static int calculateMultiplication(int a, int b) {
