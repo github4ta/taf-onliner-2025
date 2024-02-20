@@ -3,6 +3,8 @@ package it.academy.nataliakhodasevich;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class CalculatorTest {
     @Test
     public void testSumIntPositiveNegative(){
@@ -97,12 +99,12 @@ public class CalculatorTest {
 
     @Test
     public void testDivideIntPositiveZero(){
-        Assertions.assertEquals(1,Calculator.divide(1,0));
+        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(1, 0));
     }
 
     @Test
     public void testDivideIntNegativeZero(){
-        Assertions.assertEquals(-1,Calculator.divide(-1,0));
+        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(-1, 0));
     }
 
     @Test
@@ -178,8 +180,13 @@ public class CalculatorTest {
 
     @Test
     public void testMultiplyDoubleNegativeZero(){
-        Assertions.assertEquals(0.0,Calculator.multiply(-1.1,0));
+        Assertions.assertEquals(-0.0,Calculator.multiply(-1.1,0));
     }
+    /*В Java, -0.0 и 0.0 считаются равными числами,
+    поскольку они имеют одно и то же абсолютное значение и знак,
+    но double является знаковым типом данных,
+     и может хранить информацию о знаке числа. В этом контексте -0.0 представляет отрицательный ноль,
+      который также считается допустимым значением.*/
 
     @Test
     public void testDivideDoublePositiveNegative(){
@@ -198,13 +205,17 @@ public class CalculatorTest {
 
     @Test
     public void testDivideDoublePositiveZero(){
-        Assertions.assertEquals(1,Calculator.divide(1.8,0));
+        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(1.8, 0));
     }
 
     @Test
     public void testDivideDoubleNegativeZero(){
-        Assertions.assertEquals(-1,Calculator.divide(-1.9,0));
+        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(-1.9, 0));
     }
 
+    @Test
+    public void testSumString(){
+        Assertions.assertEquals("22",Calculator.sumString("10","12"));
+    }
 
 }
