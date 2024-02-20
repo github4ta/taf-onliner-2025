@@ -17,11 +17,10 @@ public class Calculator {
     }
 
     public static int divide(int a, int b) {
-        int result = 0;
-        if (b != 0) {
-            result = a / b;
+        if (b == 0) {
+            throw new IllegalArgumentException("Деление на ноль невозможно!");
         }
-        return result;
+        return a / b;
     }
 
     //   double (int, double)
@@ -38,11 +37,10 @@ public class Calculator {
     }
 
     public static double divide(int a, double b) {
-        double result = 0;
-        if (b != 0) {
-            result = a / b;
+        if (b == 0) {
+            throw new IllegalArgumentException("Деление на ноль невозможно!");
         }
-        return result;
+        return a / b;
     }
 
     //  double (double, double)
@@ -59,11 +57,10 @@ public class Calculator {
     }
 
     public static double divide(double a, double b) {
-        double result = 0;
-        if (b != 0) {
-            result = a / b;
+        if (b == 0) {
+            throw new IllegalArgumentException("Деление на ноль невозможно!");
         }
-        return result;
+        return a / b;
     }
 
     //double (double, int)
@@ -80,11 +77,10 @@ public class Calculator {
     }
 
     public static double divide(double a, int b) {
-        double result = 0;
-        if (b != 0) {
-            result = a / b;
+        if (b == 0) {
+            throw new IllegalArgumentException("Деление на ноль невозможно!");
         }
-        return result;
+        return a / b;
     }
 
     //String (String, String)
