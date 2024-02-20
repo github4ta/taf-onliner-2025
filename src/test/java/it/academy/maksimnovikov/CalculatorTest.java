@@ -589,4 +589,8 @@ public class CalculatorTest {
             Assertions.assertEquals(expected, Calculator.multiply("", ""));
         }
     }
+    @Nested
+    class TestCalculatorDivide{
+
+    }
 }
