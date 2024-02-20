@@ -142,11 +142,11 @@ public class Calculator {
     }
 
     public static String divide(String a, String b) {
-        String errorMessageDivideZero = "Divide by zero is impossible";
+        String errorMessageDivideByZero = "Divide by zero is impossible";
         String errorMessage = "Enter the correct number";
         String regex = "[0-9.-]+";
         if (b.equals("0") || b.equals("0.0")) {
-            return errorMessageDivideZero;
+            return errorMessageDivideByZero;
         }
         if (a.matches(regex) && b.matches(regex)) {
             if (a.indexOf(".") > 0 || b.indexOf(".") > 0) {
