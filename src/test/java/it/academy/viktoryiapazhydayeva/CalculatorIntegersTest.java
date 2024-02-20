@@ -44,7 +44,7 @@ public class CalculatorIntegersTest {
     }
 
     @Test
-    @DisplayName("Integers-sum: Max allowed value of integer sum is out or range")   // REFACTOR: ADD MESSAGE EXCEPTION ?!
+    @DisplayName("Integers-sum: Max allowed value of integer sum is out or range")   // leave as is, remove
     public void testMaxSumExceededIntegers() {
         Assertions.assertEquals(2147483647, Calculator.sumIntegers(637, 2147483011));
     }
@@ -56,7 +56,7 @@ public class CalculatorIntegersTest {
     }
 
     @Test
-    @DisplayName("Integers-sum: Min allowed value of integer sum is out of range")  // REFACTOR: ADD MESSAGE EXCEPTION ?!
+    @DisplayName("Integers-sum: Min allowed value of integer sum is out of range")  // leave as is, remove
     public void testMinSumExceededIntegers() {
         Assertions.assertEquals(-2147483648, Calculator.sumIntegers(-2147483648, -1));
     }

@@ -26,8 +26,14 @@ public class Calculator {
        /* if (a == null || b == null) {
             throw new NumberFormatException("String(s) are empty");
         }*/
-        int x = Integer.parseInt(java.lang.String.valueOf(a));
-        int y = Integer.parseInt(java.lang.String.valueOf(b));
+        int x;
+        int y;
+        try {
+            x = Integer.parseInt(java.lang.String.valueOf(a));
+            y = Integer.parseInt(java.lang.String.valueOf(b));
+        } catch (NumberFormatException e ){
+            throw new IllegalArgumentException("Input data can not be parsed to integer");
+        }
         int sumStrings = x + y;
         return Integer.toString(sumStrings);
     }

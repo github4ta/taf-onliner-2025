@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class CalculatorStringsTest {
 
-    @Test
+    //@ParameterizedTest /////////////////////////////////////////////////////////////////////////////////////////////
     @DisplayName("Strings-sum: Positive integers")
     public void testSumPositiveStrings() {
         Assertions.assertEquals("2510", Calculator.sumStrings("1505", "1005"));
@@ -37,13 +37,17 @@ public class CalculatorStringsTest {
     }
 
     @Test
-    @DisplayName("Strings-sum: null string")        // REFACTOR: ADD MESSAGE EXCEPTION
+    @DisplayName("Strings-sum: null string")
     public void testSumNullStrings() {
-        Assertions.assertEquals("String(s) are empty", Calculator.sumStrings("", "10"));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> Calculator.sumStrings("", "10"));
     }
 
-    //@Test
-   // @DisplayName("Strings-sum: incorrect data format")   // REFACTOR: ADD MESSAGE EXCEPTION (e.g. input=letters)
+    /////////////////////////////////////////// + string ==null  допишу
+    @Test
+    @DisplayName("Strings-sum: incorrect data format") // strings
+    public void testSumIncorrectDataStrings() {
+        Assertions.assertThrows(IllegalArgumentException.class, () ->  Calculator.sumStrings("Test12", "0"));
+    }
 
     @Test
     @DisplayName("Strings-sum: Max allowed value of integer sum")
@@ -52,7 +56,7 @@ public class CalculatorStringsTest {
     }
 
     @Test
-    @DisplayName("Strings-sum: Max allowed value of integer sum is out or range")    // REFACTOR: ADD MESSAGE EXCEPTION
+    @DisplayName("Strings-sum: Max allowed value of integer sum is out or range")    // LEAVE AS IS
     public void testMaxSumExceededStrings() {
         Assertions.assertEquals("2147483647", Calculator.sumStrings("1", "2147483647"));
     }
@@ -64,7 +68,7 @@ public class CalculatorStringsTest {
     }
 
     @Test
-    @DisplayName("Strings-sum: Min allowed value of integer sum is out of range")   // REFACTOR: ADD MESSAGE EXCEPTION
+    @DisplayName("Strings-sum: Min allowed value of integer sum is out of range")   // LEAVE AS IS
     public void testMinSumExceededStrings() {
         Assertions.assertEquals("-2147483648", Calculator.sumStrings("-2147483600", "-200"));
     }
