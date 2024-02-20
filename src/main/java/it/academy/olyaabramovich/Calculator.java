@@ -18,19 +18,24 @@ public class Calculator {
     }
 
     public static double calculateSum(double a, double b) {
-        BigDecimal num1 = BigDecimal.valueOf( a);
+        BigDecimal num1 = BigDecimal.valueOf(a);
         BigDecimal num2 = BigDecimal.valueOf(b);
         BigDecimal sum = num1.add(num2);
         return sum.doubleValue();
-
     }
 
     public static double calculateSum(int a, double b) {
-        return a + b;
+        BigDecimal num1 = BigDecimal.valueOf(a);
+        BigDecimal num2 = BigDecimal.valueOf(b);
+        BigDecimal sum = num1.add(num2);
+        return sum.doubleValue();
     }
 
     public static double calculateSum(double a, int b) {
-        return a + b;
+        BigDecimal num1 = BigDecimal.valueOf(a);
+        BigDecimal num2 = BigDecimal.valueOf(b);
+        BigDecimal sum = num1.add(num2);
+        return sum.doubleValue();
     }
 
     public static String calculateSum(String str1, String str2) {
