@@ -9,10 +9,8 @@ public class Util {
 
     public static int getValue(BigInteger number) {
         if ((number.compareTo(BigInteger.valueOf(Util.MAX_INT)) > 0) || (number.compareTo(BigInteger.valueOf(Util.MIN_INT)) < 0)) {
-            System.out.println(number);
             return Util.ERROR_VALUE;
         } else {
-            System.out.println(number);
             return number.intValue();
         }
     }

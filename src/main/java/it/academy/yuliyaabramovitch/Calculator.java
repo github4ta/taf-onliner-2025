@@ -11,24 +11,15 @@ public class Calculator {
     }
 
     public static double calculateSum(double valueA, double valueB) {
-        BigDecimal numberA = BigDecimal.valueOf(valueA);
-        BigDecimal numberB = BigDecimal.valueOf(valueB);
-        BigDecimal sum = numberA.add(numberB);
-        return sum.doubleValue();
+        return (BigDecimal.valueOf(valueA).add(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static double calculateSum(int valueA, double valueB) {
-        BigDecimal numberA = BigDecimal.valueOf(valueA);
-        BigDecimal numberB = BigDecimal.valueOf(valueB);
-        BigDecimal sum = numberA.add(numberB);
-        return sum.doubleValue();
+        return (BigDecimal.valueOf(valueA).add(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static double calculateSum(double valueA, int valueB) {
-        BigDecimal numberA = BigDecimal.valueOf(valueA);
-        BigDecimal numberB = BigDecimal.valueOf(valueB);
-        BigDecimal sum = numberA.add(numberB);
-        return sum.doubleValue();
+       return (BigDecimal.valueOf(valueA).add(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static String calculateSum(String valueA, String valueB) {
@@ -38,20 +29,20 @@ public class Calculator {
 //    ***Subtraction
 
     public static int calculateSubtraction(int valueA, int valueB) {
-        BigInteger preliminarySubtraction = BigInteger.valueOf(valueA).add(BigInteger.valueOf(valueB));
+        BigInteger preliminarySubtraction = BigInteger.valueOf(valueA).subtract(BigInteger.valueOf(valueB));
         return Util.getValue(preliminarySubtraction);
     }
 
     public static double calculateSubtraction(double valueA, double valueB) {
-        return valueA - valueB;
+        return (BigDecimal.valueOf(valueA).subtract(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static double calculateSubtraction(int valueA, double valueB) {
-        return valueA - valueB;
+        return (BigDecimal.valueOf(valueA).subtract(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static double calculateSubtraction(double valueA, int valueB) {
-        return valueA - valueB;
+        return (BigDecimal.valueOf(valueA).subtract(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static String calculateSubtraction(String valueA, String valueB) {

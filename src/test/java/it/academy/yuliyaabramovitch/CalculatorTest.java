@@ -90,6 +90,6 @@ public class CalculatorTest {
     @Test
     @DisplayName("Max 2 int Subtraction") //Needs revision
     public void testMaxIntAndIntValuesSubtraction() {
-        Assertions.assertEquals(1, Calculator.calculateSubtraction(-2147483648, 2147483647));
+        Assertions.assertEquals(0, Calculator.calculateSubtraction(-2147483648, 2147483647));
     }
 }
