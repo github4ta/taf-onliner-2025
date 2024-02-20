@@ -351,6 +351,36 @@ public class CalculatorTest {
             String expected = "10000000000000000000000000000000000";
             Assertions.assertEquals(expected, Calculator.subtract("0", "-10000000000000000000000000000000000"));
         }
-        
+
+        @Test
+        public void testCalculatorSubtractStringDecimalPositiveNumbers() {
+            String expected = "0.0";
+            Assertions.assertEquals(expected, Calculator.subtract("5.5", "5.5"));
+        }
+
+        @Test
+        public void testCalculatorSubtractStringDecimalNegativeNumbers() {
+            String expected = "3.0";
+            Assertions.assertEquals(expected, Calculator.subtract("-2.5", "-5.5"));
+        }
+
+        @Test
+        public void testCalculatorSubtractStringDecimalPositiveAndNegativeNumbers() {
+            String expected = "0.2";
+            Assertions.assertEquals(expected, Calculator.subtract("3.5", "3.3"));
+        }
+
+        @Test
+        public void testCalculatorSubtractStringDecimalPositiveNumberAndZero() {
+            String expected = "-5.5";
+            Assertions.assertEquals(expected, Calculator.subtract("0.0", "5.5"));
+        }
+
+        @Test
+        public void testCalculatorSubtractStringDecimalNegativeNumberAndZero() {
+            String expected = "5.5";
+            Assertions.assertEquals(expected, Calculator.subtract("0.0", "-5.5"));
+        }
+
     }
 }
