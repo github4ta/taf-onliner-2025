@@ -1,28 +1,26 @@
 package it.academy.viktoryiapazhydayeva;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Calculator {
     // INTEGERS
-    public static int sumIntegers(int a, int b) {
+    public static int add(int a, int b) {
         return a + b;
     }
 
-    public static int subtractIntegers(int a, int b) {
+    public static int subtract(int a, int b) {
         return a - b;
     }
 
-    public static int multiplyIntegers(int a, int b) {
+    public static int multiply(int a, int b) {
         return a * b;
     }
 
-    public static int divideIntegers(int a, int b) {
+    public static int divide(int a, int b) {
         return a / b;
     }
 
     // STRINGS TO INTEGERS
-    @NotNull
-    public static String sumStrings(String a, String b) {  // REFACTOR: NumberFormatExcpt, null, letters, sum/input min/max exceeded
+
+    public static String add(String a, String b) {  // REFACTOR: NumberFormatExcpt, null, letters, sum/input min/max exceeded
        /* if (a == null || b == null) {
             throw new NumberFormatException("String(s) are empty");
         }*/
@@ -31,34 +29,31 @@ public class Calculator {
         try {
             x = Integer.parseInt(java.lang.String.valueOf(a));
             y = Integer.parseInt(java.lang.String.valueOf(b));
-        } catch (NumberFormatException e ){
+        } catch (NumberFormatException e) {
             throw new IllegalArgumentException("Input data can not be parsed to integer");
         }
-        int sumStrings = x + y;
+        int sumStrings = add(x, y);
         return Integer.toString(sumStrings);
     }
 
-    @NotNull
-    public static String subtractStrings(String a, String b) {
+    public static String subtract(String a, String b) {
         int x = Integer.parseInt(java.lang.String.valueOf(a));
         int y = Integer.parseInt(java.lang.String.valueOf(b));
-        int subtractionStrings = x - y;
+        int subtractionStrings = subtract(x, y);
         return Integer.toString(subtractionStrings);
     }
 
-    @NotNull
-    public static String multiplyStrings(String a, String b) {
+    public static String multiply(String a, String b) {
         int x = Integer.parseInt(java.lang.String.valueOf(a));
         int y = Integer.parseInt(java.lang.String.valueOf(b));
-        int multiplicationStrings = x * y;
+        int multiplicationStrings = multiply(x, y);
         return Integer.toString(multiplicationStrings);
     }
 
-    @NotNull
-    public static String divideStrings(String a, String b) {
+    public static String divide(String a, String b) {
         int x = Integer.parseInt(java.lang.String.valueOf(a));
         int y = Integer.parseInt(java.lang.String.valueOf(b));
-        int divisionStrings = x / y;
+        int divisionStrings = divide(x, y);
         return Integer.toString(divisionStrings);
     }
 }
