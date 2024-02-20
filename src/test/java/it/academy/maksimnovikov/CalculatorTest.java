@@ -771,15 +771,29 @@ public class CalculatorTest {
             String expected = "0.000";
             Assertions.assertEquals(expected, Calculator.divide("0.0", "-0.2"));
         }
+
         @Test
         public void testDecimalStringIncorrectNumber() {
             String expected = "Enter the correct number";
             Assertions.assertEquals(expected, Calculator.divide("FF1234", "12"));
         }
+
         @Test
         public void testDecimalStringEmptyString() {
             String expected = "Enter the correct number";
             Assertions.assertEquals(expected, Calculator.divide("", ""));
+        }
+
+        @Test
+        public void testDecimalDivideByZero() {
+            String expected = "Divide by zero is impossible";
+            Assertions.assertEquals(expected, Calculator.divide("1.2", "0.0"));
+        }
+
+        @Test
+        public void testIntegerDivideByZero() {
+            String expected = "Divide by zero is impossible";
+            Assertions.assertEquals(expected, Calculator.divide("100", "0"));
         }
     }
 }
