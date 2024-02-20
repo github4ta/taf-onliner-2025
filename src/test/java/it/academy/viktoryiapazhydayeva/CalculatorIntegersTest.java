@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class CalculatorTest {
+public class CalculatorIntegersTest {
 
     // INTEGERS SUM
     @Test
@@ -59,5 +59,11 @@ public class CalculatorTest {
     @DisplayName("Integers-sum: Min allowed value of integer sum is out of range")  // REFACTOR: ADD MESSAGE EXCEPTION ?!
     public void testMinSumExceededIntegers() {
         Assertions.assertEquals(-2147483648, Calculator.sumIntegers(-2147483648, -1));
+    }
+
+    // INTEGERS SUBTRACT
+    @Test
+    public void testSubtractionPositiveIntegers(){
+        Assertions.assertEquals(-96, Calculator.subtractIntegers(20,116));
     }
 }
