@@ -3,38 +3,36 @@ package it.academy.olyaabramovich;
 import java.math.BigDecimal;
 
 public class Calculator {
+    public static final int INT_MAX_VALUE = 2147483647;
+    public static final int INT_MIN_VALUE = -2147483648;
 
-    public static Integer calculateSum(int a, int b) {
-        Long l = (long) a + b;
-        int sum = 0;
-        if (l > 2147483647) {
+    static Integer checkIfValueWithinBounds(long valueToCheck) {
+        if (valueToCheck > INT_MAX_VALUE) {
             return null;
-        } else if (l < -2147483648) {
+        } else if (valueToCheck < INT_MIN_VALUE) {
             return null;
         } else {
-            sum = a + b;
+            return (int) valueToCheck;
         }
-        return sum;
+    }
+
+    public static Integer calculateSum(int a, int b) {
+        long l = (long) a + (long) b;
+        return checkIfValueWithinBounds(l);
     }
 
     public static double calculateSum(double a, double b) {
-        BigDecimal num1 = BigDecimal.valueOf(a);
-        BigDecimal num2 = BigDecimal.valueOf(b);
-        BigDecimal sum = num1.add(num2);
+        BigDecimal sum = BigDecimal.valueOf(a).add(BigDecimal.valueOf(b));
         return sum.doubleValue();
     }
 
     public static double calculateSum(int a, double b) {
-        BigDecimal num1 = BigDecimal.valueOf(a);
-        BigDecimal num2 = BigDecimal.valueOf(b);
-        BigDecimal sum = num1.add(num2);
+        BigDecimal sum = BigDecimal.valueOf(a).add(BigDecimal.valueOf(b));
         return sum.doubleValue();
     }
 
     public static double calculateSum(double a, int b) {
-        BigDecimal num1 = BigDecimal.valueOf(a);
-        BigDecimal num2 = BigDecimal.valueOf(b);
-        BigDecimal sum = num1.add(num2);
+        BigDecimal sum = BigDecimal.valueOf(a).add(BigDecimal.valueOf(b));
         return sum.doubleValue();
     }
 
@@ -43,50 +41,28 @@ public class Calculator {
     }
 
     public static Integer calculateSubtraction(int a, int b) {
-        Long l = (long) a - b;
-        int result;
-        if (l > 2147483647) {
-            return null;
-        } else if (l < -2147483648) {
-            return null;
-        } else {
-            result = a - b;
-        }
-        return result;
+        long l = (long) a - (long) b;
+        return checkIfValueWithinBounds(l);
     }
 
     public static double calculateSubtraction(double a, double b) {
-        BigDecimal num1 = BigDecimal.valueOf(a);
-        BigDecimal num2 = BigDecimal.valueOf(b);
-        BigDecimal result = num1.subtract(num2);
+        BigDecimal result = BigDecimal.valueOf(a).subtract(BigDecimal.valueOf(b));
         return result.doubleValue();
     }
 
     public static double calculateSubtraction(int a, double b) {
-        BigDecimal num1 = BigDecimal.valueOf(a);
-        BigDecimal num2 = BigDecimal.valueOf(b);
-        BigDecimal result = num1.subtract(num2);
+        BigDecimal result = BigDecimal.valueOf(a).subtract(BigDecimal.valueOf(b));
         return result.doubleValue();
     }
 
     public static double calculateSubtraction(double a, int b) {
-        BigDecimal num1 = BigDecimal.valueOf(a);
-        BigDecimal num2 = BigDecimal.valueOf(b);
-        BigDecimal result = num1.subtract(num2);
+        BigDecimal result = BigDecimal.valueOf(a).subtract(BigDecimal.valueOf(b));
         return result.doubleValue();
     }
 
     public static Integer calculateMultiplication(int a, int b) {
-        Long l = (long) a * b;
-        int result;
-        if (l > 2147483647) {
-            return null;
-        } else if (l < -2147483648) {
-            return null;
-        } else {
-            result = a * b;
-        }
-        return result;
+        long l = (long) a * (long) b;
+        return checkIfValueWithinBounds(l);
     }
 
     public static double calculateMultiplication(double a, double b) {
@@ -101,12 +77,16 @@ public class Calculator {
         return a * b;
     }
 
-
-    public static int calculateDivision(int a, int b) {
-        return a / b;
+    public static Integer calculateDivision(int a, int b) {
+        if (b == 0) {
+            return null;
+        } else {
+            long l = (long) a / (long) b;
+            return checkIfValueWithinBounds(l);
+        }
     }
 
-    public static double calculateDivision(double a, double b) {
+    public static Double calculateDivision(double a, double b) {
         return a / b;
     }
 
