@@ -1,9 +1,6 @@
 package it.academy.nataliakhodasevich;
 
-import java.sql.SQLOutput;
-
 public class Calculator {
-    //int (int, int)
     public static int sum(int a, int b) {
         return a + b;
     }
@@ -23,7 +20,6 @@ public class Calculator {
         return a / b;
     }
 
-    //   double (int, double)
     public static double sum(int a, double b) {
         return a + b;
     }
@@ -43,7 +39,6 @@ public class Calculator {
         return a / b;
     }
 
-    //  double (double, double)
     public static double sum(double a, double b) {
         return a + b;
     }
@@ -63,7 +58,6 @@ public class Calculator {
         return a / b;
     }
 
-    //double (double, int)
     public static double sum(double a, int b) {
         return a + b;
     }
@@ -83,9 +77,8 @@ public class Calculator {
         return a / b;
     }
 
-    //String (String, String)
     public static String sumString(String a, String b) {
-       double result = Integer.parseInt(a) + Double.parseDouble(b);
+        double result = Integer.parseInt(a) + Double.parseDouble(b);
         return Double.toString(result);
     }
 
@@ -100,7 +93,7 @@ public class Calculator {
         if (strB == 0) {
             throw new IllegalArgumentException("Деление на ноль невозможно!");
         }
-       double result = strA / strB;
+        double result = strA / strB;
         return Double.toString(result);
     }
 

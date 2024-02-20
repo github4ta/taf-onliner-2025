@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
-    //test int(int,int)
+
     @Test
     public void testSumIntPositiveNegative() {
         Assertions.assertEquals(0, Calculator.sum(-1, 1));
@@ -108,7 +108,6 @@ public class CalculatorTest {
         assertThrows(IllegalArgumentException.class, () -> Calculator.divide(-1, 0));
     }
 
-    //double(double,double)
     @Test
     public void testSumDoublePositiveNegative() {
         Assertions.assertEquals(0.0, Calculator.sum(-1.0, 1.0));
@@ -159,7 +158,6 @@ public class CalculatorTest {
         Assertions.assertEquals(-1.1, Calculator.subtract(-1.1, 0));
     }
 
-
     @Test
     public void testMultiplyDoublePositiveNegative() {
         Assertions.assertEquals(-1.2100000000000002, Calculator.multiply(-1.1, 1.1));
@@ -184,11 +182,6 @@ public class CalculatorTest {
     public void testMultiplyDoubleNegativeZero() {
         Assertions.assertEquals(-0.0, Calculator.multiply(-1.1, 0));
     }
-    /*В Java, -0.0 и 0.0 считаются равными числами,
-    поскольку они имеют одно и то же абсолютное значение и знак,
-    но double является знаковым типом данных,
-     и может хранить информацию о знаке числа. В этом контексте -0.0 представляет отрицательный ноль,
-      который также считается допустимым значением.*/
 
     @Test
     public void testDivideDoublePositiveNegative() {
@@ -215,7 +208,6 @@ public class CalculatorTest {
         assertThrows(IllegalArgumentException.class, () -> Calculator.divide(-1.9, 0));
     }
 
-    //string tests(int,double)
     @Test
     public void testSumString() {
         Assertions.assertEquals("22.0", Calculator.sumString("10", "12.0"));
@@ -320,5 +312,4 @@ public class CalculatorTest {
     public void testDivideStringNegativeZero() {
         assertThrows(IllegalArgumentException.class, () -> Calculator.divideString("-1", "0"));
     }
-
 }
