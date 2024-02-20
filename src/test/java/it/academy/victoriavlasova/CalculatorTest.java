@@ -144,7 +144,7 @@ public class CalculatorTest {
     @Test
     @DisplayName("division with String #2")
     public void testCalculatorDivision6(){
-        Assertions.assertEquals("?an not be divided by zero!",calculator.division("4","0"));
+        Assertions.assertEquals("Can not be divided by zero!",calculator.division("4","0"));
     }
     @Test
     @DisplayName("division with String #3")

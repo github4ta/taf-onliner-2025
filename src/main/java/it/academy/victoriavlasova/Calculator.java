@@ -102,7 +102,7 @@ public class Calculator {
             if (str2 != 0) {
                 return Integer.toString(str1 / str2);
             } else {
-                return "?an not be divided by zero!";
+                return "Can not be divided by zero!";
             }
         } catch (NumberFormatException e) {
             return "Wrong format!";
