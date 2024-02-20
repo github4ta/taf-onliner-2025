@@ -95,7 +95,12 @@ public class Calculator {
     }
 
     public static String divideString(String a, String b) {
-        int result = Integer.parseInt(a) / Integer.parseInt(b);
+        int strA = Integer.parseInt(a);
+        int strB = Integer.parseInt(b);
+        if (strB == 0) {
+            throw new IllegalArgumentException("Деление на ноль невозможно!");
+        }
+        int result = strA / strB;
         return Integer.toString(result);
     }
 
