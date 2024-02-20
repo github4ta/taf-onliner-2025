@@ -1,12 +1,9 @@
 package it.academy.maksimnovikov;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
-    @Nested
-    class TestCalculatorSum {
         @Test
         public void testCalculatorSumTwoIntPositiveNumbers() {
             int expected = 6;
@@ -198,10 +195,7 @@ public class CalculatorTest {
             String expected = "Enter the correct number";
             Assertions.assertEquals(expected, Calculator.sum("", ""));
         }
-    }
 
-    @Nested
-    class TestCalculatorSubtract {
         @Test
         public void testCalculatorSubtractTwoIntPositiveNumbers() {
             int expected = 6;
@@ -393,10 +387,7 @@ public class CalculatorTest {
             String expected = "Enter the correct number";
             Assertions.assertEquals(expected, Calculator.subtract("", ""));
         }
-    }
 
-    @Nested
-    class TestCalculatorMultiply {
         @Test
         public void testCalculatorMultiplyTwoIntPositiveNumbers() {
             int expected = 36;
@@ -588,10 +579,7 @@ public class CalculatorTest {
             String expected = "Enter the correct number";
             Assertions.assertEquals(expected, Calculator.multiply("", ""));
         }
-    }
 
-    @Nested
-    class TestCalculatorDivide {
         @Test
         public void testCalculatorDivideTwoIntPositiveNumbers() {
             int expected = 6;
@@ -795,5 +783,4 @@ public class CalculatorTest {
             String expected = "Divide by zero is impossible";
             Assertions.assertEquals(expected, Calculator.divide("100", "0"));
         }
-    }
 }
