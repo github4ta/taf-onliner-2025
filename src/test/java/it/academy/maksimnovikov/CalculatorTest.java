@@ -589,8 +589,37 @@ public class CalculatorTest {
             Assertions.assertEquals(expected, Calculator.multiply("", ""));
         }
     }
-    @Nested
-    class TestCalculatorDivide{
 
+    @Nested
+    class TestCalculatorDivide {
+        @Test
+        public void testCalculatorDivideTwoIntPositiveNumbers() {
+            int expected = 6;
+            Assertions.assertEquals(expected, Calculator.divide(36, 6));
+        }
+
+        @Test
+        public void testCalculatorDivideTwoIntNegativeNumbers() {
+            int expected = 2;
+            Assertions.assertEquals(expected, Calculator.divide(-10, -5));
+        }
+
+        @Test
+        public void testCalculatorDivideTwoIntPositiveAndNegativeNumbers() {
+            int expected = -2;
+            Assertions.assertEquals(expected, Calculator.divide(8, -4));
+        }
+
+        @Test
+        public void testCalculatorDivideTwoIntPositiveNumberAndZero() {
+            int expected = 0;
+            Assertions.assertEquals(expected, Calculator.divide(0, 2));
+        }
+
+        @Test
+        public void testCalculatorDivideTwoIntNegativeNumberAndZero() {
+            int expected = 0;
+            Assertions.assertEquals(expected, Calculator.divide(0, -2));
+        }
     }
 }
