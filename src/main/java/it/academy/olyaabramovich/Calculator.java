@@ -44,7 +44,7 @@ public class Calculator {
 
     public static Integer calculateSubtraction(int a, int b) {
         Long l = (long) a - b;
-        int result = 0;
+        int result;
         if (l > 2147483647) {
             return null;
         } else if (l < -2147483648) {
@@ -76,8 +76,17 @@ public class Calculator {
         return result.doubleValue();
     }
 
-    public static int calculateMultiplication(int a, int b) {
-        return a * b;
+    public static Integer calculateMultiplication(int a, int b) {
+        Long l = (long) a * b;
+        int result;
+        if (l > 2147483647) {
+            return null;
+        } else if (l < -2147483648) {
+            return null;
+        } else {
+            result = a * b;
+        }
+        return result;
     }
 
     public static double calculateMultiplication(double a, double b) {
