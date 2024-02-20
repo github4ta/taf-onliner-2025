@@ -45,23 +45,23 @@ public class CalculatorTest {
     }
 
     @Test
-    public void testIntDoubleAddMaxMin() {
-        Assertions.assertEquals(-1, calc.add(, ));
+    public void testIntMaxDoubleMinAdd() {
+        Assertions.assertEquals(-1.7E308, calc.add(2147483647,-1.7e+308 ));
     }
 
     @Test
     public void testIntDoubleAddMax() {
-        Assertions.assertEquals(-2, calc.add(, ));
+        Assertions.assertEquals(1.7E308, calc.add(2147483647,1.7e+308 ));
     }
 
     @Test
     public void testIntDoubleAddMin() {
-        Assertions.assertEquals(0, calc.add(-, -2));
+        Assertions.assertEquals(-1.7E308, calc.add(-2147483648,-1.7e+308 ));
     }
 
     @Test
-    public void testIntAddMaxMin2() {
-        Assertions.assertEquals(-1, calc.add(-2147483648, 2147483647));
+    public void testIntDoubleAddMaxMin() {
+        Assertions.assertEquals(-1.7E308, calc.add(2147483647, -1.7e+308));
     }
 
 
