@@ -1,7 +1,11 @@
 package it.academy.viktoryiapazhydayeva;
 
 public class Calculator {
-    // INTEGERS
+
+    /**
+     * int (int, int)
+     */
+
     public static int add(int a, int b) {
         return a + b;
     }
@@ -18,9 +22,11 @@ public class Calculator {
         return a / b;
     }
 
-    // STRINGS TO INTEGERS
+    /**
+     * String (String, String)
+     */
 
-    public static String add(String a, String b) {  // REFACTOR: NumberFormatExcpt, null, letters, sum/input min/max exceeded
+    public static String add(String a, String b) {
         int x;
         int y;
         try {
@@ -52,5 +58,62 @@ public class Calculator {
         int y = Integer.parseInt(java.lang.String.valueOf(b));
         int divisionStrings = divide(x, y);
         return Integer.toString(divisionStrings);
+    }
+
+    /**
+     * double (double, double)
+     */
+    public static double add(double a, double b) {
+        return a + b;
+    }
+
+    public static double subtract(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+
+    public static double divide(double a, double b) {
+        return a / b;
+    }
+
+    /**
+     * double (int, double)
+     */
+    public static double add(int a, double b) {
+        return a + b;
+    }
+
+    public static double subtract(int a, double b) {
+        return a - b;
+    }
+
+    public static double multiply(int a, double b) {
+        return a * b;
+    }
+
+    public static double divide(int a, double b) {
+        return a / b;
+    }
+
+    /**
+     * double (double, int)
+     */
+    public static double add(double a, int b) {
+        return a + b;
+    }
+
+    public static double subtract(double a, int b) {
+        return a - b;
+    }
+
+    public static double multiply(double a, int b) {
+        return a * b;
+    }
+
+    public static double divide(double a, int b) {
+        return a / b;
     }
 }
