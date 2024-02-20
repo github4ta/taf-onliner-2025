@@ -382,5 +382,16 @@ public class CalculatorTest {
             Assertions.assertEquals(expected, Calculator.subtract("0.0", "-5.5"));
         }
 
+        @Test
+        public void testSubtractStringIncorrectNumber() {
+            String expected = "Enter the correct number";
+            Assertions.assertEquals(expected, Calculator.subtract("FF1234", "12"));
+        }
+
+        @Test
+        public void testSubtractStringEmptyString() {
+            String expected = "Enter the correct number";
+            Assertions.assertEquals(expected, Calculator.subtract("", ""));
+        }
     }
 }
