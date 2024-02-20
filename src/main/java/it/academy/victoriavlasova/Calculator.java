@@ -80,22 +80,18 @@ public class Calculator {
     }
 
     public int division(int a, int b) {
-        if (b != 0) ;
         return a / b;
     }
 
     public double division(double a, double b) {
-        if (b != 0.0) ;
         return a / b;
     }
 
     public double division(int a, double b) {
-        if (b != 0.0) ;
         return ((double) a) / b;
     }
 
     public double division(double a, int b) {
-        if (b != 0) ;
         return a / ((double) b);
     }
 
@@ -105,10 +101,11 @@ public class Calculator {
             Integer str2 = Integer.valueOf(b);
             if (str2 != 0) {
                 return Integer.toString(str1 / str2);
+            } else {
+                return "?????? ?????? ?? 0!";
             }
-            else {return "?????? ?????? ?? 0!";}
         } catch (NumberFormatException e) {
-                return "???????????? ?????? ??????!";
+            return "???????????? ?????? ??????!";
         }
     }
 }
