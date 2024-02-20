@@ -7,7 +7,7 @@ public class Calculator {
         return a + b;
     }
 
-    public int substract(int a, int b) {
+    public int subtract(int a, int b) {
         return a - b;
     }
 
@@ -23,7 +23,7 @@ public class Calculator {
         return a + b;
     }
 
-    public double substract(double a, double b) {
+    public double subtract(double a, double b) {
         return a - b;
     }
 
@@ -39,7 +39,7 @@ public class Calculator {
         return a + b;
     }
 
-    public double substract(int a, double b) {
+    public double subtract(int a, double b) {
         return a - b;
     }
 
@@ -55,7 +55,7 @@ public class Calculator {
         return a + b;
     }
 
-    public double substract(double a, int b) {
+    public double subtract(double a, int b) {
         return a - b;
     }
 
@@ -71,7 +71,7 @@ public class Calculator {
         return a + b;
     }
 
-    public String substract(String a, String b) {
+    public String subtract(String a, String b) {
         if (a == null || b == null) {
             return "a or b is null!";
         }
@@ -79,11 +79,11 @@ public class Calculator {
     }
 
     public String multiple(String a, String b) {
-        return a;
+        return a + b;
     }
 
     public String divide(String a, String b) {
-        return a;
+        return a + b;
     }
 }
 

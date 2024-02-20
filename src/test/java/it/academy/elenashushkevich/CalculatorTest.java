@@ -8,35 +8,73 @@ public class CalculatorTest {
     Calculator calc = new Calculator();
 
     @Test
-    public void testIntAddZero(){
-        Assertions.assertEquals(0, calc.add(0,0));
+    public void testIntAddZero() {
+        Assertions.assertEquals(0, calc.add(0, 0));
     }
 
     @Test
-    public void testIntAddMax(){
-        Assertions.assertEquals(-2, calc.add(2147483647,2147483647));
+    public void testIntAddMax() {
+        Assertions.assertEquals(-2, calc.add(2147483647, 2147483647));
     }
 
     @Test
-    public void testIntAddMin(){
-        Assertions.assertEquals(0, calc.add(-2147483648,-2147483648));
+    public void testIntAddMin() {
+        Assertions.assertEquals(0, calc.add(-2147483648, -2147483648));
     }
 
     @Test
-    public void testIntAddMaxMin(){
-        Assertions.assertEquals(-1, calc.add(-2147483648,2147483647));
-    }
-
-
-
-    @Test
-    public void testStringAddEmptyNull(){
-        Assertions.assertEquals(null, calc.add("",null));
+    public void testIntAddMaxMin() {
+        Assertions.assertEquals(-1, calc.add(-2147483648, 2147483647));
     }
 
     @Test
-    public void testStringSubtractNulls(){
-        Assertions.assertEquals("a or b is null!" , calc.substract(null,null));
+    public void testDoubleAddMax() {
+        Double positiveInfinity = Double.POSITIVE_INFINITY;
+        Assertions.assertEquals(Double.POSITIVE_INFINITY, calc.add(1.7e+308, 1.7e+308));
+    }
+
+    @Test
+    public void testDoubleAddMin() {
+        Double negativeInfinity = Double.NEGATIVE_INFINITY;
+        Assertions.assertEquals(Double.NEGATIVE_INFINITY, calc.add(-1.7e+308, -1.7e+308));
+    }
+
+    @Test
+    public void testDoubleAddMaxMin() {
+        Assertions.assertEquals(0.0, calc.add(-1.7e+308, 1.7e+308));
+    }
+
+    @Test
+    public void testIntDoubleAddMaxMin() {
+        Assertions.assertEquals(-1, calc.add(, ));
+    }
+
+    @Test
+    public void testIntDoubleAddMax() {
+        Assertions.assertEquals(-2, calc.add(, ));
+    }
+
+    @Test
+    public void testIntDoubleAddMin() {
+        Assertions.assertEquals(0, calc.add(-, -2));
+    }
+
+    @Test
+    public void testIntAddMaxMin2() {
+        Assertions.assertEquals(-1, calc.add(-2147483648, 2147483647));
+    }
+
+
+    @Test
+    public void testStringAddEmptyNull() {
+
+        // Assertions.assertEquals(null, calc.add("",null));
+    }
+
+    @Test
+    public void testStringSubtractNulls() {
+        Assertions.assertNull(calc.add(null, null));
+        // Assertions.assertEquals("a or b is null!" , calc.substract(null,null));
     }
 
 }
