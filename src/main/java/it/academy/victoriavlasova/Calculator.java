@@ -1,88 +1,114 @@
 package it.academy.victoriavlasova;
 
 public class Calculator {
-    public int sum(int a, int b){
-        return a+b;
+    public int sum(int a, int b) {
+        return a + b;
     }
-    public double sum(double a, double b){
-        return a+b;
+
+    public double sum(double a, double b) {
+        return a + b;
     }
-    public double sum(int a, double b){
-        return ((double)a)+b;
+
+    public double sum(int a, double b) {
+        return ((double) a) + b;
     }
-    public double sum(double a, int b){
-        return a+((double)b);
+
+    public double sum(double a, int b) {
+        return a + ((double) b);
     }
-    public String sum(String a, String b){
+
+    public String sum(String a, String b) {
         try {
-            Integer str1= Integer.valueOf(a);
-            Integer str2= Integer.valueOf(b);
-            return Integer.toString(str1+str2);
-        }catch (NumberFormatException e) {
+            Integer str1 = Integer.valueOf(a);
+            Integer str2 = Integer.valueOf(b);
+            return Integer.toString(str1 + str2);
+        } catch (NumberFormatException e) {
             return "???????????? ?????? ??????!";
         }
     }
-    public int subtraction(int a, int b){
-        return a-b;
+
+    public int subtraction(int a, int b) {
+        return a - b;
     }
-    public double subtraction(double a, double b){
-        return a-b;
+
+    public double subtraction(double a, double b) {
+        return a - b;
     }
-    public double subtraction(int a, double b){
-        return ((double)a)-b;
+
+    public double subtraction(int a, double b) {
+        return ((double) a) - b;
     }
-    public double subtraction(double a, int b){
-        return a-((double)b);
+
+    public double subtraction(double a, int b) {
+        return a - ((double) b);
     }
-    public String subtraction(String a, String b){
+
+    public String subtraction(String a, String b) {
         try {
-            Integer str1= Integer.valueOf(a);
-            Integer str2= Integer.valueOf(b);
-            return Integer.toString(str1-str2);
-        }catch (NumberFormatException e) {
+            Integer str1 = Integer.valueOf(a);
+            Integer str2 = Integer.valueOf(b);
+            return Integer.toString(str1 - str2);
+        } catch (NumberFormatException e) {
             return "???????????? ?????? ??????!";
         }
     }
-    public int multiplication(int a, int b){
-        return a*b;
+
+    public int multiplication(int a, int b) {
+        return a * b;
     }
-    public double multiplication(double a, double b){
-        return a*b;
+
+    public double multiplication(double a, double b) {
+        return a * b;
     }
-    public double multiplication(int a, double b){
-        return ((double)a)*b;
+
+    public double multiplication(int a, double b) {
+        return ((double) a) * b;
     }
-    public double multiplication(double a, int b){
-        return a*((double)b);
+
+    public double multiplication(double a, int b) {
+        return a * ((double) b);
     }
-    public String multiplication(String a, String b){
+
+    public String multiplication(String a, String b) {
         try {
-            Integer str1= Integer.valueOf(a);
-            Integer str2= Integer.valueOf(b);
-            return Integer.toString(str1*str2);
-        }catch (NumberFormatException e) {
+            Integer str1 = Integer.valueOf(a);
+            Integer str2 = Integer.valueOf(b);
+            return Integer.toString(str1 * str2);
+        } catch (NumberFormatException e) {
             return "???????????? ?????? ??????!";
         }
     }
-    public int division(int a, int b){
-        return a/b;
+
+    public int division(int a, int b) {
+        if (b != 0) ;
+        return a / b;
     }
-    public double division(double a, double b){
-        return a/b;
+
+    public double division(double a, double b) {
+        if (b != 0.0) ;
+        return a / b;
     }
-    public double division(int a, double b){
-        return ((double)a)/b;
+
+    public double division(int a, double b) {
+        if (b != 0.0) ;
+        return ((double) a) / b;
     }
-    public double division(double a, int b){
-        return a/((double)b);
+
+    public double division(double a, int b) {
+        if (b != 0) ;
+        return a / ((double) b);
     }
-    public String division(String a, String b){
+
+    public String division(String a, String b) {
         try {
-            Integer str1= Integer.valueOf(a);
-            Integer str2= Integer.valueOf(b);
-            return Integer.toString(str1/str2);
-        }catch (NumberFormatException e) {
-            return "???????????? ?????? ??????!";
+            Integer str1 = Integer.valueOf(a);
+            Integer str2 = Integer.valueOf(b);
+            if (str2 != 0) {
+                return Integer.toString(str1 / str2);
+            }
+            else {return "?????? ?????? ?? 0!";}
+        } catch (NumberFormatException e) {
+                return "???????????? ?????? ??????!";
         }
     }
 }
