@@ -31,17 +31,17 @@ public class CalculatorTest {
 
     @Test
     public void testSubtractIntPositiveNegative(){
-        Assertions.assertEquals(0,Calculator.subtract(-1,1));
+        Assertions.assertEquals(-2,Calculator.subtract(-1,1));
     }
 
     @Test
     public void testSubtractIntNegativeNegative(){
-        Assertions.assertEquals(-2,Calculator.subtract(-1,-1));
+        Assertions.assertEquals(0,Calculator.subtract(-1,-1));
     }
 
     @Test
     public void testSubtractIntPositivePositive(){
-        Assertions.assertEquals(2,Calculator.subtract(1,1));
+        Assertions.assertEquals(0,Calculator.subtract(1,1));
     }
 
     @Test
@@ -57,42 +57,42 @@ public class CalculatorTest {
 
     @Test
     public void testMultiplyIntPositiveNegative(){
-        Assertions.assertEquals(0,Calculator.multiply(-1,1));
+        Assertions.assertEquals(-1,Calculator.multiply(-1,1));
     }
 
     @Test
     public void testMultiplyIntNegativeNegative(){
-        Assertions.assertEquals(-2,Calculator.multiply(-1,-1));
+        Assertions.assertEquals(1,Calculator.multiply(-1,-1));
     }
 
     @Test
     public void testMultiplyIntPositivePositive(){
-        Assertions.assertEquals(2,Calculator.multiply(1,1));
+        Assertions.assertEquals(1,Calculator.multiply(1,1));
     }
 
     @Test
     public void testMultiplyIntPositiveZero(){
-        Assertions.assertEquals(1,Calculator.multiply(1,0));
+        Assertions.assertEquals(0,Calculator.multiply(1,0));
     }
 
     @Test
     public void testMultiplyIntNegativeZero(){
-        Assertions.assertEquals(-1,Calculator.multiply(-1,0));
+        Assertions.assertEquals(0,Calculator.multiply(-1,0));
     }
 
     @Test
     public void testDivideIntPositiveNegative(){
-        Assertions.assertEquals(0,Calculator.divide(-1,1));
+        Assertions.assertEquals(-1,Calculator.divide(-1,1));
     }
 
     @Test
     public void testDivideIntNegativeNegative(){
-        Assertions.assertEquals(-2,Calculator.divide(-1,-1));
+        Assertions.assertEquals(1,Calculator.divide(-1,-1));
     }
 
     @Test
     public void testDivideIntPositivePositive(){
-        Assertions.assertEquals(2,Calculator.divide(1,1));
+        Assertions.assertEquals(1,Calculator.divide(1,1));
     }
 
     @Test
