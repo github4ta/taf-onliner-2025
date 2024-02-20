@@ -163,12 +163,16 @@ public class CalculatorTest {
 
     @Test
     public void testDoubleIntSubtractPositiveNegative() {
-        Assertions.assertEquals(3.4899999999999998, calc.subtract(0.23, -3.26));
+        Assertions.assertEquals(3.4899999999999998, calc.subtract(0.23, -3));
     }
 
     @Test
-    public void testDoubleIntSubtractNegativePositive() {
-        Assertions.assertEquals(-10.0, calc.subtract(-9.65, 0.35));
+    public void testDoubleIntSubtractNegative() {
+        Assertions.assertEquals(0.34999999999999964, calc.subtract(-9.65, -10));
+    }
+    @Test
+    public void testDoubleIntSubtractPositive() {
+        Assertions.assertEquals(5.65, calc.subtract(9.65, 4));
     }
 
     @Test
