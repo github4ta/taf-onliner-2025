@@ -1,178 +1,173 @@
 package it.academy.olyaabramovich;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
 
-    // сложение 2 чисел типа int
     @Test
+    @DisplayName("Сумма (int + int): 2 положительных чисел")
     public void testSumWithIntNumbers() {
-        int sum = Calculator.calculateSum(1, 100);
-        Assertions.assertEquals(101, sum);
+        Assertions.assertEquals(101, Calculator.calculateSum(1, 100));
     }
 
     @Test
+    @DisplayName("Сумма (int + int): 2 отрицательных числа")
     public void testSumWithIntNegativeNumber() {
-        int sum = Calculator.calculateSum(-1, -10000);
-        Assertions.assertEquals(-10001, sum);
+        Assertions.assertEquals(-10001, Calculator.calculateSum(-1, -10000));
     }
 
     @Test
+    @DisplayName("Сумма (int + int): целочисленное значение и 0")
     public void testSumWithIntZero() {
-        int sum = Calculator.calculateSum(0, 2147483647);
-        Assertions.assertEquals(2147483647, sum);
+        Assertions.assertEquals(2147483647, Calculator.calculateSum(0, 2147483647));
     }
 
     @Test
+    @DisplayName("Сумма (int + int): результат превышает положительное значение для типа int")
     public void testSumWithIntOutOfPositiveBounds() {
-        int sum = Calculator.calculateSum(1, 2147483647);
-        Assertions.assertEquals(0, sum);
+        Assertions.assertNull(Calculator.calculateSum(1, 2147483647));
     }
 
     @Test
+    @DisplayName("Сумма (int + int): результат меньше отрицательного значения для типа int")
     public void testSumWithIntOutOfNegativeBounds() {
-        int sum = Calculator.calculateSum(-1, -2147483648);
-        Assertions.assertEquals(0, sum);
+        Assertions.assertNull(Calculator.calculateSum(-1, -2147483648));
     }
 
-
-    // сложение 2 чисел типа double
     @Test
+    @DisplayName("Сумма (double + double): 2 положительных числа")
     public void testSumWithDoubleNumbers() {
-        double sum = Calculator.calculateSum(1.1111, 10.1234);
-        Assertions.assertEquals(11.2345, sum);
+        Assertions.assertEquals(11.2345, Calculator.calculateSum(1.1111, 10.1234));
     }
 
     @Test
+    @DisplayName("Сумма (double + double): 2 положительных числа")
     public void testSumWithDoubleNegativeNumber() {
-        double sum = Calculator.calculateSum(10.5, -16.45);
-        Assertions.assertEquals(-5.95, sum);
+        Assertions.assertEquals(-5.95, Calculator.calculateSum(10.5, -16.45));
     }
 
     @Test
+    @DisplayName("Сумма (double + double): 2 отрицательных числа")
     public void testSumWithDoubleNegativeNumbers() {
-        double sum = Calculator.calculateSum(-1.0, -51.222);
-        Assertions.assertEquals(-52.222, sum);
+        Assertions.assertEquals(-52.222, Calculator.calculateSum(-1.0, -51.222));
     }
 
     @Test
+    @DisplayName("Сумма (double + double): число и 0")
     public void testSumWithDoubleZero() {
-        double sum = Calculator.calculateSum(0.001, 0.0);
-        Assertions.assertEquals(0.001, sum);
+        Assertions.assertEquals(0.001, Calculator.calculateSum(0.001, 0.0));
     }
 
-    // сложение чисел int + double
     @Test
+    @DisplayName("Сумма (int + double): 2 положительных числа")
     public void testSumWithIntDouble() {
-        double sum = Calculator.calculateSum(1, 5.234);
-        Assertions.assertEquals(6.234, sum);
+        Assertions.assertEquals(6.234, Calculator.calculateSum(1, 5.234));
     }
 
     @Test
+    @DisplayName("Сумма (int + double): положительное число и отрицательное число")
     public void testSumWithIntDoubleNegativeNumber() {
-        double sum = Calculator.calculateSum(-5, 2.2);
-        Assertions.assertEquals(-2.8, sum);
+        Assertions.assertEquals(-2.8, Calculator.calculateSum(-5, 2.2));
     }
 
     @Test
+    @DisplayName("Сумма (int + double): 2 отрицательных числа")
     public void testSumWithIntDoubleNegativeNumbers() {
-        double sum = Calculator.calculateSum(-5, -2);
-        Assertions.assertEquals(-7, sum);
+        Assertions.assertEquals(-7, Calculator.calculateSum(-5, -2.0));
     }
 
     @Test
+    @DisplayName("Сумма (int + double): число и 0")
     public void testSumWithIntDoubleZero() {
-        double sum = Calculator.calculateSum(1, 0.0);
-        Assertions.assertEquals(1, sum);
+        Assertions.assertEquals(1, Calculator.calculateSum(1, 0.0));
     }
 
     // сложение чисел double + int
     @Test
+    @DisplayName("Сумма (double + int): 2 положительных числа")
     public void testSumWithDoubleInt() {
-        double sum = Calculator.calculateSum(10.01, 1);
-        Assertions.assertEquals(11.01, sum);
+        Assertions.assertEquals(11.01, Calculator.calculateSum(10.01, 1));
     }
 
     @Test
+    @DisplayName("Сумма (double + int): 2 положительное число и отрицательное число")
     public void testSumWithDoubleIntNegativeNumber() {
-        double sum = Calculator.calculateSum(1.24, -4);
-        Assertions.assertEquals(-2.76, sum);
+        Assertions.assertEquals(-2.76, Calculator.calculateSum(1.24, -4));
     }
 
     @Test
+    @DisplayName("Сумма (double + int): 2 отрицательных числа")
     public void testSumWithDoubleIntNegativeNumbers() {
-        double sum = Calculator.calculateSum(-7.7, -20);
-        Assertions.assertEquals(-27.7, sum);
+        Assertions.assertEquals(-27.7, Calculator.calculateSum(-7.7, -20));
     }
 
     @Test
+    @DisplayName("Сумма (double + int): число и 0")
     public void testSumWithDoubleIntZero() {
-        double sum = Calculator.calculateSum(1.2, 0);
-        Assertions.assertEquals(1.2, sum);
+        Assertions.assertEquals(1.2, Calculator.calculateSum(1.2, 0));
     }
 
-    // разница 2 чисел int
     @Test
+    @DisplayName("Разница (int + int): 2 положительных чисел")
     public void testSubtractionWithIntNumbers() {
-        int diff = Calculator.calculateSubtraction(7, 20);
-        Assertions.assertEquals(-13, diff);
+        Assertions.assertEquals(-13, Calculator.calculateSubtraction(7, 20));
     }
 
     @Test
+    @DisplayName("Разница (int + int): положительное число и отрицательное число")
     public void testSubtractionWithIntNegativeNumber() {
-        int diff = Calculator.calculateSubtraction(1, -50);
-        Assertions.assertEquals(51, diff);
+        Assertions.assertEquals(51, Calculator.calculateSubtraction(1, -50));
     }
 
     @Test
+    @DisplayName("Разница (int + int): 2 отрицательных числа")
     public void testSubtractionWithIntNegativeNumbers() {
-        int diff = Calculator.calculateSubtraction(-15, -45);
-        Assertions.assertEquals(30, diff);
+        Assertions.assertEquals(30, Calculator.calculateSubtraction(-15, -45));
     }
 
     @Test
+    @DisplayName("Разница (int + int): число и 0")
     public void testSubtractionWithIntZero() {
-        int diff = Calculator.calculateSubtraction(100, 0);
-        Assertions.assertEquals(100, diff);
+        Assertions.assertEquals(100, Calculator.calculateSubtraction(100, 0));
     }
 
     @Test
+    @DisplayName("Разница (int + int): результат превышает положительное значение для типа int")
     public void testSubtractionWithIntOutOfPositiveBounds() {
-        int diff = Calculator.calculateSubtraction(2147483647, -1);
-        Assertions.assertEquals(0, diff);
+        Assertions.assertNull(Calculator.calculateSubtraction(2147483647, -1));
     }
 
     @Test
+    @DisplayName("Разница (int + int): результат меньше отрицательного значения для типа int")
     public void testSubtractionWithIntOutOfNegativeBounds() {
-        int diff = Calculator.calculateSubtraction(-2147483648, 1);
-        Assertions.assertEquals(0, diff);
+        Assertions.assertNull(Calculator.calculateSubtraction(-2147483648, 1));
     }
 
-    // разница 2 чисел типа double
+    ///////////////////////////////////////////////////////
     @Test
+    @DisplayName("Разница (double + double): 2 положительных числа")
     public void testSubtractionWithDoubleNumbers() {
-        double diff = Calculator.calculateSubtraction(1.54, 3.67);
-        Assertions.assertEquals(-2.13, diff);
+        Assertions.assertEquals(-2.13, Calculator.calculateSubtraction(1.54, 3.67));
     }
 
     @Test
+    @DisplayName("Разница (double + double): положительное число и отрицательное число")
     public void testSubtractionWithDoubleNegativeNumber() {
-        double diff = Calculator.calculateSubtraction(-8.1, 20.0);
-        Assertions.assertEquals(-28.1, diff);
+        Assertions.assertEquals(-28.1, Calculator.calculateSubtraction(-8.1, 20.0));
     }
 
     @Test
+    @DisplayName("Разница (double + double): 2 отрицательных числа")
     public void testSubtractionWithDoubleNegativeNumbers() {
-        double diff = Calculator.calculateSubtraction(-1.1234, -2.97);
-        Assertions.assertEquals(1.8466, diff);
+        Assertions.assertEquals(1.8466, Calculator.calculateSubtraction(-1.1234, -2.97));
     }
 
     @Test
+    @DisplayName("Разница (double + double): число и 0")
     public void testSubtractionWithDoubleZero() {
-        double diff = Calculator.calculateSubtraction(-8.8, 0.0);
-        Assertions.assertEquals(-8.8, diff);
+        Assertions.assertEquals(-8.8, Calculator.calculateSubtraction(-8.8, 0.0));
     }
-
 
 }
