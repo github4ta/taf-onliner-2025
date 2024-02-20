@@ -1,8 +1,6 @@
 package it.academy.nataliakhodasevich;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class CalculatorTest {
@@ -56,7 +54,6 @@ public class CalculatorTest {
     public void testSubtractIntNegativeZero() {
         Assertions.assertEquals(-1, Calculator.subtract(-1, 0));
     }
-
 
     @Test
     public void testMultiplyIntPositiveNegative() {
