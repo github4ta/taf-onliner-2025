@@ -80,4 +80,41 @@ public class Calculator {
             }
         } else return errorMessage;
     }
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public static double multiply(double a, double b) {
+        BigDecimal numA = new BigDecimal(a);
+        BigDecimal numB = new BigDecimal(b);
+        return (numA.multiply(numB)).doubleValue();
+    }
+
+    public static double multiply(int a, double b) {
+        BigDecimal numA = new BigDecimal(a);
+        BigDecimal numB = new BigDecimal(b);
+        return (numA.multiply(numB)).doubleValue();
+    }
+
+    public static double multiply(double a, int b) {
+        BigDecimal numA = new BigDecimal(a);
+        BigDecimal numB = new BigDecimal(b);
+        return (numA.multiply(numB)).doubleValue();
+    }
+
+    public static String multiply(String a, String b) {
+        String errorMessage = "Enter the correct number";
+        String regex = "[0-9.-]+";
+        if (a.matches(regex) && b.matches(regex)) {
+            if (a.indexOf(".") > 0 || b.indexOf(".") > 0) {
+                BigDecimal numA = new BigDecimal(a);
+                BigDecimal numB = new BigDecimal(b);
+                return (numA.multiply(numB)).toString();
+            } else {
+                BigInteger numC = new BigInteger(a);
+                BigInteger numD = new BigInteger(b);
+                return (numC.multiply(numD)).toString();
+            }
+        } else return errorMessage;
+    }
 }
