@@ -15,7 +15,11 @@ public class Calculator {
     }
 
     public static int divide(int a, int b) {
-        return a / b;
+        int result = 0;
+        if (b != 0) {
+            result = a / b;
+        }
+        return result;
     }
 
     public static double sum(int a, double b) {
@@ -31,7 +35,11 @@ public class Calculator {
     }
 
     public static double divide(int a, double b) {
-        return a / b;
+        double result = 0;
+        if (b != 0) {
+            result = a / b;
+        }
+        return result;
     }
 
     public static double sum(double a, double b) {
@@ -47,7 +55,11 @@ public class Calculator {
     }
 
     public static double divide(double a, double b) {
-        return a / b;
+        double result = 0;
+        if (b != 0) {
+            result = a / b;
+        }
+        return result;
     }
 
     public static double sum(double a, int b) {
@@ -63,6 +75,10 @@ public class Calculator {
     }
 
     public static double divide(double a, int b) {
-        return a / b;
+        double result = 0;
+        if (b != 0) {
+            result = a / b;
+        }
+        return result;
     }
 }
