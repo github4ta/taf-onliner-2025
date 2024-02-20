@@ -1,7 +1,9 @@
 package it.academy.nataliakhodasevich;
 
-public class Calculator {
+import java.sql.SQLOutput;
 
+public class Calculator {
+    //int (int, int)
     public static int sum(int a, int b) {
         return a + b;
     }
@@ -22,6 +24,7 @@ public class Calculator {
         return result;
     }
 
+    //   double (int, double)
     public static double sum(int a, double b) {
         return a + b;
     }
@@ -42,6 +45,7 @@ public class Calculator {
         return result;
     }
 
+    //  double (double, double)
     public static double sum(double a, double b) {
         return a + b;
     }
@@ -62,6 +66,7 @@ public class Calculator {
         return result;
     }
 
+    //double (double, int)
     public static double sum(double a, int b) {
         return a + b;
     }
@@ -80,5 +85,26 @@ public class Calculator {
             result = a / b;
         }
         return result;
+    }
+
+    //String (String, String)
+    public static String sumString(String a, String b) {
+        int result = Integer.parseInt(a) + Integer.parseInt(b);
+        return Integer.toString(result);
+    }
+
+    public static String subtractString(String a, String b) {
+        int result = Integer.parseInt(a) - Integer.parseInt(b);
+        return Integer.toString(result);
+    }
+
+    public static String divideString(String a, String b) {
+        int result = Integer.parseInt(a) / Integer.parseInt(b);
+        return Integer.toString(result);
+    }
+
+    public static String multiplyString(String a, String b) {
+        int result = Integer.parseInt(a) * Integer.parseInt(b);
+        return Integer.toString(result);
     }
 }
