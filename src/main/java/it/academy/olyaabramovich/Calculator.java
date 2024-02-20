@@ -1,10 +1,12 @@
 package it.academy.olyaabramovich;
 
+import java.math.BigDecimal;
+
 public class Calculator {
 
     public static int calculateSum(int a, int b) {
         Long l = (long) a + b;
-        int sum=0;
+        int sum = 0;
         if (l > 2147483647) {
             System.out.println("Сумма чисел превышает 2 147 483 647");
         } else if (l < -2147483648) {
@@ -16,7 +18,11 @@ public class Calculator {
     }
 
     public static double calculateSum(double a, double b) {
-        return a + b;
+        BigDecimal num1 = BigDecimal.valueOf( a);
+        BigDecimal num2 = BigDecimal.valueOf(b);
+        BigDecimal sum = num1.add(num2);
+        return sum.doubleValue();
+
     }
 
     public static double calculateSum(int a, double b) {
