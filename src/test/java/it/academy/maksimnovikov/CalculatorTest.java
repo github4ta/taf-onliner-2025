@@ -395,6 +395,35 @@ public class CalculatorTest {
         }
     }
     @Nested class TestCalculatorMultiply{
+        @Test
+        public void testCalculatorMultiplyTwoIntPositiveNumbers() {
+            int expected = 36;
+            Assertions.assertEquals(expected, Calculator.multiply(6, 6));
+        }
+
+        @Test
+        public void testCalculatorMultiplyTwoIntNegativeNumbers() {
+            int expected = 4;
+            Assertions.assertEquals(expected, Calculator.multiply(-2, -2));
+        }
+
+        @Test
+        public void testCalculatorMultiplyTwoIntPositiveAndNegativeNumbers() {
+            int expected = -8;
+            Assertions.assertEquals(expected, Calculator.multiply(2, -4));
+        }
+
+        @Test
+        public void testCalculatorMultiplyTwoIntPositiveNumberAndZero() {
+            int expected = 0;
+            Assertions.assertEquals(expected, Calculator.multiply(0, 2));
+        }
+
+        @Test
+        public void testCalculatorMultiplyTwoIntNegativeNumberAndZero() {
+            int expected = 0;
+            Assertions.assertEquals(expected, Calculator.multiply(0, -2));
+        }
 
     }
 }
