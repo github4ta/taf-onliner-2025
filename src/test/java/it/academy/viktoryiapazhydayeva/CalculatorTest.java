@@ -288,5 +288,27 @@ public class CalculatorTest {
     /**
      * String (double, int)
      */
+    @Test
+    @DisplayName("Double, int: sum Mim Double + Max Integer ")
+    public void testSumMinDoubleMaxInt() {
+        Assertions.assertEquals(2.147483647E9, Calculator.add(Double.MIN_VALUE, Integer.MAX_VALUE));
+    }
 
+    @Test
+    @DisplayName("Double, int: subtract with delta")
+    public void testSubtractionDoubleInt() {
+        Assertions.assertEquals(100.0, Calculator.subtract(100.999, 1), 0.1);
+    }
+
+    @Test
+    @DisplayName("Double, int: multiply double * Max Integer")
+    public void testMultiplicationDoubleInt() {
+        Assertions.assertEquals(21474.836470000002, Calculator.multiply(0.00001, Integer.MAX_VALUE));
+    }
+
+    @Test
+    @DisplayName("Double, int: division by 0")
+    public void testZeroDivisionDoubleInt() {
+        Assertions.assertEquals(Double.NEGATIVE_INFINITY, Calculator.divide(-2.1, 0));
+    }
 }
