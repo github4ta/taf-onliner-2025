@@ -107,37 +107,37 @@ public class CalculatorTest {
 
     @Test
     public void testSumDoublePositiveNegative() {
-        Assertions.assertEquals(0.0, Calculator.sum(-1.0, 1.0));
+        Assertions.assertEquals(0.000, Calculator.sum(-1.0, 1.0), 0.001);
     }
 
     @Test
     public void testSumDoubleNegativeNegative() {
-        Assertions.assertEquals(-2.0, Calculator.sum(-1.0, -1.0));
+        Assertions.assertEquals(-2.000, Calculator.sum(-1.0, -1.0), 0.001);
     }
 
     @Test
     public void testSumDoublePositivePositive() {
-        Assertions.assertEquals(2.0, Calculator.sum(1.0, 1.0));
+        Assertions.assertEquals(2.000, Calculator.sum(1.0, 1.0), 0.001);
     }
 
     @Test
     public void testSumDoublePositiveZero() {
-        Assertions.assertEquals(1.0, Calculator.sum(1.0, 0));
+        Assertions.assertEquals(1.000, Calculator.sum(1.0, 0), 0.001);
     }
 
     @Test
     public void testSumDoubleNegativeZero() {
-        Assertions.assertEquals(-1.0, Calculator.sum(-1.0, 0));
+        Assertions.assertEquals(-1.000, Calculator.sum(-1.0, 0), 0.001);
     }
 
     @Test
     public void testSubtractDoublePositiveNegative() {
-        Assertions.assertEquals(-2.0, Calculator.subtract(-1.0, 1.0));
+        Assertions.assertEquals(-2.000, Calculator.subtract(-1.0, 1.0), 0.001);
     }
 
     @Test
     public void testSubtractDoubleNegativeNegative() {
-        Assertions.assertEquals(0, Calculator.subtract(-1.1, -1.1));
+        Assertions.assertEquals(0, Calculator.subtract(-1.1, -1.1), 0.001);
     }
 
     @Test
@@ -152,22 +152,22 @@ public class CalculatorTest {
 
     @Test
     public void testSubtractDoubleNegativeZero() {
-        Assertions.assertEquals(-1.1, Calculator.subtract(-1.1, 0));
+        Assertions.assertEquals(-1.100, Calculator.subtract(-1.1, 0), 0.001);
     }
 
     @Test
     public void testMultiplyDoublePositiveNegative() {
-        Assertions.assertEquals(-1.2100000000000002, Calculator.multiply(-1.1, 1.1));
+        Assertions.assertEquals(-1.210, Calculator.multiply(-1.1, 1.1), 0.001);
     }
 
     @Test
     public void testMultiplyDoubleNegativeNegative() {
-        Assertions.assertEquals(1.2100000000000002, Calculator.multiply(-1.1, -1.1));
+        Assertions.assertEquals(1.210, Calculator.multiply(-1.1, -1.1), 0.001);
     }
 
     @Test
     public void testMultiplyDoublePositivePositive() {
-        Assertions.assertEquals(1.2100000000000002, Calculator.multiply(1.1, 1.1));
+        Assertions.assertEquals(1.210, Calculator.multiply(1.1, 1.1), 0.001);
     }
 
     @Test
