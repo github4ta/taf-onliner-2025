@@ -22,7 +22,10 @@ public class Calculator {
 
     // STRINGS TO INTEGERS
     @NotNull
-    public static String sumStrings(String a, String b) {
+    public static String sumStrings(String a, String b) {  // REFACTOR: NumberFormatExcpt, null, letters, sum/input min/max exceeded
+       /* if (a == null || b == null) {
+            throw new NumberFormatException("String(s) are empty");
+        }*/
         int x = Integer.parseInt(java.lang.String.valueOf(a));
         int y = Integer.parseInt(java.lang.String.valueOf(b));
         int sumStrings = x + y;
