@@ -148,4 +148,34 @@ public class CalculatorTest {
     public void test24() {
         Assertions.assertEquals(-2147483647, Calculator.subtract(-2147483648, -1));
     }
+
+    @Test
+    @DisplayName("int: positive * positive")
+    public void test25() {
+        Assertions.assertEquals(2, Calculator.multiply(1, 2));
+    }
+
+    @Test
+    @DisplayName("int: negative * negative")
+    public void test26() {
+        Assertions.assertEquals(2, Calculator.multiply(-1, -2));
+    }
+
+    @Test
+    @DisplayName("int: positive * negative")
+    public void test27() {
+        Assertions.assertEquals(-6, Calculator.multiply(3, -2));
+    }
+
+    @Test
+    @DisplayName("int: positive * zero")
+    public void test28() {
+        Assertions.assertEquals(0, Calculator.multiply(3, 0));
+    }
+
+    @Test
+    @DisplayName("int: negative * zero")
+    public void test29() {
+        Assertions.assertEquals(0, Calculator.multiply(-3, 0));
+    }
 }
