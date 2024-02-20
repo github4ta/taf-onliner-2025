@@ -29,5 +29,29 @@ public class CalculatorTest {
         Assertions.assertEquals(-1,Calculator.sum(-1,0));
     }
 
+    @Test
+    public void testSubtractIntPositiveNegative(){
+        Assertions.assertEquals(0,Calculator.subtract(-1,1));
+    }
+
+    @Test
+    public void testSubtractIntNegativeNegative(){
+        Assertions.assertEquals(-2,Calculator.subtract(-1,-1));
+    }
+
+    @Test
+    public void testSubtractIntPositivePositive(){
+        Assertions.assertEquals(2,Calculator.subtract(1,1));
+    }
+
+    @Test
+    public void testSubtractIntPositiveZero(){
+        Assertions.assertEquals(1,Calculator.subtract(1,0));
+    }
+
+    @Test
+    public void testSubtractIntNegativeZero(){
+        Assertions.assertEquals(-1,Calculator.subtract(-1,0));
+    }
 
 }
