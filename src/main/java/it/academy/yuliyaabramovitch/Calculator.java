@@ -51,19 +51,20 @@ public class Calculator {
 
     //    ***Multiplication
     public static int calculateMultiplication(int valueA, int valueB) {
-        return valueA * valueB;
+        BigInteger preliminarySum = BigInteger.valueOf(valueA).multiply(BigInteger.valueOf(valueB));
+        return Util.getValue(preliminarySum);
     }
 
     public static double calculateMultiplication(double valueA, double valueB) {
-        return valueA * valueB;
+        return (BigDecimal.valueOf(valueA).multiply(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static double calculateMultiplication(int valueA, double valueB) {
-        return valueA * valueB;
+        return (BigDecimal.valueOf(valueA).multiply(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static double calculateMultiplication(double valueA, int valueB) {
-        return valueA * valueB;
+        return (BigDecimal.valueOf(valueA).multiply(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static String calculateMultiplication(String valueA, String valueB) {
