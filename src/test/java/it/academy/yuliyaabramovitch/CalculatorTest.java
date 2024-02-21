@@ -91,6 +91,21 @@ public class CalculatorTest {
     public void testDoubleAndIntStringsSum(){
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("3.356", "1"));
     }
+    @Test
+    @DisplayName("StringNegativeInt and StringPositiveInt Sum")
+    public void testnegativeIntndPositiveIntStringsSum(){
+        Assertions.assertEquals("8", Calculator.calculateSum("-2", "10"));
+    }
+    @Test
+    @DisplayName("StringBigPositiveInt Sum")
+    public void testBigPositiveIntStringsSum(){
+        Assertions.assertEquals("0", Calculator.calculateSum("9999999999999999999", "88888888888"));
+    }
+    @Test
+    @DisplayName("StringBigNegativeInt Sum")
+    public void testBigNegativeIntStringsSum(){
+        Assertions.assertEquals("0", Calculator.calculateSum("-9999999999999999999", "-88888888888"));
+    }
 
     //    ***SUBTRACTION_TESTS***
     @Test
@@ -149,9 +164,44 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("double and int Subtraction")
+    @DisplayName("Double and int Subtraction")
     public void testDoubleAndIntValuesSubtraction() {
         Assertions.assertEquals(-3.22, Calculator.calculateSubtraction(-2.22, 1), Util.DELTA);
+    }
+    @Test
+    @DisplayName("2 Strings Subtraction")
+    public void testTwoStringsAsIntSubtraction(){
+        Assertions.assertEquals("3", Calculator.calculateSubtraction("5", "2"));
+    }
+    @Test
+    @DisplayName("StringText and StringNumber Subtraction")
+    public void testTextAndNumberStringsSubtraction(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("wertyuio", "2"));
+    }
+    @Test
+    @DisplayName("StringNumber and StringText Subtraction")
+    public void testNumberAndTextStringsSubtraction(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("3", "2qwert"));
+    }
+    @Test
+    @DisplayName("StringInt and StringDouble Subtraction")
+    public void testIntAndDoubleStringsSubtraction(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("3", "2.00"));
+    }
+    @Test
+    @DisplayName("StringDouble and StringInt Subtraction")
+    public void testDoubleAndIntStringsSubtraction(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("3.356", "1"));
+    }
+    @Test
+    @DisplayName("StringNegativeInt and StringPositiveInt Subtraction")
+    public void testnegativeIntndPositiveIntStringsSubtraction(){
+        Assertions.assertEquals("-13", Calculator.calculateSubtraction("-2", "11"));
+    }
+    @Test
+    @DisplayName("StringBigInt Sum")
+    public void testBigIntStringsSubtraction(){
+        Assertions.assertEquals("0", Calculator.calculateSubtraction("-9999999999999999999", "-88888888888"));
     }
 
     //    ***MULTIPLICATION_TESTS***
