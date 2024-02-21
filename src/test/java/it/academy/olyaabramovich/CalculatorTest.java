@@ -161,6 +161,19 @@ public class CalculatorTest {
     }
 
     @Test
+    @DisplayName("Разница (int + int): результат в max границах типа int")
+    public void testSubtractionWithinPositiveBounds() {
+        Assertions.assertEquals(2147483647, Calculator.calculateSubtraction(INT_MAX_VALUE - 1, -1));
+    }
+
+    @Test
+    @DisplayName("Разница (int + int): результат в min границах типа int")
+    public void testSubtractionWithinNegativeBounds() {
+        Assertions.assertEquals(-2147483648, Calculator.calculateSubtraction(INT_MIN_VALUE + 1, 1));
+    }
+
+
+    @Test
     @DisplayName("Разница (double + double): 2 положительных числа")
     public void testSubtractionWithDoubleNumbers() {
         Assertions.assertEquals(-2.13, Calculator.calculateSubtraction(1.54, 3.67));
@@ -392,5 +405,83 @@ public class CalculatorTest {
     @DisplayName("Деление (int + int): результат превышает положительное значение для типа int")
     public void testDivisionWithIntOutOfPositiveBounds() {
         Assertions.assertNull(Calculator.calculateDivision(INT_MIN_VALUE, -1));
+    }
+
+    @Test
+    @DisplayName("Деление (double + double): деление без остатка")
+    public void testDivisionWithDoublePositiveNumbers() {
+        Assertions.assertEquals(5, Calculator.calculateDivision(15.0, 3.0));
+    }
+
+    @Test
+    @DisplayName("Деление (double + double): деление с остатком")
+    public void testDivisionWithDoublePositiveNumbers2() {
+        Assertions.assertEquals(33.333333333333, Calculator.calculateDivision(100.0, 3.0), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (double + double): положительное число и отрицательное число")
+    public void testDivisionWithDoubleNegativeNumber() {
+        Assertions.assertEquals(-4.111, Calculator.calculateDivision(-16.444, 4.0));
+    }
+
+    @Test
+    @DisplayName("Деление (double + double): 2 отрицательных числа")
+    public void testDivisionWithDoubleNegativeNumbers() {
+        Assertions.assertEquals(0.9, Calculator.calculateDivision(-9.0, -10.0));
+    }
+
+    @Test
+    @DisplayName("Деление (double + double): число и 0")
+    public void testDivisionWithDoubleZero() {
+        Assertions.assertNull(Calculator.calculateDivision(7.0, 0.0));
+    }
+
+    @Test
+    @DisplayName("Деление (int + double): деление без остатка")
+    public void testDivisionWithIntDoublePositiveNumber() {
+        Assertions.assertEquals(5.0, Calculator.calculateDivision(15, 3.0), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (int + double): положительное число и отрицательное число")
+    public void testDivisionWithIntDoubleNegativeNumber() {
+        Assertions.assertEquals(-2.0, Calculator.calculateDivision(9, -4.5), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (int + double): 2 отрицательных числа")
+    public void testDivisionWithIntDoubleNegativeNumbers() {
+        Assertions.assertEquals(6.066666666, Calculator.calculateDivision(-91, -15.0), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (int + double): число и 0")
+    public void testDivisionWithIntDoubleZero() {
+        Assertions.assertNull(Calculator.calculateDivision(0, 0.0));
+    }
+
+    @Test
+    @DisplayName("Деление (double + int): деление без остатка")
+    public void testDivisionWithDoubleIntPositiveNumber() {
+        Assertions.assertEquals(2.0, Calculator.calculateDivision(4.0, 2), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (double + int): положительное число и отрицательное число")
+    public void testDivisionWithDoubleIntNegativeNumber() {
+        Assertions.assertEquals(-4.0, Calculator.calculateDivision(-80.0, 20), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (double + int): 2 отрицательных числа")
+    public void testDivisionWithDoubleIntNegativeNumbers() {
+        Assertions.assertEquals(2.5, Calculator.calculateDivision(-100.0, -40), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (double + int): число и 0")
+    public void testDivisionWithDoubleIntZero() {
+        Assertions.assertNull(Calculator.calculateDivision(16.0, 0));
     }
 }
