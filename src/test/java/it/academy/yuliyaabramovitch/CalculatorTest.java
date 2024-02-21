@@ -199,8 +199,13 @@ public class CalculatorTest {
         Assertions.assertEquals("-13", Calculator.calculateSubtraction("-2", "11"));
     }
     @Test
-    @DisplayName("StringBigInt Sum")
-    public void testBigIntStringsSubtraction(){
+    @DisplayName("StringBigPositiveInt Subtraction")
+    public void testBigPositiveIntStringsSubtraction(){
+        Assertions.assertEquals("0", Calculator.calculateSubtraction("9999999999999999999", "88888888888"));
+    }
+    @Test
+    @DisplayName("StringBigNegativeInt Subtraction")
+    public void testBigNegativeIntStringsSubtraction(){
         Assertions.assertEquals("0", Calculator.calculateSubtraction("-9999999999999999999", "-88888888888"));
     }
 
@@ -264,5 +269,45 @@ public class CalculatorTest {
     @DisplayName("double and int Multiplication")
     public void testDoubleAndIntValuesMultiplication() {
         Assertions.assertEquals(-2.22681, Calculator.calculateMultiplication(-2.22681, 1), Util.DELTA);
+    }
+    @Test
+    @DisplayName("2 Strings Multiplication")
+    public void testTwoStringsAsIntMultiplication(){
+        Assertions.assertEquals("10", Calculator.calculateMultiplication("5", "2"));
+    }
+    @Test
+    @DisplayName("StringText and StringNumber Multiplication")
+    public void testTextAndNumberStringsMultiplication(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("wertyuio", "2"));
+    }
+    @Test
+    @DisplayName("StringNumber and StringText Multiplication")
+    public void testNumberAndTextStringsMultiplication(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("3", "2qwert"));
+    }
+    @Test
+    @DisplayName("StringInt and StringDouble Multiplication")
+    public void testIntAndDoubleStringsMultiplication(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("3", "2.00"));
+    }
+    @Test
+    @DisplayName("StringDouble and StringInt Multiplication")
+    public void testDoubleAndIntStringsMultiplication(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("3.356", "1"));
+    }
+    @Test
+    @DisplayName("StringNegativeInt and StringPositiveInt Multiplication")
+    public void testnegativeIntndPositiveIntStringsMultiplication(){
+        Assertions.assertEquals("-22", Calculator.calculateMultiplication("-2", "11"));
+    }
+    @Test
+    @DisplayName("StringBigPositiveInt Multiplication")
+    public void testBigPositiveIntStringsMultiplication(){
+        Assertions.assertEquals("0", Calculator.calculateMultiplication("9999999999999999999", "88888888888"));
+    }
+    @Test
+    @DisplayName("StringBigNegativeInt Sum")
+    public void testBigNegativeIntStringsMultiplication(){
+        Assertions.assertEquals("0", Calculator.calculateMultiplication("-9999999999999999999", "-88888888888"));
     }
 }

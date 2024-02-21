@@ -81,7 +81,7 @@ public class Calculator {
         if (Util.isStringCanBeParsedAsInt(valueA) != true | Util.isStringCanBeParsedAsInt(valueB) != true) {
             return Util.ERROR;
         } else {
-            BigInteger preliminaryMultiply = new BigInteger(valueA).add(new BigInteger(valueB));
+            BigInteger preliminaryMultiply = new BigInteger(valueA).multiply(new BigInteger(valueB));
             return String.valueOf(Util.getValue(preliminaryMultiply));
         }
     }
