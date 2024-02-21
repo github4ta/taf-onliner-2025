@@ -67,9 +67,29 @@ public class CalculatorTest {
         Assertions.assertEquals(-1.22, Calculator.calculateSum(-2.22, 1), Util.DELTA);
     }
     @Test
-    @DisplayName("2 Strings")
-    public void testTwoStringsAsInt(){
-        Assertions.assertEquals(2, Calculator.calculateSum("2147483647", "2147483647"));
+    @DisplayName("2 Strings Sum")
+    public void testTwoStringsAsIntSum(){
+        Assertions.assertEquals("7", Calculator.calculateSum("5", "2"));
+    }
+    @Test
+    @DisplayName("StringText and StringNumber Sum")
+    public void testTextAndNumberStringsSum(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("wertyuio", "2"));
+    }
+    @Test
+    @DisplayName("StringNumber and StringText Sum")
+    public void testNumberAndTextStringsSum(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("3", "2qwert"));
+    }
+    @Test
+    @DisplayName("StringInt and StringDouble Sum")
+    public void testIntAndDoubleStringsSum(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("3", "2.00"));
+    }
+    @Test
+    @DisplayName("StringDouble and StringInt Sum")
+    public void testDoubleAndIntStringsSum(){
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("3.356", "1"));
     }
 
     //    ***SUBTRACTION_TESTS***
