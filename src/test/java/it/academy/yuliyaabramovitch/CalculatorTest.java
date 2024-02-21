@@ -62,9 +62,14 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("double and int Sum")
+    @DisplayName("Double and int Sum")
     public void testDoubleAndIntValuesSum() {
         Assertions.assertEquals(-1.22, Calculator.calculateSum(-2.22, 1), Util.DELTA);
+    }
+    @Test
+    @DisplayName("2 Strings")
+    public void testTwoStringsAsInt(){
+        Assertions.assertEquals(2, Calculator.calculateSum("2147483647", "2147483647"));
     }
 
     //    ***SUBTRACTION_TESTS***

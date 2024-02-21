@@ -19,11 +19,16 @@ public class Calculator {
     }
 
     public static double calculateSum(double valueA, int valueB) {
-       return (BigDecimal.valueOf(valueA).add(BigDecimal.valueOf(valueB))).doubleValue();
+        return (BigDecimal.valueOf(valueA).add(BigDecimal.valueOf(valueB))).doubleValue();
     }
 
     public static String calculateSum(String valueA, String valueB) {
-        return String.join(" ", valueA, valueB);
+        if (Util.isStringCanBeParsedAsInt(valueA) != true | Util.isStringCanBeParsedAsInt(valueB) != true) {
+            return Util.ERROR;
+        } else {
+            BigInteger preliminarySum = new BigInteger(valueA).add(new BigInteger(valueB));
+            return String.valueOf(Util.getValue(preliminarySum));
+        }
     }
 
 //    ***Subtraction
