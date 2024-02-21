@@ -310,4 +310,9 @@ public class CalculatorTest {
     public void testBigNegativeIntStringsMultiplication(){
         Assertions.assertEquals("0", Calculator.calculateMultiplication("-9999999999999999999", "-88888888888"));
     }
+    @Test
+    @DisplayName("Two int Dividing")
+    public void testTwoIntDividing(){
+        Assertions.assertEquals(8, Calculator.calculateDividing(16,2));
+    }
 }

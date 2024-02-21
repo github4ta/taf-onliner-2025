@@ -9,7 +9,7 @@ public class Util {
     public static final int MIN_INT = -2147483648;
     public static final int ERROR_VALUE = 0;
     public static final double DELTA = 0.000001;
-    public static final String REGEX_INT= "^[-+]{0,1}\\d{1,}$";
+    public static final String REGEX_INT = "^[-+]{0,1}\\d{1,}$";
     public static final String ERROR = "Неверный формат данных. Выражение не может быть обработано!";
 
     public static int getValue(BigInteger number) {
@@ -19,12 +19,13 @@ public class Util {
             return number.intValue();
         }
     }
-    public static Boolean isStringCanBeParsedAsInt(String str){
-        Boolean canBeParsedAsInt=false;
+
+    public static Boolean isStringCanBeParsedAsInt(String str) {
+        Boolean canBeParsedAsInt = false;
         Pattern pattern = Pattern.compile(REGEX_INT);
-        Matcher matcher=pattern.matcher(str);
-        while (matcher.find()){
-            canBeParsedAsInt=true;
+        Matcher matcher = pattern.matcher(str);
+        while (matcher.find()) {
+            canBeParsedAsInt = true;
         }
         return canBeParsedAsInt;
     }
