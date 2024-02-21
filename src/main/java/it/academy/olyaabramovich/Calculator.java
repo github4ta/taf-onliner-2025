@@ -2,6 +2,8 @@ package it.academy.olyaabramovich;
 
 import java.math.BigDecimal;
 
+import static java.math.BigDecimal.valueOf;
+
 public class Calculator {
     public static final int INT_MAX_VALUE = 2147483647;
     public static final int INT_MIN_VALUE = -2147483648;
@@ -34,10 +36,6 @@ public class Calculator {
     public static double calculateSum(double a, int b) {
         BigDecimal sum = BigDecimal.valueOf(a).add(BigDecimal.valueOf(b));
         return sum.doubleValue();
-    }
-
-    public static String calculateSum(String str1, String str2) {
-        return str1 + str2;
     }
 
     public static Integer calculateSubtraction(int a, int b) {
@@ -107,6 +105,35 @@ public class Calculator {
             return null;
         } else {
             return a / b;
+        }
+    }
+
+    public static String calculateSum(String str1, String str2) {
+        BigDecimal value1 = valueOf(Double.parseDouble(str1));
+        BigDecimal value2 = valueOf(Double.parseDouble(str2));
+        return String.valueOf(value1.add(value2));
+    }
+
+    public static String calculateSubtraction(String str1, String str2) {
+        BigDecimal value1 = valueOf(Double.parseDouble(str1));
+        BigDecimal value2 = valueOf(Double.parseDouble(str2));
+        return String.valueOf(value1.subtract(value2));
+    }
+
+    public static String calculateMultiplication(String str1, String str2) {
+        BigDecimal value1 = valueOf(Double.parseDouble(str1));
+        BigDecimal value2 = valueOf(Double.parseDouble(str2));
+        return String.valueOf(value1.multiply(value2));
+    }
+
+    public static String calculateDivision(String str1, String str2) {
+        BigDecimal value1 = valueOf(Double.parseDouble(str1));
+        BigDecimal value2 = valueOf(Double.parseDouble(str2));
+
+        if (value2.equals(0)) {
+            return null;
+        } else {
+            return String.valueOf(value1.divide(value2));
         }
     }
 }
