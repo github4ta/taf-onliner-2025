@@ -123,7 +123,8 @@ public class Calculator {
     public static String calculateMultiplication(String str1, String str2) {
         BigDecimal value1 = valueOf(Double.parseDouble(str1));
         BigDecimal value2 = valueOf(Double.parseDouble(str2));
-        return String.valueOf(value1.multiply(value2));
+        double result = value1.multiply(value2).doubleValue();
+        return String.valueOf(result);
     }
 
     public static String calculateDivision(String str1, String str2) {
