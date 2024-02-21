@@ -87,14 +87,26 @@ public class Calculator {
     }
 
     public static Double calculateDivision(double a, double b) {
-        return a / b;
+        if (b == 0) {
+            return null;
+        } else {
+            return a / b;
+        }
     }
 
-    public static double calculateDivision(int a, double b) {
-        return a / b;
+    public static Double calculateDivision(int a, double b) {
+        if (b == 0) {
+            return null;
+        } else {
+            return a / b;
+        }
     }
 
-    public static double calculateDivision(double a, int b) {
-        return a / b;
+    public static Double calculateDivision(double a, int b) {
+        if (b == 0) {
+            return null;
+        } else {
+            return a / b;
+        }
     }
 }
