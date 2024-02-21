@@ -1,13 +1,20 @@
 package it.academy.elenashushkevich;
 
 public class Calculator {
-
+    int retValue;
 
     public int add(int a, int b) {
-        return a + b;
+
+        if (a >= 2147483647 || a <= -2147483648 || b >= 2147483647 || b <= -2147483648) {
+            retValue = 0;
+        } else {
+            retValue = a + b;
+        }
+        return retValue;
     }
 
     public int subtract(int a, int b) {
+
         return a - b;
     }
 
@@ -68,6 +75,9 @@ public class Calculator {
     }
 
     public String add(String a, String b) {
+        if (a == null || b == null) {
+            return null;
+        }
         return a + b;
     }
 

@@ -170,20 +170,26 @@ public class CalculatorTest {
     public void testDoubleIntSubtractNegative() {
         Assertions.assertEquals(0.34999999999999964, calc.subtract(-9.65, -10));
     }
+
     @Test
     public void testDoubleIntSubtractPositive() {
         Assertions.assertEquals(5.65, calc.subtract(9.64, 4));
     }
 
     @Test
+    public void testIntAddMax1() {
+        Assertions.assertEquals(0, calc.add(-2147483648, 2147483647));
+    }
+
+    @Test
     public void testStringAddEmptyNull() {
 
-        //Assertions.assertEquals(null, calc.add("", null));
+        Assertions.assertEquals("null", calc.add(null, ""));
     }
 
     @Test
     public void testStringSubtractNulls() {
-        //Assertions.assertNull(calc.add(null, null));
+        Assertions.assertNull(calc.add(null, null));
         //Assertions.assertEquals("a or b is null!", calc.subtract(null, null));
     }
 
