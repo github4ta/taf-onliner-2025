@@ -51,7 +51,12 @@ public class Calculator {
     }
 
     public static String calculateSubtraction(String valueA, String valueB) {
-        return "Нельзя выполнить вычитание строк!";
+        if (Util.isStringCanBeParsedAsInt(valueA) != true | Util.isStringCanBeParsedAsInt(valueB) != true) {
+            return Util.ERROR;
+        } else {
+            BigInteger preliminarySubtraction = new BigInteger(valueA).subtract(new BigInteger(valueB));
+            return String.valueOf(Util.getValue(preliminarySubtraction));
+        }
     }
 
     //    ***Multiplication
@@ -73,7 +78,12 @@ public class Calculator {
     }
 
     public static String calculateMultiplication(String valueA, String valueB) {
-        return "Нельзя выполнить умножение строк!";
+        if (Util.isStringCanBeParsedAsInt(valueA) != true | Util.isStringCanBeParsedAsInt(valueB) != true) {
+            return Util.ERROR;
+        } else {
+            BigInteger preliminaryMultiply = new BigInteger(valueA).add(new BigInteger(valueB));
+            return String.valueOf(Util.getValue(preliminaryMultiply));
+        }
     }
 
     //    ***Dividing
