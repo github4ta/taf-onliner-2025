@@ -345,11 +345,16 @@ public class CalculatorTest {
     }
     @Test
 
-    @DisplayName("Dividing by zero")
+    @DisplayName("Dividing Int by zero")
     public void testDividingByZero() throws ArithmeticException {
       Throwable thrown = Assertions.assertThrows(ArithmeticException.class, () -> {
           Calculator.calculateDividing(16, 0);
         });
         Assertions.assertNotNull(thrown.getMessage());
+    }
+    @Test
+    @DisplayName("Two Double Dividing")
+    public void testTwoDoubleDividing() {
+        Assertions.assertEquals(0.9938, Calculator.calculateDividing(16.0111, 16.11111));
     }
 }

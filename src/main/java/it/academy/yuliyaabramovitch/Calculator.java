@@ -2,9 +2,9 @@ package it.academy.yuliyaabramovitch;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.RoundingMode;
 
 public class Calculator {
-    //    ***Sum
     public static int calculateSum(int valueA, int valueB) {
         BigInteger preliminarySum = BigInteger.valueOf(valueA).add(BigInteger.valueOf(valueB));
         return Util.getValue(preliminarySum);
@@ -30,8 +30,6 @@ public class Calculator {
             return String.valueOf(Util.getValue(preliminarySum));
         }
     }
-
-//    ***Subtraction
 
     public static int calculateSubtraction(int valueA, int valueB) {
         BigInteger preliminarySubtraction = BigInteger.valueOf(valueA).subtract(BigInteger.valueOf(valueB));
@@ -59,7 +57,6 @@ public class Calculator {
         }
     }
 
-    //    ***Multiplication
     public static int calculateMultiplication(int valueA, int valueB) {
         BigInteger preliminarySum = BigInteger.valueOf(valueA).multiply(BigInteger.valueOf(valueB));
         return Util.getValue(preliminarySum);
@@ -92,15 +89,15 @@ public class Calculator {
     }
 
     public static double calculateDividing(double valueA, double valueB) {
-        return valueA / valueB;
+        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB),4, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double calculateDividing(int valueA, double valueB) {
-        return valueA / valueB;
+        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB),4, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double calculateDividing(double valueA, int valueB) {
-        return valueA / valueB;
+        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB),4, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static String calculateDividing(String valueA, String valueB) {
