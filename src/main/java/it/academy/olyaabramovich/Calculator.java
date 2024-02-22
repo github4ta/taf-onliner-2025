@@ -1,6 +1,7 @@
 package it.academy.olyaabramovich;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 import static java.math.BigDecimal.valueOf;
 
@@ -88,7 +89,9 @@ public class Calculator {
         if (b == 0) {
             return null;
         } else {
-            return a / b;
+            BigDecimal value1 = valueOf(a);
+            BigDecimal value2 = valueOf(b);
+            return value1.divide(value2, 4, RoundingMode.HALF_UP).doubleValue();
         }
     }
 
@@ -96,7 +99,9 @@ public class Calculator {
         if (b == 0) {
             return null;
         } else {
-            return a / b;
+            BigDecimal value1 = valueOf(a);
+            BigDecimal value2 = valueOf(b);
+            return value1.divide(value2, 4, RoundingMode.HALF_UP).doubleValue();
         }
     }
 
@@ -104,7 +109,9 @@ public class Calculator {
         if (b == 0) {
             return null;
         } else {
-            return a / b;
+            BigDecimal value1 = valueOf(a);
+            BigDecimal value2 = valueOf(b);
+            return value1.divide(value2, 4, RoundingMode.HALF_UP).doubleValue();
         }
     }
 
@@ -134,7 +141,7 @@ public class Calculator {
         if (value2.equals(0)) {
             return null;
         } else {
-            return String.valueOf(value1.divide(value2));
+            return String.valueOf(value1.divide(value2, 4, RoundingMode.HALF_UP).doubleValue());
         }
     }
 }
