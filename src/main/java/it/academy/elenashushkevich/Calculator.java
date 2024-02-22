@@ -88,7 +88,7 @@ public class Calculator {
         return a * b;
     }
 
-    public static double divide(double a, int b) {
+    public double divide(double a, int b) {
         if (b == 0) {
             throw new ArithmeticException("Деление на ноль невозможно!");
         }
