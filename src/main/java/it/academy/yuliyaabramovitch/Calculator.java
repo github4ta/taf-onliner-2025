@@ -23,7 +23,7 @@ public class Calculator {
     }
 
     public static String calculateSum(String valueA, String valueB) {
-        if (Util.isStringCanBeParsedAsInt(valueA) != true | Util.isStringCanBeParsedAsInt(valueB) != true) {
+        if (!Util.isStringCanBeParsedAsInt(valueA) | !Util.isStringCanBeParsedAsInt(valueB)) {
             return Util.ERROR;
         } else {
             BigInteger preliminarySum = new BigInteger(valueA).add(new BigInteger(valueB));
@@ -49,7 +49,7 @@ public class Calculator {
     }
 
     public static String calculateSubtraction(String valueA, String valueB) {
-        if (Util.isStringCanBeParsedAsInt(valueA) != true | Util.isStringCanBeParsedAsInt(valueB) != true) {
+        if (!Util.isStringCanBeParsedAsInt(valueA) | !Util.isStringCanBeParsedAsInt(valueB)) {
             return Util.ERROR;
         } else {
             BigInteger preliminarySubtraction = new BigInteger(valueA).subtract(new BigInteger(valueB));
@@ -75,7 +75,7 @@ public class Calculator {
     }
 
     public static String calculateMultiplication(String valueA, String valueB) {
-        if (Util.isStringCanBeParsedAsInt(valueA) != true | Util.isStringCanBeParsedAsInt(valueB) != true) {
+        if (!Util.isStringCanBeParsedAsInt(valueA) | !Util.isStringCanBeParsedAsInt(valueB)) {
             return Util.ERROR;
         } else {
             BigInteger preliminaryMultiply = new BigInteger(valueA).multiply(new BigInteger(valueB));
@@ -100,6 +100,11 @@ public class Calculator {
     }
 
     public static String calculateDividing(String valueA, String valueB) {
-        return "Нельзя выполнить деление строк!";
+        if (!Util.isStringCanBeParsedAsInt(valueA) | !Util.isStringCanBeParsedAsInt(valueB)) {
+            return Util.ERROR;
+        } else {
+            BigInteger preliminaryMultiply = new BigInteger(valueA).divide(new BigInteger(valueB));
+            return String.valueOf(Util.getValue(preliminaryMultiply));
+        }
     }
 }

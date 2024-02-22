@@ -98,7 +98,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("StringNegativeInt and StringPositiveInt Sum")
-    public void testnegativeIntndPositiveIntStringsSum() {
+    public void testNegativeIntAndPositiveIntStringsSum() {
         Assertions.assertEquals("8", Calculator.calculateSum("-2", "10"));
     }
 
@@ -207,7 +207,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("StringNegativeInt and StringPositiveInt Subtraction")
-    public void testnegativeIntndPositiveIntStringsSubtraction() {
+    public void testNegativeIntAndPositiveIntStringsSubtraction() {
         Assertions.assertEquals("-13", Calculator.calculateSubtraction("-2", "11"));
     }
 
@@ -316,7 +316,7 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("StringNegativeInt and StringPositiveInt Multiplication")
-    public void testnegativeIntndPositiveIntStringsMultiplication() {
+    public void testNegativeIntAndPositiveIntStringsMultiplication() {
         Assertions.assertEquals("-22", Calculator.calculateMultiplication("-2", "11"));
     }
 
@@ -327,7 +327,7 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("StringBigNegativeInt Sum")
+    @DisplayName("StringBigNegativeInt Multiplication")
     public void testBigNegativeIntStringsMultiplication() {
         Assertions.assertEquals("0", Calculator.calculateMultiplication("-9999999999999999999", "-88888888888"));
     }
@@ -372,6 +372,61 @@ public class CalculatorTest {
     public void testDoubleDividingByZero() {
         Throwable thrown = Assertions.assertThrows(ArithmeticException.class, () -> {
             Calculator.calculateDividing(16.12345, 0.00);
+        });
+        Assertions.assertNotNull(thrown.getMessage());
+    }
+    @Test
+    @DisplayName("2 Strings Dividing")
+    public void testTwoStringsAsIntDividing() {
+        Assertions.assertEquals("2", Calculator.calculateDividing("5", "2"));
+    }
+
+    @Test
+    @DisplayName("StringText and StringNumber Dividing")
+    public void testTextAndNumberStringsDividing() {
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateDividing("wertyuio", "2"));
+    }
+
+    @Test
+    @DisplayName("StringNumber and StringText Dividing")
+    public void testNumberAndTextStringsDividing() {
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateDividing("3", "2qwert"));
+    }
+
+    @Test
+    @DisplayName("StringInt and StringDouble Dividing")
+    public void testIntAndDoubleStringsDividing() {
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateDividing("3", "2.00"));
+    }
+
+    @Test
+    @DisplayName("StringDouble and StringInt Dividing")
+    public void testDoubleAndIntStringsDividing() {
+        Assertions.assertEquals(Util.ERROR, Calculator.calculateDividing("3.356", "1"));
+    }
+
+    @Test
+    @DisplayName("StringNegativeInt and StringPositiveInt Dividing")
+    public void testNegativeIntAndPositiveIntStringsDividing() {
+        Assertions.assertEquals("0", Calculator.calculateDividing("-2", "11"));
+    }
+
+    @Test
+    @DisplayName("StringBigPositiveInt Dividing")
+    public void testBigPositiveIntStringsDividing() {
+        Assertions.assertEquals("11", Calculator.calculateDividing("999999999999", "88888888888"));
+    }
+
+    @Test
+    @DisplayName("StringBigNegativeInt Dividing")
+    public void testBigNegativeIntStringsDividing() {
+        Assertions.assertEquals("11", Calculator.calculateDividing("-999999999999", "-88888888888"));
+    }
+    @Test
+    @DisplayName("Double Dividing by DoubleZero")
+    public void testStringIntDividingByStringZero() {
+        Throwable thrown = Assertions.assertThrows(ArithmeticException.class, () -> {
+            Calculator.calculateDividing("4", "0");
         });
         Assertions.assertNotNull(thrown.getMessage());
     }
