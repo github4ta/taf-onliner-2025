@@ -1,7 +1,6 @@
 package by.onliner;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,4 +34,10 @@ public class OnlinerTest {
         return aboutCompanyPageTitle.getText();
     }
 
+    @Test
+    @DisplayName("About Company page title IS 'О сайте'")
+    public void testAboutCompanyPageRendering() {
+        openAboutCompanyPage();
+        Assertions.assertEquals("О сайте", getAboutCompanyPageTitleText());
+    }
 }
