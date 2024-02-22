@@ -1,5 +1,6 @@
 package it.academy.elenashushkevich;
 
+import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -14,7 +15,7 @@ public class CalculatorTest {
 
     @Test
     public void testIntAddMax() {
-        Assertions.assertEquals(-2, calc.add(2147483647, 2147483647));
+        Assertions.assertEquals(0, calc.add(2147483647, 2147483647));
     }
 
     @Test
@@ -24,7 +25,7 @@ public class CalculatorTest {
 
     @Test
     public void testIntAddMaxMin() {
-        Assertions.assertEquals(-1, calc.add(-2147483648, 2147483647));
+        Assertions.assertEquals(0, calc.add(-2147483648, 2147483647));
     }
 
     @Test
@@ -163,7 +164,7 @@ public class CalculatorTest {
 
     @Test
     public void testDoubleIntSubtractPositiveNegative() {
-        Assertions.assertEquals(3.4899999999999998, calc.subtract(0.23, -3));
+        Assertions.assertEquals(3.23, calc.subtract(0.23, -3));
     }
 
     @Test
@@ -173,7 +174,7 @@ public class CalculatorTest {
 
     @Test
     public void testDoubleIntSubtractPositive() {
-        Assertions.assertEquals(5.65, calc.subtract(9.64, 4));
+        Assertions.assertEquals(5.640000000000001, calc.subtract(9.64, 4));
     }
 
     @Test
@@ -190,7 +191,20 @@ public class CalculatorTest {
     @Test
     public void testStringSubtractNulls() {
         Assertions.assertNull(calc.add(null, null));
-        //Assertions.assertEquals("a or b is null!", calc.subtract(null, null));
+    }
+
+    @Test
+    public void testDivineIntZeroB() {
+        Assertions.assertEquals(0, calc.divide(15, 0));
+    }
+
+    @Test
+    public void testDivineDoubleIntZeroB() {
+        Assertions.assertEquals(0.0, calc.divide(15.0, 0));
+    }
+    @Test
+    public void testDivineIntDoubleZeroB() {
+        Assertions.assertEquals(0, calc.divide(15, 0.0));
     }
 
 }

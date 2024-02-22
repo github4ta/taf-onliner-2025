@@ -2,6 +2,7 @@ package it.academy.elenashushkevich;
 
 public class Calculator {
     int retValue;
+    double retValueDouble;
 
     public int add(int a, int b) {
 
@@ -23,7 +24,13 @@ public class Calculator {
     }
 
     public int divide(int a, int b) {
-        return a / b;
+        if (b == 0) {
+
+            retValue = 0;
+        } else {
+            retValue = a / b;
+        }
+        return retValue;
     }
 
     public double add(double a, double b) {
@@ -39,7 +46,13 @@ public class Calculator {
     }
 
     public double divide(double a, double b) {
-        return a / b;
+        if (b == 0) {
+            retValueDouble = 0;
+        } else {
+
+            retValueDouble = a / b;
+        }
+        return retValueDouble;
     }
 
     public double add(int a, double b) {
@@ -55,7 +68,12 @@ public class Calculator {
     }
 
     public double divide(int a, double b) {
-        return a / b;
+        if (b == 0) {
+            retValueDouble = 0;
+        } else {
+            retValueDouble = a / b;
+        }
+        return retValueDouble;
     }
 
     public double add(double a, int b) {
@@ -71,6 +89,11 @@ public class Calculator {
     }
 
     public double divide(double a, int b) {
+        if (b == 0) {
+            retValueDouble = 0.0;
+        } else {
+            retValueDouble = a / b;
+        }
         return a / b;
     }
 
@@ -89,11 +112,11 @@ public class Calculator {
     }
 
     public String multiple(String a, String b) {
-        return a + b;
+        return a;
     }
 
     public String divide(String a, String b) {
-        return a + b;
+        return a;
     }
 }
 
