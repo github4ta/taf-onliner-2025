@@ -173,7 +173,6 @@ public class CalculatorTest {
         Assertions.assertEquals(-2147483648, Calculator.calculateSubtraction(INT_MIN_VALUE + 1, 1));
     }
 
-
     @Test
     @DisplayName("Разница (double - double): 2 положительных числа")
     public void testSubtractionWithDoubleNumbers() {
@@ -417,7 +416,13 @@ public class CalculatorTest {
     @Test
     @DisplayName("Деление (double / double): деление с остатком")
     public void testDivisionWithDoublePositiveNumbers2() {
-        Assertions.assertEquals(33.333333333333, Calculator.calculateDivision(100.0, 3.0), delta);
+        Assertions.assertEquals(13.75, Calculator.calculateDivision(41.25, 3.0),delta);
+    }
+
+    @Test
+    @DisplayName("Деление (double / double): остаток в периоде")
+    public void testDivisionWithDoubleInPeriod() {
+        Assertions.assertEquals(4.1667, Calculator.calculateDivision(100.0, 24.0));
     }
 
     @Test
@@ -453,7 +458,13 @@ public class CalculatorTest {
     @Test
     @DisplayName("Деление (int / double): 2 отрицательных числа")
     public void testDivisionWithIntDoubleNegativeNumbers() {
-        Assertions.assertEquals(6.066666666, Calculator.calculateDivision(-91, -15.0), delta);
+        Assertions.assertEquals(6.0667, Calculator.calculateDivision(-91, -15.0), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (int / double): остаток в периоде")
+    public void testDivisionWithIntDoubleInPeriod() {
+        Assertions.assertEquals(1.3333, Calculator.calculateDivision(8, 6.0));
     }
 
     @Test
@@ -478,6 +489,12 @@ public class CalculatorTest {
     @DisplayName("Деление (double / int): 2 отрицательных числа")
     public void testDivisionWithDoubleIntNegativeNumbers() {
         Assertions.assertEquals(2.5, Calculator.calculateDivision(-100.0, -40), delta);
+    }
+
+    @Test
+    @DisplayName("Деление (double / int): остаток в периоде")
+    public void testDivisionWithDoubleIntInPeriod() {
+        Assertions.assertEquals(1.3636, Calculator.calculateDivision(15.0, 11));
     }
 
     @Test
@@ -588,9 +605,57 @@ public class CalculatorTest {
 
     @Test
     @DisplayName("Умножение строк (string * string)")
-    public void testMultiplicationtRwoStrings() {
+    public void testMultiplicationtTwoStrings() {
         assertThrows(NumberFormatException.class, () -> {
             Calculator.calculateMultiplication("a1", "9");
+        });
+    }
+
+    @Test
+    @DisplayName("Деление строк (int / int): 2 положительных числа")
+    public void testDivisionStringWithTwoInt() {
+        Assertions.assertEquals("1.0", Calculator.calculateDivision("5", "5"));
+    }
+
+    @Test
+    @DisplayName("Деление строк (double / double): 2 отрицательных числа")
+    public void testDivisionStringWithTwoDouble() {
+        Assertions.assertEquals("0.604", Calculator.calculateDivision("-1.51", "-2.5"));
+    }
+
+    @Test
+    @DisplayName("Деление строк (int / double)")
+    public void testDivisionStringWithIntDouble() {
+        Assertions.assertEquals("60.6061", Calculator.calculateDivision("200", "3.3"));
+    }
+
+    @Test
+    @DisplayName("Деление строк (double / int)")
+    public void testDivisionStringWithDoubleInt() {
+        Assertions.assertEquals("0.2583", Calculator.calculateDivision("1.55", "6"));
+    }
+
+    @Test
+    @DisplayName("Деление строк (double / 0)")
+    public void testDivisionDoubleAndZero() {
+        assertThrows(ArithmeticException.class, () -> {
+            Calculator.calculateDivision("1.25", "0");
+        });
+    }
+
+    @Test
+    @DisplayName("Деление строк (int / 0)")
+    public void testDivisionIntAndZero() {
+        assertThrows(ArithmeticException.class, () -> {
+            Calculator.calculateDivision("100", "0");
+        });
+    }
+
+    @Test
+    @DisplayName("Деление строк (string * string)")
+    public void testDivisionTwoStrings() {
+        assertThrows(NumberFormatException.class, () -> {
+            Calculator.calculateDivision("a1", "9");
         });
     }
 }
