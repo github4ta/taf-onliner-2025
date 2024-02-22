@@ -357,4 +357,22 @@ public class CalculatorTest {
     public void testTwoDoubleDividing() {
         Assertions.assertEquals(0.9938, Calculator.calculateDividing(16.0111, 16.11111));
     }
+    @Test
+    @DisplayName("Int And Double Dividing")
+    public void testIntAndDoubleDividing() {
+        Assertions.assertEquals(2.8584, Calculator.calculateDividing(7, 2.4489));
+    }
+    @Test
+    @DisplayName("Double and Int Dividing")
+    public void testDoubleAndIntDividing() {
+        Assertions.assertEquals(8.0056, Calculator.calculateDividing(16.0111, 2));
+    }
+    @Test
+    @DisplayName("Double Dividing by DoubleZero")
+    public void testDoubleDividingByZero() {
+        Throwable thrown = Assertions.assertThrows(ArithmeticException.class, () -> {
+            Calculator.calculateDividing(16.12345, 0.00);
+        });
+        Assertions.assertNotNull(thrown.getMessage());
+    }
 }

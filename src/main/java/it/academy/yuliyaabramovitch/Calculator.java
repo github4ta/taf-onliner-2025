@@ -83,21 +83,20 @@ public class Calculator {
         }
     }
 
-    //    ***Dividing
     public static int calculateDividing(int valueA, int valueB) {
         return valueA / valueB;
     }
 
     public static double calculateDividing(double valueA, double valueB) {
-        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB),4, RoundingMode.HALF_UP)).doubleValue();
+        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB), 4, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double calculateDividing(int valueA, double valueB) {
-        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB),4, RoundingMode.HALF_UP)).doubleValue();
+        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB), 4, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static double calculateDividing(double valueA, int valueB) {
-        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB),4, RoundingMode.HALF_UP)).doubleValue();
+        return (BigDecimal.valueOf(valueA).divide(BigDecimal.valueOf(valueB), 4, RoundingMode.HALF_UP)).doubleValue();
     }
 
     public static String calculateDividing(String valueA, String valueB) {
