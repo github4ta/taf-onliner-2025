@@ -5,7 +5,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
-    //    ***SUM_TESTS***
     @Test
     @DisplayName("Positive 2 int Sum")
     public void testPositiveIntValuesSum() {
@@ -66,48 +65,55 @@ public class CalculatorTest {
     public void testDoubleAndIntValuesSum() {
         Assertions.assertEquals(-1.22, Calculator.calculateSum(-2.22, 1), Util.DELTA);
     }
+
     @Test
     @DisplayName("2 Strings Sum")
-    public void testTwoStringsAsIntSum(){
+    public void testTwoStringsAsIntSum() {
         Assertions.assertEquals("7", Calculator.calculateSum("5", "2"));
     }
+
     @Test
     @DisplayName("StringText and StringNumber Sum")
-    public void testTextAndNumberStringsSum(){
+    public void testTextAndNumberStringsSum() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("wertyuio", "2"));
     }
+
     @Test
     @DisplayName("StringNumber and StringText Sum")
-    public void testNumberAndTextStringsSum(){
+    public void testNumberAndTextStringsSum() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("3", "2qwert"));
     }
+
     @Test
     @DisplayName("StringInt and StringDouble Sum")
-    public void testIntAndDoubleStringsSum(){
+    public void testIntAndDoubleStringsSum() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("3", "2.00"));
     }
+
     @Test
     @DisplayName("StringDouble and StringInt Sum")
-    public void testDoubleAndIntStringsSum(){
+    public void testDoubleAndIntStringsSum() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSum("3.356", "1"));
     }
+
     @Test
     @DisplayName("StringNegativeInt and StringPositiveInt Sum")
-    public void testnegativeIntndPositiveIntStringsSum(){
+    public void testnegativeIntndPositiveIntStringsSum() {
         Assertions.assertEquals("8", Calculator.calculateSum("-2", "10"));
     }
+
     @Test
     @DisplayName("StringBigPositiveInt Sum")
-    public void testBigPositiveIntStringsSum(){
+    public void testBigPositiveIntStringsSum() {
         Assertions.assertEquals("0", Calculator.calculateSum("9999999999999999999", "88888888888"));
     }
+
     @Test
     @DisplayName("StringBigNegativeInt Sum")
-    public void testBigNegativeIntStringsSum(){
+    public void testBigNegativeIntStringsSum() {
         Assertions.assertEquals("0", Calculator.calculateSum("-9999999999999999999", "-88888888888"));
     }
 
-    //    ***SUBTRACTION_TESTS***
     @Test
     @DisplayName("Positive 2 int Subtraction")
     public void testPositiveIntValuesSubtraction() {
@@ -168,48 +174,55 @@ public class CalculatorTest {
     public void testDoubleAndIntValuesSubtraction() {
         Assertions.assertEquals(-3.22, Calculator.calculateSubtraction(-2.22, 1), Util.DELTA);
     }
+
     @Test
     @DisplayName("2 Strings Subtraction")
-    public void testTwoStringsAsIntSubtraction(){
+    public void testTwoStringsAsIntSubtraction() {
         Assertions.assertEquals("3", Calculator.calculateSubtraction("5", "2"));
     }
+
     @Test
     @DisplayName("StringText and StringNumber Subtraction")
-    public void testTextAndNumberStringsSubtraction(){
+    public void testTextAndNumberStringsSubtraction() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("wertyuio", "2"));
     }
+
     @Test
     @DisplayName("StringNumber and StringText Subtraction")
-    public void testNumberAndTextStringsSubtraction(){
+    public void testNumberAndTextStringsSubtraction() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("3", "2qwert"));
     }
+
     @Test
     @DisplayName("StringInt and StringDouble Subtraction")
-    public void testIntAndDoubleStringsSubtraction(){
+    public void testIntAndDoubleStringsSubtraction() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("3", "2.00"));
     }
+
     @Test
     @DisplayName("StringDouble and StringInt Subtraction")
-    public void testDoubleAndIntStringsSubtraction(){
+    public void testDoubleAndIntStringsSubtraction() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateSubtraction("3.356", "1"));
     }
+
     @Test
     @DisplayName("StringNegativeInt and StringPositiveInt Subtraction")
-    public void testnegativeIntndPositiveIntStringsSubtraction(){
+    public void testnegativeIntndPositiveIntStringsSubtraction() {
         Assertions.assertEquals("-13", Calculator.calculateSubtraction("-2", "11"));
     }
+
     @Test
     @DisplayName("StringBigPositiveInt Subtraction")
-    public void testBigPositiveIntStringsSubtraction(){
+    public void testBigPositiveIntStringsSubtraction() {
         Assertions.assertEquals("0", Calculator.calculateSubtraction("9999999999999999999", "88888888888"));
     }
+
     @Test
     @DisplayName("StringBigNegativeInt Subtraction")
-    public void testBigNegativeIntStringsSubtraction(){
+    public void testBigNegativeIntStringsSubtraction() {
         Assertions.assertEquals("0", Calculator.calculateSubtraction("-9999999999999999999", "-88888888888"));
     }
 
-    //    ***MULTIPLICATION_TESTS***
     @Test
     @DisplayName("Positive 2 int Multiplication")
     public void testPositiveIntValuesMultiplication() {
@@ -266,53 +279,77 @@ public class CalculatorTest {
     }
 
     @Test
-    @DisplayName("double and int Multiplication")
+    @DisplayName("Double and int Multiplication")
     public void testDoubleAndIntValuesMultiplication() {
         Assertions.assertEquals(-2.22681, Calculator.calculateMultiplication(-2.22681, 1), Util.DELTA);
     }
+
     @Test
     @DisplayName("2 Strings Multiplication")
-    public void testTwoStringsAsIntMultiplication(){
+    public void testTwoStringsAsIntMultiplication() {
         Assertions.assertEquals("10", Calculator.calculateMultiplication("5", "2"));
     }
+
     @Test
     @DisplayName("StringText and StringNumber Multiplication")
-    public void testTextAndNumberStringsMultiplication(){
+    public void testTextAndNumberStringsMultiplication() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("wertyuio", "2"));
     }
+
     @Test
     @DisplayName("StringNumber and StringText Multiplication")
-    public void testNumberAndTextStringsMultiplication(){
+    public void testNumberAndTextStringsMultiplication() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("3", "2qwert"));
     }
+
     @Test
     @DisplayName("StringInt and StringDouble Multiplication")
-    public void testIntAndDoubleStringsMultiplication(){
+    public void testIntAndDoubleStringsMultiplication() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("3", "2.00"));
     }
+
     @Test
     @DisplayName("StringDouble and StringInt Multiplication")
-    public void testDoubleAndIntStringsMultiplication(){
+    public void testDoubleAndIntStringsMultiplication() {
         Assertions.assertEquals(Util.ERROR, Calculator.calculateMultiplication("3.356", "1"));
     }
+
     @Test
     @DisplayName("StringNegativeInt and StringPositiveInt Multiplication")
-    public void testnegativeIntndPositiveIntStringsMultiplication(){
+    public void testnegativeIntndPositiveIntStringsMultiplication() {
         Assertions.assertEquals("-22", Calculator.calculateMultiplication("-2", "11"));
     }
+
     @Test
     @DisplayName("StringBigPositiveInt Multiplication")
-    public void testBigPositiveIntStringsMultiplication(){
+    public void testBigPositiveIntStringsMultiplication() {
         Assertions.assertEquals("0", Calculator.calculateMultiplication("9999999999999999999", "88888888888"));
     }
+
     @Test
     @DisplayName("StringBigNegativeInt Sum")
-    public void testBigNegativeIntStringsMultiplication(){
+    public void testBigNegativeIntStringsMultiplication() {
         Assertions.assertEquals("0", Calculator.calculateMultiplication("-9999999999999999999", "-88888888888"));
     }
+
+    //    ***DIVIDING_TESTS***
     @Test
     @DisplayName("Two int Dividing")
-    public void testTwoIntDividing(){
-        Assertions.assertEquals(8, Calculator.calculateDividing(16,2));
+    public void testTwoIntDividing() {
+        Assertions.assertEquals(8, Calculator.calculateDividing(16, 2));
+    }
+    @Test
+    @DisplayName("Two int Dividing with remainder")
+    public void testTwoIntDividingWithRemainder() {
+        Assertions.assertEquals(5, Calculator.calculateDividing(16, 3));
+    }
+    @Test
+
+    @DisplayName("Dividing by zero")
+    public void testDividingByZero() throws ArithmeticException {
+      Throwable thrown = Assertions.assertThrows(ArithmeticException.class, () -> {
+          Calculator.calculateDividing(16, 0);
+        });
+        Assertions.assertNotNull(thrown.getMessage());
     }
 }
