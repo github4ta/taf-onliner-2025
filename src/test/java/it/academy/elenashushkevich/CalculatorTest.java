@@ -4,6 +4,8 @@ import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 public class CalculatorTest {
 
     Calculator calc = new Calculator();
@@ -200,7 +202,7 @@ public class CalculatorTest {
 
     @Test
     public void testDivineDoubleIntZeroB() {
-        Assertions.assertEquals(0.0, calc.divide(15.0, 0));
+        assertThrows(ArithmeticException.class, () -> calc.divide(15.0, 0));
     }
     @Test
     public void testDivineIntDoubleZeroB() {

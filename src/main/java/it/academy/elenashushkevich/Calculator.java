@@ -88,13 +88,11 @@ public class Calculator {
         return a * b;
     }
 
-    public double divide(double a, int b) {
+    public static double divide(double a, int b) {
         if (b == 0) {
-            retValueDouble = 0.0;
-        } else {
-            retValueDouble = a / b;
+            throw new ArithmeticException("Деление на ноль невозможно!");
         }
-        return a / b;
+        return a/b;
     }
 
     public String add(String a, String b) {
