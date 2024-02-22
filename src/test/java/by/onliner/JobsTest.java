@@ -14,5 +14,6 @@ public class JobsTest {
         driver.navigate().to(url);
         driver.findElement(By.xpath("//a[@href='https://blog.onliner.by/vacancy']")).click();
         Assertions.assertEquals("Вакансии", driver.findElement(By.xpath("//div[@class='news-header__title']/h1")).getText());
+        driver.quit();
     }
 }
