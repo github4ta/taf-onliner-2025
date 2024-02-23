@@ -1,4 +1,4 @@
 package it.academy.kulachek;
 
-public class Calculator {
+public class Test {
 }
