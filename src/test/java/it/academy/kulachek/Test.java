@@ -12,6 +12,13 @@ public class Test {
     static String sectionServices = "(//a[@href='https://s.onliner.by/tasks'])[2]";
     static String titleOrders = "//div[@class='service-header__title service-header__title_huge']";
 
-
+    @org.junit.jupiter.api.Test
+    public void testOnliner() {
+        driver.get(url);
+        driver.manage().window().maximize();
+        WebElement element = driver.findElement(By.xpath(sectionServices));
+        element.click();
+        Assertions.assertEquals("Заказы", driver.findElement(By.xpath(titleOrders)).getText());
+    }
 
 }
