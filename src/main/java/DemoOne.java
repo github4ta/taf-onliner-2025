@@ -2,8 +2,15 @@ public class DemoOne {
     public static void main(String[] args) {
         System.out.println("New line");
         System.out.println("Hello, master!");
-        System.out.println(Math.max(1, 9));
         System.out.println("Hello, java!");
-        System.out.println(DemoOne.name+" "+DemoOne.surname+" " +DemoOne.edge);
+
+        String str1 = "onliner";
+        String str2 = "my_onlinER_test";
+
+        if (str2.toLowerCase().contains(str1)) {
+            System.out.println("Строка 1 входит в строку 2");
+        } else {
+            System.out.println("Совпадений нет.");
+        }
     }
 }
