@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class OnlinerTest extends BaseTest {
+public class OnlinerTest extends BaseTest{
     public static String aboutCompanyLinkXPath = "//a[@href='https://blog.onliner.by/about']";
     public static String aboutCompanyPageTitleXPath = "//div[@class='news-header__title']/h1";
 
@@ -45,6 +45,5 @@ public class OnlinerTest extends BaseTest {
         driver.findElement(By.xpath(forumXpath)).click();
         driver.findElement(By.xpath(personalDataXpath)).click();
         Assertions.assertEquals("Форум", driver.findElement(By.xpath(titleXpath)).getText());
-        driver.quit();
     }
 }
