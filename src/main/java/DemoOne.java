@@ -1,9 +1,3 @@
-public class DemoOne extends DemoSuperOne {
-public class DemoOne {
-
-
-public class DemoOne {
-public class DemoOne extends Demo2907 {
 import by.onliner.DemoTwo;
 
 
