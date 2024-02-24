@@ -11,7 +11,6 @@ public class DemoOne extends Demo2907 {
 
         String str1 = "onliner";
         String str2 = "my_onlinER_test";
-
         if (str2.toLowerCase().contains(str1)) {
             System.out.println("Строка 1 входит в строку 2");
         } else {
