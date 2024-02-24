@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class OnlinerTest {
+public class OnlinerTest extends BaseTest{
     @Test
     public void testCatalogHeader() {
         ChromeDriver driver = new ChromeDriver();
@@ -17,17 +17,14 @@ public class OnlinerTest {
         String actualCatalogHeaderText = driver.findElement(By.cssSelector(".catalog-navigation__title")).getText();
         Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
     }
+
     @Test
-        public void testOnliner() {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.onliner.by/");
+    public void testOnliner() {
         String forumXpath = "//a[@href='https://forum.onliner.by/']/span[@class='b-main-navigation__text']";
         String personalDataXpath = "//button[@aria-label='Соглашаюсь']/p[@class='fc-button-label']";
         String titleXpath = "//h1[@class='m-title']";
         driver.findElement(By.xpath(forumXpath)).click();
         driver.findElement(By.xpath(personalDataXpath)).click();
         Assertions.assertEquals("Форум", driver.findElement(By.xpath(titleXpath)).getText());
-        driver.quit();
     }
 }
