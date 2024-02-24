@@ -1,12 +1,32 @@
 package by.onliner;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class OnlinerTest {
+public class OnlinerTest extends BaseTest {
+    public static String aboutCompanyLinkXPath = "//a[@href='https://blog.onliner.by/about']";
+    public static String aboutCompanyPageTitleXPath = "//div[@class='news-header__title']/h1";
+
+    public void openAboutCompanyPage() {
+        WebElement aboutCompanyLink = driver.findElement(By.xpath(aboutCompanyLinkXPath));
+        aboutCompanyLink.click();
+    }
+
+    public String getAboutCompanyPageTitleText() {
+        WebElement aboutCompanyPageTitle = driver.findElement(By.xpath(aboutCompanyPageTitleXPath));
+        return aboutCompanyPageTitle.getText();
+    }
+
+    @Test
+    @DisplayName("About Company page title IS 'О сайте'")
+    public void testAboutCompanyPageRendering() {
+        openAboutCompanyPage();
+        Assertions.assertEquals("О сайте", getAboutCompanyPageTitleText());
+    }
+
     @Test
     public void testCatalogHeader() {
         ChromeDriver driver = new ChromeDriver();
@@ -17,8 +37,9 @@ public class OnlinerTest {
         String actualCatalogHeaderText = driver.findElement(By.cssSelector(".catalog-navigation__title")).getText();
         Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
     }
+
     @Test
-        public void testOnliner() {
+    public void testOnliner() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
