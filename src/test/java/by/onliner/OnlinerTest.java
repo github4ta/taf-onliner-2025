@@ -28,7 +28,17 @@ public class OnlinerTest {
     }
 
     @Test
-    public void testOnliner() {
+    public void testCatalogHeader() {
+        ChromeDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("https://www.onliner.by/");
+        driver.findElement(By.cssSelector(".b-top-menu a[href='https://catalog.onliner.by']")).click();
+        String expectedCatalogHeaderText = "Каталог";
+        String actualCatalogHeaderText = driver.findElement(By.cssSelector(".catalog-navigation__title")).getText();
+        Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
+    }
+    @Test
+        public void testOnliner() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
