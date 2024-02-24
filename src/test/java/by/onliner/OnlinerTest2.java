@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class OnlinerTest2 {
+public class OnlinerTest2 extends BaseTest{
     @Test
     public void testOnliner2() {
         WebDriver driver = new ChromeDriver();
