@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MainTest {
+public class ApartmentsTest {
 
     @Test
     public void testApartmentsMarket(){
