@@ -9,16 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ReturnPolicyTest {
-    WebDriver driver;
-
-    @BeforeEach
-    public void warmUp() {
-        driver = new ChromeDriver();
-        String url = "https://www.onliner.by/";
-        driver.navigate().to(url);
-    }
-
+public class ReturnPolicyTest extends BaseTest {
     @Test
     public void checkReturnPolicyTest() {
         WebElement returnPolicy = driver.findElement(By.xpath("//a[@href='https://blog.onliner.by/pravila-vozvrata-tovarov-i-deneg']"));
@@ -27,10 +18,5 @@ public class ReturnPolicyTest {
         String expectedResult = "Правила возврата товаров и денег";
         WebElement pageTitle = driver.findElement(By.xpath("//div[@class='news-header__title']"));
         Assertions.assertEquals(expectedResult, pageTitle.getText());
-    }
-
-    @AfterEach
-    public void tearUp() {
-        driver.quit();
     }
 }
