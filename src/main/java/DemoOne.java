@@ -1,6 +1,5 @@
 import by.onliner.DemoTwo;
 
-public class DemoOne {
 public class DemoOne extends Demo2907 {
     public static void main(String[] args) {
         System.out.println("Hello, master!");
