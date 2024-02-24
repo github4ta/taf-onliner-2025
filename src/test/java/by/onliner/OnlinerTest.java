@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class OnlinerTest {
+public class OnlinerTest extends BaseTest {
     public static String aboutCompanyLinkXPath = "//a[@href='https://blog.onliner.by/about']";
     public static String aboutCompanyPageTitleXPath = "//div[@class='news-header__title']/h1";
 
@@ -37,8 +37,9 @@ public class OnlinerTest {
         String actualCatalogHeaderText = driver.findElement(By.cssSelector(".catalog-navigation__title")).getText();
         Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
     }
+
     @Test
-        public void testOnliner() {
+    public void testOnliner() {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.onliner.by/");
