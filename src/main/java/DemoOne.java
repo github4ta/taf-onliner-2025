@@ -3,5 +3,6 @@ public class DemoOne {
         System.out.println("Hello, master!");
         System.out.println(Math.max(1, 9));
         System.out.println("Hello, java!");
+        System.out.println("Hello everyone");
     }
 }
