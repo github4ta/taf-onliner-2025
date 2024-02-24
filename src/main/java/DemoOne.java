@@ -1,9 +1,11 @@
+public class DemoOne extends DemoSuperOne {
 public class DemoOne {
 
 
 public class DemoOne {
 public class DemoOne extends Demo2907 {
     public static void main(String[] args) {
+        System.out.println(name);
         System.out.println("Hello, master!");
         System.out.println("Hello, java!");
 
