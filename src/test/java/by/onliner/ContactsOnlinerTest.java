@@ -11,7 +11,6 @@ public class ContactsOnlinerTest extends BaseTest {
 
         String redactionContactsXpath = "//*[contains(text(),\"Контакты редакции\")]";
         String titleContactsPageXpath = "//div[@class=\"news-header__title\"]";
-        //WebDriverWait wait = new WebDriverWait(chromeDriver, Duration.ofSeconds(5))wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(redactionContactsXpath))).click();
         driver.findElement(By.xpath(redactionContactsXpath)).click();
         WebElement titleContactsPage = driver.findElement(By.xpath(titleContactsPageXpath));
         Assertions.assertTrue(titleContactsPage.getText().contains("Контакты редакции."));

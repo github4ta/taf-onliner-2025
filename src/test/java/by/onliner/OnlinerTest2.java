@@ -9,15 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class OnlinerTest2 extends BaseTest{
     @Test
     public void testOnliner2() {
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get("https://www.onliner.by/");
-        String forumXpath = "//a[@href='https://forum.onliner.by/']/span[@class='b-main-navigation__text']";
-        String personalDataXpath = "//button[@aria-label='Соглашаюсь']/p[@class='fc-button-label']";
-        String titleXpath = "//h1[@class='m-title']";
-        driver.findElement(By.xpath(forumXpath)).click();
-        driver.findElement(By.xpath(personalDataXpath)).click();
-        Assertions.assertEquals("Форум", driver.findElement(By.xpath(titleXpath)).getText());
-        driver.quit();
+        String serviceSection = "(//a[@href='https://s.onliner.by/tasks'])[2]";
+        String headerOrders = "//div[@class='service-header__title service-header__title_huge']";
+        driver.findElement(By.xpath(serviceSection)).click();
+        Assertions.assertEquals("Заказы", driver.findElement(By.xpath(headerOrders)).getText());
     }
 }
