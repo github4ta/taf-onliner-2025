@@ -1,8 +1,6 @@
-public class DemoOne extends DemoSuperOne {
-public class DemoOne {
+import by.onliner.DemoTwo;
 
 
-public class DemoOne {
 public class DemoOne extends Demo2907 {
     public static void main(String[] args) {
         System.out.println(name);
@@ -16,5 +14,10 @@ public class DemoOne extends Demo2907 {
         } else {
             System.out.println("Совпадений нет.");
         }
+        DemoTwo demoTwo = new DemoTwo();
+        String unitNumber = demoTwo.setUnitNumber("UI-999");
+        demoTwo.printText(unitNumber);
+        System.out.println("Hello everyone");
+        System.out.println(DemoOne.name + " " + DemoOne.surname + " " + DemoOne.edge);
     }
 }
