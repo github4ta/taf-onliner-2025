@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 
 public class HomePageTest extends BaseTest {
 
-    WebDriver driver;
-
     @Test
     public void testCopyRightsText() {
         By copyRights = By.cssSelector(".footer-style__copy");
