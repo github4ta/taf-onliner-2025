@@ -9,9 +9,7 @@ public class AutobaraholkaPage {
     public AutobaraholkaPage(WebDriver driver) {
         this.driver = driver;
     }
-    public void clickAutobaraholkaBtn(){
-        driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
-    }
+
     public String getAutobaraholkaTitle() {
          return driver.findElement(By.xpath(AutobaraholkaLocator.ACTUAL_TITLE_FOR_AUTOBARAHOLKA_XPATH)).getText();
     }

@@ -49,4 +49,6 @@ public class HomePage {
     public String getCopyrightsText() {
         return driver.findElement(By.cssSelector(COPYRIGHTS)).getText();
     }
+    public void clickAutobaraholkaBtn(){driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
+    }
 }
