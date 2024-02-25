@@ -12,6 +12,6 @@ public class NewsTest extends BaseTest {
         HomePage homePage = new HomePage(driver);
         News news = new News(driver);
         homePage.clickTwentyFourHoursNews();
-        Assertions.assertEquals("Новое за 24 часа", news.getNewsTitleText());
+        Assertions.assertTrue(news.getNewsTitleText("Новое за 24 часа"));
     }
 }

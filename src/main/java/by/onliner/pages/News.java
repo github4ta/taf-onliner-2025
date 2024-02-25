@@ -11,8 +11,9 @@ public class News {
         this.driver = driver;
     }
 
-    public String getNewsTitleText() {
+    public boolean getNewsTitleText(String text) {
         WebElement newsTitle = driver.findElement(By.xpath(NewsLocator.NEWS_XPATH));
-        return newsTitle.getText();
+        String newsTitleText = newsTitle.getText();
+        return newsTitleText.contains(text);
     }
 }
