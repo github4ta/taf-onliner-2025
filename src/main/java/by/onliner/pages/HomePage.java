@@ -51,4 +51,11 @@ public class HomePage {
     }
     public void clickAutobaraholkaBtn(){driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }
+    public void clickContactsOfEditorialOffice(){
+        driver.findElement(By.xpath(ContactsLocator.CONTACTS_OF_EDITORIAL_OFFICE)).click();
+    }
+    public void clickTwentyFourHoursNews(){
+        WebElement twentyFourHoursNewsLink = driver.findElement(By.xpath(HomePageLocator.TWENTY_FOUR_HOURS_NEWS_XPATH));
+        twentyFourHoursNewsLink.click();
+    }
 }
