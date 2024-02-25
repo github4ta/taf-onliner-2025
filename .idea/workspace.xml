@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1307ad-4c4b-42aa-baad-39b6dd080428" name="Changes" comment="Refactor CatalogLocator Class" />
+    <list default="true" id="1c1307ad-4c4b-42aa-baad-39b6dd080428" name="Changes" comment="add Locator BARAHOLKA_BUTTON_XPATH" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -523,7 +523,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708870578189</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Delete FleaMarketTest">
+      <option name="closed" value="true" />
+      <created>1708872687390</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1708872687390</updated>
+    </task>
+    <task id="LOCAL-00035" summary="add Locator BARAHOLKA_BUTTON_XPATH">
+      <option name="closed" value="true" />
+      <created>1708872806349</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1708872806349</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -555,8 +571,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Refactor Return Main, MainTest Classes, Changed Sum methods for Double (added &quot;delta&quot;)" />
-    <MESSAGE value="Refactor added Annotation &quot;Display Name&quot;. Add subtraction test methods for int" />
     <MESSAGE value="Refactor calculateSum mtd (addedriles fot int max and min values). Add Util class for constant values" />
     <MESSAGE value="Refactor calculateSum, calculateSubtraction mthds. Add Util method for constant checking Max|Min int values" />
     <MESSAGE value="Refactor optimized Sum and substraction mthds" />
@@ -580,6 +594,8 @@
     <MESSAGE value="Add Class CatalogTest, testCatalogOpened method" />
     <MESSAGE value="Refactor removed testCatalogHeader method" />
     <MESSAGE value="Refactor test catalogOpened method, Add CatalogLocator Class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor test catalogOpened method, Add CatalogLocator Class" />
+    <MESSAGE value="Delete FleaMarketTest" />
+    <MESSAGE value="add Locator BARAHOLKA_BUTTON_XPATH" />
+    <option name="LAST_COMMIT_MESSAGE" value="add Locator BARAHOLKA_BUTTON_XPATH" />
   </component>
 </project>
