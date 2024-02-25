@@ -33,4 +33,9 @@ public class HomePage {
         driver.findElement(HomePageLocator.BARAHOLKA_BUTTON_XPATH).click();
     }
     public void contactsClick(){  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
+
+    public void clickReturnPolicy(){
+        driver.findElement(By.xpath(HomePageLocator.RETURN_POLICY)).click();
+
+    }
 }
