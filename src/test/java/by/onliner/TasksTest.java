@@ -7,7 +7,7 @@ import org.openqa.selenium.By;
 public class TasksTest extends BaseTest {
 
     @Test
-    public void testOnliner2() {
+    public void testTasksOpened() {
         String serviceSection = "(//a[@href='https://s.onliner.by/tasks'])[2]";
         String headerOrders = "//div[@class='service-header__title service-header__title_huge']";
         driver.findElement(By.xpath(serviceSection)).click();
