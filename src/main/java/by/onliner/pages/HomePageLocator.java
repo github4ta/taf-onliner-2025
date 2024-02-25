@@ -17,4 +17,5 @@ public class HomePageLocator {
     public final static String  PERSONAL_DATA_XPATH = "//button[@aria-label='Соглашаюсь']/p[@class='fc-button-label']";
     public static final String COPYRIGHTS = ".footer-style__copy";
     public static final String TWENTY_FOUR_HOURS_NEWS_XPATH = "//a[text()='Новое за 24 часа']";
+    public static final String CATALOG_ITEM = ".b-top-menu a[href='https://catalog.onliner.by']";
 }
