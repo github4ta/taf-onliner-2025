@@ -51,4 +51,7 @@ public class HomePage {
     }
     public void clickAutobaraholkaBtn(){driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }
+    public void clickContactsOfEditorialOffice(){
+        driver.findElement(By.xpath(ContactsLocator.CONTACTS_OF_EDITORIAL_OFFICE)).click();
+    }
 }
