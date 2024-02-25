@@ -18,4 +18,7 @@ public class HomePage {
     public void vacancyBtnClick() {
         driver.findElement(By.xpath(HomePageLocator.VACANCY_BTN)).click();
     }
+    public void clickBaraholkaButton(){
+        driver.findElement(HomePageLocator.BARAHOLKA_BUTTON_XPATH).click();
+    }
 }
