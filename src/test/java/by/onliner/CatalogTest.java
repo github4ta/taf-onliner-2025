@@ -13,7 +13,7 @@ public class CatalogTest extends BaseTest{
     catalog = new Catalog(driver);
     catalog.openCatalogPage();
     String expectedCatalogHeaderText = "Каталог";
-    String actualCatalogHeaderText = driver.findElement(CatalogLocator.catalogHeader).getText();
+    String actualCatalogHeaderText = catalog.getCatalogPageHeader();
     Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
 }
 }
