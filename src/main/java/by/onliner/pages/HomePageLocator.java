@@ -15,4 +15,5 @@ public class HomePageLocator {
     public static final String RETURN_POLICY =  "//a[@href='https://blog.onliner.by/pravila-vozvrata-tovarov-i-deneg']";
     public final static String  FORUM_XPATH = "//a[@href='https://forum.onliner.by/']/span[@class='b-main-navigation__text']";
     public final static String  PERSONAL_DATA_XPATH = "//button[@aria-label='Соглашаюсь']/p[@class='fc-button-label']";
+    public static final String COPYRIGHTS = ".footer-style__copy";
 }
