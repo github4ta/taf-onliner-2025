@@ -1,14 +1,17 @@
 package by.onliner;
 
+import by.onliner.pages.Catalog;
 import by.onliner.pages.CatalogLocator;
 import by.onliner.pages.HomePageLocator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CatalogTest extends BaseTest{
+    Catalog catalog;
 @Test
     public void testCatalogOpened(){
-    driver.findElement(HomePageLocator.CATALOG_BTN).click();
+    catalog = new Catalog(driver);
+    catalog.openCatalogPage();
     String expectedCatalogHeaderText = "Каталог";
     String actualCatalogHeaderText = driver.findElement(CatalogLocator.catalogHeader).getText();
     Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
