@@ -18,4 +18,5 @@ public class HomePage {
     public void vacancyBtnClick() {
         driver.findElement(By.xpath(HomePageLocator.VACANCY_BTN)).click();
     }
+    public void contactsClick(){  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
 }
