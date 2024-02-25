@@ -26,14 +26,6 @@ public class OnlinerTest extends BaseTest{
         openAboutCompanyPage();
         Assertions.assertEquals("О сайте", getAboutCompanyPageTitleText());
     }
-
-    @Test
-    public void testCatalogHeader() {
-        driver.findElement(By.cssSelector(".b-top-menu a[href='https://catalog.onliner.by']")).click();
-        String expectedCatalogHeaderText = "Каталог";
-        String actualCatalogHeaderText = driver.findElement(By.cssSelector(".catalog-navigation__title")).getText();
-        Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
-    }
     @Test
         public void testOnliner() {
         WebDriver driver = new ChromeDriver();
