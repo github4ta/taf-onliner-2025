@@ -11,4 +11,5 @@ public class HomePageLocator {
     public static final String VACANCY_BTN = "//a[@href='https://blog.onliner.by/vacancy']";
     public static final By BARAHOLKA_BUTTON_XPATH = By.xpath("//a[@href=\"https://baraholka.onliner.by/\"]");
     public static final String CONTACTS_XPATH = "\"//*[contains(text(),\"Контакты редакции\")]\"";
+    public static final String COPYRIGHTS = ".footer-style__copy";
 }
