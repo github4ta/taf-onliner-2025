@@ -14,6 +14,7 @@ public class HomePage {
     public void clickServiceSection() {
         driver.findElement(By.xpath(HomePageLocator.SERVICE_SECTION)).click();
     }
+
     public void vacancyBtnClick() {
         driver.findElement(By.xpath(HomePageLocator.VACANCY_BTN)).click();
     }
