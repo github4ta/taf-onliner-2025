@@ -15,4 +15,16 @@ public class BaraholkaTest extends BaseTest {
         Baraholka baraholka = new Baraholka(driver);
         Assertions.assertEquals("Барахолка", baraholka.getTextHeading());
     }
+
+    @Test
+    public void testLaptopsItemExists(){
+        HomePage homePage=new HomePage(driver);
+        homePage.clickBaraholkaButton();
+        Baraholka baraholka=new Baraholka(driver);
+        baraholka.clickLaptops();
+        baraholka.clickBuyBtn();
+        baraholka.clickFirstItem();
+        String itemTitle=baraholka.getTextItemTitle();
+        Assertions.assertTrue(itemTitle.contains("Ноутбук"));
+    }
 }
