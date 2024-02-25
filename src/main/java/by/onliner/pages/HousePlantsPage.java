@@ -9,7 +9,8 @@ public class HousePlantsPage {
     public HousePlantsPage(WebDriver driver) {
         this.driver = driver;
     }
-    public String getHousePlantsHeader (){
-        driver.findElement(By.xpath(HouseplantsLocators.HOUSEPLANTS_HEADER)).click();
+
+    public String getHousePlantsHeader() {
+        return driver.findElement(By.xpath(HouseplantsLocators.HOUSEPLANTS_HEADER)).getText();
     }
 }
