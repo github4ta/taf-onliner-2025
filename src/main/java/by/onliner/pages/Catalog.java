@@ -9,7 +9,12 @@ public class Catalog {
         this.driver = driver;
     }
 
-    public void openCatalogPage(){
+    public void openCatalogPage() {
         driver.findElement(HomePageLocator.CATALOG_BTN).click();
+    }
+
+    public String getCatalogPageHeader() {
+        String headerText = driver.findElement(CatalogLocator.catalogHeader).getText();
+        return headerText;
     }
 }
