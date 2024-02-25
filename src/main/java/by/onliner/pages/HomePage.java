@@ -5,12 +5,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HomePage {
-
-    private WebDriver driver;
+    WebDriver driver;
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
     }
+
+    public void openForum() {
+        WebElement forumBtn = driver.findElement(By.xpath(HomePageLocator.FORUM_XPATH));
+        forumBtn.click();
+    }
+
+    public void clickPolicy() {
+        WebElement policy = driver.findElement(By.xpath(HomePageLocator.PERSONAL_DATA_XPATH));
+        policy.click();
+    }
+
 
     public void clickServiceSection() {
         driver.findElement(By.xpath(HomePageLocator.SERVICE_SECTION)).click();
@@ -19,8 +29,7 @@ public class HomePage {
     public void vacancyBtnClick() {
         driver.findElement(By.xpath(HomePageLocator.VACANCY_BTN)).click();
     }
-
-    public void clickBaraholkaButton() {
+    public void clickBaraholkaButton(){
         driver.findElement(HomePageLocator.BARAHOLKA_BUTTON_XPATH).click();
     }
 
@@ -29,4 +38,8 @@ public class HomePage {
         aboutCompanyLink.click();
     }
     public void contactsClick(){  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
+
+    public String getCopyrightsText() {
+        return driver.findElement(By.cssSelector(HomePageLocator.COPYRIGHTS)).getText();
+    }
 }
