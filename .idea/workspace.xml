@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1c1307ad-4c4b-42aa-baad-39b6dd080428" name="Changes" comment="Refactor CatalogLocator Class" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;yuliyaAbramovitch&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="recentNewPullRequestHead">
+      <RepoCoordinatesHolder>
+        <option name="owner" value="github4ta" />
+        <option name="repository" value="taf-onliner-2025" />
+      </RepoCoordinatesHolder>
+    </option>
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="4c361dee-6f8c-4cbc-9354-47a228fb0efd" />
+        <option name="url" value="https://github.com/github4ta/taf-onliner-2025.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2car6ZqbjMsHKxhy3fUmZlmO9Ev" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.DemoOne.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DemoTwo.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigIntStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigIntStringsSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigNegativeIntStringsDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigNegativeIntStringsMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigNegativeIntStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigNegativeIntStringsSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigPositiveIntStringsDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigPositiveIntStringsMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testBigPositiveIntStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDividingByZero.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntStringsDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntStringsMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntStringsSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleAndIntValuesSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleDividingByZero.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testDoubleValuesSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleStringsDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleStringsMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleStringsSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testIntAndDoubleValuesSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testMaxIntAndIntValue.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testMaxIntAndIntValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testMaxIntAndIntValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testMaxIntAndIntValuesSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testMinIntAndIntValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testMinIntAndIntValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testMinIntAndIntValuesSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeAndZeroValuesSumCalculating.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeIntAndPositiveIntStringsDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeIntAndZeroValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeIntAndZeroValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeIntAndZeroValuesSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeIntValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeIntValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeIntValuesSumCalculating.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNegativeValuesSumCalculating.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNumberAndTextStringsDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNumberAndTextStringsMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNumberAndTextStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testNumberAndTextStringsSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testPositiveAndNegativeIntValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testPositiveAndNegativeIntValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testPositiveIntAndZeroValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testPositiveIntValuesMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testPositiveIntValuesSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testPositiveIntValuesSumCalculating.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testPositiveValuesSumCalculating.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testStringIntDividingByStringZero.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTextAndNumberStringsDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTextAndNumberStringsMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTextAndNumberStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTextAndNumberStringsSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTwoDoubleDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTwoIntDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTwoIntDividingWithRemainder.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTwoStringsAsInt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTwoStringsAsIntDividing.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTwoStringsAsIntMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testTwoStringsAsIntSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testnegativeIntndPositiveIntStringsMultiplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testnegativeIntndPositiveIntStringsSubtraction.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CalculatorTest.testnegativeIntndPositiveIntStringsSum.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CatalogTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CatalogTest.testCatalogOpened.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OnlinerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OnlinerTest.testCatalogHeader.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;UI-0002-LOCATOR&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/MavenProjects/helloci&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="it.academy.yuliyaabramovitch" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CatalogTest.testCatalogOpened">
+    <configuration name="CalculatorTest.testBigPositiveIntStringsDividing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-onliner-2025" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.academy.yuliyaabramovitch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.academy.yuliyaabramovitch" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.yuliyaabramovitch.CalculatorTest" />
+      <option name="METHOD_NAME" value="testBigPositiveIntStringsDividing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.testNegativeIntAndPositiveIntStringsDividing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-onliner-2025" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.academy.yuliyaabramovitch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.academy.yuliyaabramovitch" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.yuliyaabramovitch.CalculatorTest" />
+      <option name="METHOD_NAME" value="testNegativeIntAndPositiveIntStringsDividing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalculatorTest.testStringIntDividingByStringZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-onliner-2025" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="it.academy.yuliyaabramovitch.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="it.academy.yuliyaabramovitch" />
+      <option name="MAIN_CLASS_NAME" value="it.academy.yuliyaabramovitch.CalculatorTest" />
+      <option name="METHOD_NAME" value="testStringIntDividingByStringZero" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CatalogTest.testCatalogOpened" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-onliner-2025" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.onliner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.onliner" />
+      <option name="MAIN_CLASS_NAME" value="by.onliner.CatalogTest" />
+      <option name="METHOD_NAME" value="testCatalogOpened" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OnlinerTest.testCatalogHeader" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="taf-onliner-2025" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.onliner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.onliner" />
+      <option name="MAIN_CLASS_NAME" value="by.onliner.OnlinerTest" />
+      <option name="METHOD_NAME" value="testCatalogHeader" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.OnlinerTest.testCatalogHeader" />
+        <item itemvalue="JUnit.CatalogTest.testCatalogOpened" />
+        <item itemvalue="JUnit.CalculatorTest.testStringIntDividingByStringZero" />
+        <item itemvalue="JUnit.CalculatorTest.testNegativeIntAndPositiveIntStringsDividing" />
+        <item itemvalue="JUnit.CalculatorTest.testBigPositiveIntStringsDividing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1c1307ad-4c4b-42aa-baad-39b6dd080428" name="Changes" comment="" />
+      <created>1708360356373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708360356373</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Delete Main Class from main and test packages">
+      <option name="closed" value="true" />
+      <created>1708369911652</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708369911652</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add calculateSum Methods">
+      <option name="closed" value="true" />
+      <created>1708370823025</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708370823025</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add Methods calculateSubtraction, calculateMultiplication, calculateDividing">
+      <option name="closed" value="true" />
+      <created>1708374811500</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708374811500</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add TestMethods for IntSumCalculating. Refactor Calculator Class methods (add 'static')">
+      <option name="closed" value="true" />
+      <created>1708379636344</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708379636344</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Refactor Sum Methods with Double, Add tests for Sum Methods">
+      <option name="closed" value="true" />
+      <created>1708421960276</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708421960277</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Refactor Return Main, MainTest Classes, Changed Sum methods for Double (added &quot;delta&quot;)">
+      <option name="closed" value="true" />
+      <created>1708455786490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708455786490</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor added Annotation &quot;Display Name&quot;. Add subtraction test methods for int">
+      <option name="closed" value="true" />
+      <created>1708458102353</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708458102353</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Refactor calculateSum mtd (addedriles fot int max and min values). Add Util class for constant values">
+      <option name="closed" value="true" />
+      <created>1708460907046</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708460907046</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactor calculateSum, calculateSubtraction mthds. Add Util method for constant checking Max|Min int values">
+      <option name="closed" value="true" />
+      <created>1708465540257</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708465540257</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Refactor optimized Sum and substraction mthds">
+      <option name="closed" value="true" />
+      <created>1708466980224</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708466980224</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add test for subtraction. Refactor test methods: added constant DELTA">
+      <option name="closed" value="true" />
+      <created>1708467872488</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708467872488</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Refactor methods for Multiplication">
+      <option name="closed" value="true" />
+      <created>1708468145949</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708468145949</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add tests for Multiplication">
+      <option name="closed" value="true" />
+      <created>1708469246568</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708469246568</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Refactor Sum method for Strings. Add util method to check the possibility of parsing a string as an int. Add test for 2 strings sum">
+      <option name="closed" value="true" />
+      <created>1708534368650</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708534368650</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Add test testTextAndNumberStringsSum, testNumberAndTextStringsSum, testIntAndDoubleStringsSum, testDoubleAndIntStringsSum">
+      <option name="closed" value="true" />
+      <created>1708535410088</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708535410088</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Refactor calculateSubtraction and calculateMultiplication for Strings">
+      <option name="closed" value="true" />
+      <created>1708538991149</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708538991149</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Add tests for String subtraction">
+      <option name="closed" value="true" />
+      <created>1708540096727</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708540096727</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Add tests for String Multiplication">
+      <option name="closed" value="true" />
+      <created>1708540768251</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708540768251</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add test for Int Dividing">
+      <option name="closed" value="true" />
+      <created>1708542212222</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708542212223</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Add test for Int Dividing by 0, test 2 int dividing with remainder">
+      <option name="closed" value="true" />
+      <created>1708586489910</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1708586489911</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Refactor Dividing methods for Double (output)">
+      <option name="closed" value="true" />
+      <created>1708588073036</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1708588073036</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Add Dividing methods for Double (output)">
+      <option name="closed" value="true" />
+      <created>1708588615635</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1708588615635</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Add Dividing test methods for String">
+      <option name="closed" value="true" />
+      <created>1708589803590</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708589803590</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Add OnlinerTest Class, testCatalogHeader method.">
+      <option name="closed" value="true" />
+      <created>1708709690814</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708709690814</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add code to DemoOne, Add class DemoTwo">
+      <option name="closed" value="true" />
+      <created>1708794089016</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708794089017</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Add code to DemoOne, Add class DemoTwo">
+      <option name="closed" value="true" />
+      <created>1708794987810</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708794987810</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add code">
+      <option name="closed" value="true" />
+      <created>1708797848715</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1708797848715</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Refactor code">
+      <option name="closed" value="true" />
+      <created>1708799503902</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1708799503902</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Add Class CatalogTest, testCatalogOpened method">
+      <option name="closed" value="true" />
+      <created>1708861009974</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1708861009974</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Refactor removed testCatalogHeader method">
+      <option name="closed" value="true" />
+      <created>1708862628278</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1708862628278</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Refactor removed testCatalogHeader method">
+      <option name="closed" value="true" />
+      <created>1708864700923</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1708864700923</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Refactor test catalogOpened method, Add CatalogLocator Class">
+      <option name="closed" value="true" />
+      <created>1708870039264</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1708870039264</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Refactor CatalogLocator Class">
+      <option name="closed" value="true" />
+      <created>1708870578189</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708870578189</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="true" />
+                </map>
+              </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="UI-0002-LOCATOR" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refactor Return Main, MainTest Classes, Changed Sum methods for Double (added &quot;delta&quot;)" />
+    <MESSAGE value="Refactor added Annotation &quot;Display Name&quot;. Add subtraction test methods for int" />
+    <MESSAGE value="Refactor calculateSum mtd (addedriles fot int max and min values). Add Util class for constant values" />
+    <MESSAGE value="Refactor calculateSum, calculateSubtraction mthds. Add Util method for constant checking Max|Min int values" />
+    <MESSAGE value="Refactor optimized Sum and substraction mthds" />
+    <MESSAGE value="Add test for subtraction. Refactor test methods: added constant DELTA" />
+    <MESSAGE value="Refactor methods for Multiplication" />
+    <MESSAGE value="Add tests for Multiplication" />
+    <MESSAGE value="Refactor Sum method for Strings. Add util method to check the possibility of parsing a string as an int. Add test for 2 strings sum" />
+    <MESSAGE value="Add test testTextAndNumberStringsSum, testNumberAndTextStringsSum, testIntAndDoubleStringsSum, testDoubleAndIntStringsSum" />
+    <MESSAGE value="Refactor calculateSubtraction and calculateMultiplication for Strings" />
+    <MESSAGE value="Add tests for String subtraction" />
+    <MESSAGE value="Add tests for String Multiplication" />
+    <MESSAGE value="Add test for Int Dividing" />
+    <MESSAGE value="Add test for Int Dividing by 0, test 2 int dividing with remainder" />
+    <MESSAGE value="Refactor Dividing methods for Double (output)" />
+    <MESSAGE value="Add Dividing methods for Double (output)" />
+    <MESSAGE value="Add Dividing test methods for String" />
+    <MESSAGE value="Add OnlinerTest Class, testCatalogHeader method." />
+    <MESSAGE value="Add code to DemoOne, Add class DemoTwo" />
+    <MESSAGE value="Add code" />
+    <MESSAGE value="Refactor code" />
+    <MESSAGE value="Add Class CatalogTest, testCatalogOpened method" />
+    <MESSAGE value="Refactor removed testCatalogHeader method" />
+    <MESSAGE value="Refactor test catalogOpened method, Add CatalogLocator Class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor test catalogOpened method, Add CatalogLocator Class" />
+  </component>
+</project>
