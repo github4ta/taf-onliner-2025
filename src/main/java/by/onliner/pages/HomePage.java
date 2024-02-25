@@ -35,9 +35,12 @@ public class HomePage {
     public void clickBaraholkaButton(){
         driver.findElement(HomePageLocator.BARAHOLKA_BUTTON_XPATH).click();
     }
+    public void contactsClick(){  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
 
-    public void contactsClick()
-    {  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
+    public void clickReturnPolicy(){
+        driver.findElement(By.xpath(HomePageLocator.RETURN_POLICY)).click();
+
+    }
 
     public String getCopyrightsText() {
         return driver.findElement(By.cssSelector(COPYRIGHTS)).getText();
