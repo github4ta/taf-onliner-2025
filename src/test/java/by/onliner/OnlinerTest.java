@@ -19,7 +19,6 @@ public class OnlinerTest extends BaseTest{
         WebElement aboutCompanyPageTitle = driver.findElement(By.xpath(aboutCompanyPageTitleXPath));
         return aboutCompanyPageTitle.getText();
     }
-
     @Test
     @DisplayName("About Company page title IS 'О сайте'")
     public void testAboutCompanyPageRendering() {
