@@ -21,10 +21,10 @@ public class Catalog {
     public void clickGardenAndHomeMenu() {
         driver.findElement(CatalogLocator.gardenAndHome).click();
     }
-    public void clickdecorAndInteriorItem(){
+    public void clickDecorAndInteriorItem(){
         driver.findElement(CatalogLocator.decorAndInterior).click();
     }
-    public void clickhomeFlowersItem(){
+    public void clickHomeFlowersItem(){
         driver.findElement(CatalogLocator.homeFlowers).click();
     }
 }
