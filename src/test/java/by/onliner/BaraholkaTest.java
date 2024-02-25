@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
-public class BaraholkaTest extends BaseTest{
+public class BaraholkaTest extends BaseTest {
     @Test
     public void testBaraholkaOpened() {
         final By FLEA_MARKET_BUTTON_XPATH = By.xpath("//a[@href=\"https://baraholka.onliner.by/\"]");
