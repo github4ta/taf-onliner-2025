@@ -16,4 +16,5 @@ public class HomePageLocator {
     public final static String  FORUM_XPATH = "//a[@href='https://forum.onliner.by/']/span[@class='b-main-navigation__text']";
     public final static String  PERSONAL_DATA_XPATH = "//button[@aria-label='Соглашаюсь']/p[@class='fc-button-label']";
     public static final String COPYRIGHTS = ".footer-style__copy";
+    public static final String TWENTY_FOUR_HOURS_NEWS_XPATH = "//a[text()='Новое за 24 часа']";
 }
