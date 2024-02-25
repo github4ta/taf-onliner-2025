@@ -12,8 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class VacancyTest extends BaseTest {
     @Test
     public void testVacancyOpened() {
-        Vacancy vacancy=new Vacancy((ChromeDriver) driver);
-        HomePage homePage=new HomePage((ChromeDriver) driver);
+        Vacancy vacancy=new Vacancy(driver);
+        HomePage homePage=new HomePage(driver);
         homePage.vacancyBtnClick();
         Assertions.assertEquals("Вакансии", vacancy.vacancyHeaderGetText());
     }
