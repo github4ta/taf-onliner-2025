@@ -17,4 +17,8 @@ public class Catalog {
         String headerText = driver.findElement(CatalogLocator.catalogHeader).getText();
         return headerText;
     }
+
+    public void clickGardenAndHome() {
+        driver.findElement(CatalogLocator.gardenAndHome).click();
+    }
 }
