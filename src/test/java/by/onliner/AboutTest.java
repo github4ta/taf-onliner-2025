@@ -10,6 +10,7 @@ public class AboutTest extends BaseTest {
     public void testAboutOpened() {
         About about = new About(driver);
         HomePage homePage = new HomePage(driver);
+        homePage.openAboutCompanyPage();
         Assertions.assertEquals("О сайте", about.getAboutCompanyPageTitleText());
     }
 }
