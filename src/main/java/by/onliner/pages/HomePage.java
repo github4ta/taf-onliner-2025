@@ -42,9 +42,6 @@ public class HomePage {
 
     }
 
-    public void contactsClick()
-    {  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
-
     public String getCopyrightsText() {
         return driver.findElement(By.cssSelector(COPYRIGHTS)).getText();
     }
