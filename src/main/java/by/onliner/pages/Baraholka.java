@@ -12,4 +12,20 @@ public class Baraholka {
     public String getTextHeading() {
         return driver.findElement(BaraholkaLocator.HEADING_XPATH).getText();
     }
+
+    public void clickLaptops(){
+        driver.findElement(BaraholkaLocator.LAPTOPS_XPATH).click();
+    }
+
+    public void clickBuyBtn(){
+        driver.findElement(BaraholkaLocator.BUY_BTN_XPATH).click();
+    }
+
+    public void clickFirstItem(){
+        driver.findElement(BaraholkaLocator.FIRST_ITEM_XPATH).click();
+    }
+
+    public String getTextItemTitle(){
+       return driver.findElement(BaraholkaLocator.ITEM_TITLE).getText();
+    }
 }
