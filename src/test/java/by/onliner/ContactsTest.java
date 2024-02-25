@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-public class ContactsOnlinerTest extends BaseTest {
+public class ContactsTest extends BaseTest {
     @Test
-    public void onlinerContactsTest() {
+    public void testContactsOpened() {
 
         String redactionContactsXpath = "//*[contains(text(),\"Контакты редакции\")]";
         String titleContactsPageXpath = "//div[@class=\"news-header__title\"]";
