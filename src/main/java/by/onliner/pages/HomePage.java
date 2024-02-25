@@ -2,6 +2,7 @@ package by.onliner.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class HomePage {
 
@@ -18,7 +19,13 @@ public class HomePage {
     public void vacancyBtnClick() {
         driver.findElement(By.xpath(HomePageLocator.VACANCY_BTN)).click();
     }
-    public void clickBaraholkaButton(){
+
+    public void clickBaraholkaButton() {
         driver.findElement(HomePageLocator.BARAHOLKA_BUTTON_XPATH).click();
+    }
+
+    public void openAboutCompanyPage() {
+        WebElement aboutCompanyLink = driver.findElement(By.xpath(HomePageLocator.aboutCompanyLinkXPath));
+        aboutCompanyLink.click();
     }
 }

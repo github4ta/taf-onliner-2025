@@ -2,6 +2,7 @@ package by.onliner;
 
 import by.onliner.pages.About;
 import by.onliner.pages.AboutLocator;
+import by.onliner.pages.HomePage;
 import by.onliner.pages.HomePageLocator;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
@@ -12,7 +13,7 @@ public class AboutTest extends BaseTest {
     @Test
     public void testAboutOpened() {
         About about = new About(driver);
-        openAboutCompanyPage();
+        HomePage homePage = new HomePage(driver);
         Assertions.assertEquals("О сайте", about.getAboutCompanyPageTitleText());
     }
 }
