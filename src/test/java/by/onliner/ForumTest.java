@@ -12,8 +12,6 @@ public class ForumTest extends BaseTest {
         HomePage homePage = new HomePage(driver);
         homePage.openForum();
         ForumPage forumPage = new ForumPage(driver);
-        //driver.findElement(By.xpath(HomePage.FORUM_XPATH)).click();
-        //driver.findElement(By.xpath(HomePageLocator.PERSONAL_DATA_XPATH)).click();
         Assertions.assertEquals("Форум", forumPage.getText());
     }
 
