@@ -18,7 +18,13 @@ public class Catalog {
         return headerText;
     }
 
-    public void clickGardenAndHome() {
+    public void clickGardenAndHomeMenu() {
         driver.findElement(CatalogLocator.gardenAndHome).click();
+    }
+    public void clickDecorAndInteriorItem(){
+        driver.findElement(CatalogLocator.decorAndInterior).click();
+    }
+    public void clickHouseFlowersItem(){
+        driver.findElement(CatalogLocator.homeFlowers).click();
     }
 }
