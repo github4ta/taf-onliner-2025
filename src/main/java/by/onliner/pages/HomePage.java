@@ -18,7 +18,7 @@ public class HomePage {
     private String aboutCompanyLinkXPath = "//a[@href='https://blog.onliner.by/about']";
     private final String VACANCY_BTN = "//a[@href='https://blog.onliner.by/vacancy']";
     private final By BARAHOLKA_BUTTON_XPATH = By.xpath("//a[@href=\"https://baraholka.onliner.by/\"]");
-    private final String CONTACTS_XPATH = "\"//*[contains(text(),\"Контакты редакции\")]\"";
+    private final String CONTACTS_XPATH = "//a[@href='https://people.onliner.by/contacts']";
     private final String RETURN_POLICY = "//a[@href='https://blog.onliner.by/pravila-vozvrata-tovarov-i-deneg']";
     private static String FORUM_XPATH = "//a[@href='https://forum.onliner.by/']/span[@class='b-main-navigation__text']";
     private static String PERSONAL_DATA_XPATH = "//button[@aria-label='Соглашаюсь']/p[@class='fc-button-label']";
@@ -70,7 +70,8 @@ public class HomePage {
     }
 
     public void clickContactsOfEditorialOffice() {
-        driver.findElement(By.xpath(ContactsLocator.CONTACTS_OF_EDITORIAL_OFFICE)).click();
+        ContactsPage contactsPage=new ContactsPage(driver);
+        driver.findElement(By.xpath(contactsPage.getCONTACTS_OF_EDITORIAL_OFFICE())).click();
     }
 
     public void clickTwentyFourHoursNews() {
