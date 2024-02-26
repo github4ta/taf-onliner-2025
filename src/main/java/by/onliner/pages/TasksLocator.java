@@ -8,4 +8,9 @@ public class TasksLocator {
     public static final String ACTIVE_STATUS = "//*[@id=\"service-list\"]/div[2]/div/div/div[2]/div[2]/div[5]/div/div[2]/ul/li[1]/label/span/span[1]";
     public static final String FIRST_ITEM_IN_SEARCH = "//*[@id=\"service-list\"]/div[2]/div/div/div[3]/search-tasks-list/div/div/div[1]/search-tasks-item/div/div/div[1]/div/a/span[2]/span[1]";
     public static final String TITLE = "//*[@id=\"container\"]/div/div[2]/div/div/div/div/div/div[1]/div/div/div/div[1]/div";
+    public static final String SUBSECTION_NAME = "//a[text()='Туризм']/ancestor::div[@class='service-form__collapse-header']";
+    public static final String SCROLL_TO_SECTION_TITLE = "//div[@class='service-form__label-title' and text()='Статус']";
+    public static final String CHECKBOX = "//div[contains(@class,'service-form__collapse-item_opened')]//li[2]";
+    public static final String OFFER_ITEM = "//div[@class='service-offers__data']/a";
+    public static final String SERVICE_DETAIL = "//div[@class='service-summary__details-list']/a";
 }
