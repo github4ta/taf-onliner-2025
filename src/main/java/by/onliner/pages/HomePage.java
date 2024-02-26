@@ -58,7 +58,7 @@ public class HomePage {
         WebElement twentyFourHoursNewsLink = driver.findElement(By.xpath(HomePageLocator.TWENTY_FOUR_HOURS_NEWS_XPATH));
         twentyFourHoursNewsLink.click();
     }
-    public void clickCatalogItem(){
+    public void openCatalogItem(){
         driver.findElement(By.cssSelector(HomePageLocator.CATALOG_ITEM)).click();
     }
 }

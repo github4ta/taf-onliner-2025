@@ -24,7 +24,7 @@ public class Catalog {
     public void clickDecorAndInteriorItem(){
         driver.findElement(CatalogLocator.decorAndInterior).click();
     }
-    public void clickHomeFlowersItem(){
+    public void clickHouseFlowersItem(){
         driver.findElement(CatalogLocator.homeFlowers).click();
     }
 }

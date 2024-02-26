@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 
 public class CatalogLocator {
     public static By catalogHeader = By.cssSelector(".catalog-navigation__title");
-    public static By gardenAndHome = By.cssSelector(".catalog-navigation-classifier__item-icon catalog-navigation-classifier__item-icon_id_5");
-    public static By decorAndInterior = By.xpath("//div[@class ='catalog-navigation-list__aside-item catalog-navigation-list__aside-item_active']");
-    public static By homeFlowers = By.xpath("//span[@style ='catalog-navigation-list__dropdown-preview']");
+    public static By gardenAndHome = By.xpath("//li[@data-id=\"5\"]");
+    public static By decorAndInterior = By.xpath("//*[@id=\"container\"]/div/div/div/div/div[1]/div[4]/div/div[7]/div[1]/div/div[10]/div[1]");
+    public static By homeFlowers = By.xpath("//*[@id=\"container\"]/div/div/div/div/div[1]/div[4]/div/div[7]/div[1]/div/div[10]/div[2]/div/a[6]/span/span[2]");
 
 }
