@@ -3,7 +3,6 @@ package by.onliner;
 import by.onliner.pages.ForumLocator;
 import by.onliner.pages.ForumPage;
 import by.onliner.pages.HomePage;
-import by.onliner.pages.HomePageLocator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
