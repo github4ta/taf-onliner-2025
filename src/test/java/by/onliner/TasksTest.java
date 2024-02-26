@@ -16,6 +16,19 @@ public class TasksTest extends BaseTest {
     }
 
     @Test
+    public void testCompareTitle () throws InterruptedException{
+        HomePage homePage = new HomePage(driver);
+        Tasks tasks = new Tasks(driver);
+        homePage.clickServiceSection();
+        tasks.clickMinsk();
+        tasks.clickForAnimals();
+        tasks.clickHaircutForAnimals();
+        tasks.clickActiveStatus();
+        tasks.clickFirstItemInSearch();
+        Assertions.assertEquals("Стрижка шпиц гигиеническая", tasks.compareTitle());
+    }
+
+    @Test
     public void checkTaskDetailsTitle() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
         homePage.clickServiceSection();
