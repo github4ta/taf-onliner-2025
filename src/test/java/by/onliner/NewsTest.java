@@ -1,7 +1,7 @@
 package by.onliner;
 
 import by.onliner.pages.HomePage;
-import by.onliner.pages.News;
+import by.onliner.pages.NewsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,8 +10,8 @@ public class NewsTest extends BaseTest {
     @Test
     public void testNewsOpened() {
         HomePage homePage = new HomePage(driver);
-        News news = new News(driver);
+        NewsPage newsPage = new NewsPage(driver);
         homePage.clickTwentyFourHoursNews();
-        Assertions.assertTrue(news.getNewsTitleText("Новое за 24 часа"));
+        Assertions.assertTrue(newsPage.getNewsTitleText("Новое за 24 часа"));
     }
 }
