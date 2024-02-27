@@ -24,6 +24,7 @@ public class CatalogPage {
     }
 
     public void clickGardenAndHomeMenu() {
+
         driver.findElement(By.xpath(GARDEN_AND_HOME)).click();
     }
     public void clickDecorAndInteriorItem(){
