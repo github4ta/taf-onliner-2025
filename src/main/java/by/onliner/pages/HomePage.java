@@ -13,7 +13,7 @@ public class HomePage {
 
     private final String SERVICE_SECTION = "(//a[@href='https://s.onliner.by/tasks'])[2]";
     private final String LOCATOR = "you locator to the link web element";
-    private final By CATALOG_BTN = By.cssSelector(".b-top-menu a[href='https://catalog.onliner.by']");
+    private final String CATALOG_BTN = ".b-top-menu a[href='https://catalog.onliner.by']";
     private final String AUTOBARAHOLKA_XPATH = "//ul[@class='b-main-navigation']/li[3]/a";
     private String aboutCompanyLinkXPath = "//a[@href='https://blog.onliner.by/about']";
     private final String VACANCY_BTN = "//a[@href='https://blog.onliner.by/vacancy']";
@@ -81,5 +81,8 @@ public class HomePage {
 
     public void openCatalogItem() {
         driver.findElement(By.cssSelector(CATALOG_ITEM)).click();
+    }
+    public void openCatalogPage() {
+        driver.findElement(By.cssSelector(CATALOG_BTN)).click();
     }
 }
