@@ -14,5 +14,12 @@ public class CatalogTest extends BaseTest{
     CatalogPage catalogPage = new CatalogPage(driver);
     catalogPage.getCatalogPageHeader();
     Assertions.assertTrue(catalogPage.getCatalogPageHeader().contains("Каталог"));
+    HomePage homePage =new HomePage(driver);
+    homePage.openCatalogPage();
+    CatalogPage catalogPage = new CatalogPage(driver);
+    catalogPage.getCatalogPageHeader();
+    String expectedCatalogHeaderText = "Каталог";
+    String actualCatalogHeaderText = catalog.getCatalogPageHeader();
+    Assertions.assertTrue(actualCatalogHeaderText.contains(expectedCatalogHeaderText));
 }
 }
