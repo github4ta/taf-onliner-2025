@@ -2,20 +2,21 @@ package by.onliner;
 
 import by.onliner.pages.CatalogPage;
 import by.onliner.pages.HomePage;
-import by.onliner.pages.HousePlantsPage;
+import by.onliner.pages.PkPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class FlowersTest extends BaseTest{
+public class PkTest extends BaseTest{
     @Test
-    public void testContainsFlowersHeader() {
+    public void testPkOpened() {
         HomePage homePage = new HomePage(driver);
         homePage.openCatalogItem();
         CatalogPage catalog = new CatalogPage(driver);
+        catalog.acceptPrivacyPolicy();
         catalog.clickGardenAndHomeMenu();
         catalog.clickDecorAndInteriorItem();
         catalog.clickHouseFlowersItem();
-        HousePlantsPage housePlantsPage = new HousePlantsPage(driver);
-        Assertions.assertTrue(housePlantsPage.getHousePlantsHeader().contains("Комнатные растения, флорариумы"));
+        PkPage pkPage = new PkPage(driver);
+        Assertions.assertTrue(pkPage.getHousePlantsHeader().contains("Комнатные растения, флорариумы"));
     }
 }
