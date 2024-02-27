@@ -14,10 +14,6 @@ public class CatalogPage {
         this.driver = driver;
     }
 
-    public void openCatalogPage() {
-        driver.findElement(HomePageLocator.CATALOG_BTN).click();
-    }
-
     public String getCatalogPageHeader() {
         String headerText = driver.findElement(By.cssSelector(CATALOG_HEADER)).getText();
         return headerText;
