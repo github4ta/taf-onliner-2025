@@ -24,6 +24,7 @@ public class CatalogPage {
     }
 
     public void clickDecorAndInteriorItem() {
+
         driver.findElement(By.xpath(DECOR_AND_INTERIOR)).click();
     }
 
