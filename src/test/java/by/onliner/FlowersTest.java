@@ -1,18 +1,17 @@
 package by.onliner;
 
-import by.onliner.pages.Catalog;
+import by.onliner.pages.CatalogPage;
 import by.onliner.pages.HomePage;
 import by.onliner.pages.HousePlantsPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
 
 public class FlowersTest extends BaseTest{
     @Test
     public void testContainsFlowersHeader() {
         HomePage homePage = new HomePage(driver);
         homePage.openCatalogItem();
-        Catalog catalog = new Catalog(driver);
+        CatalogPage catalog = new CatalogPage(driver);
         catalog.clickGardenAndHomeMenu();
         catalog.clickDecorAndInteriorItem();
         catalog.clickHouseFlowersItem();

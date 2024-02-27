@@ -1,14 +1,14 @@
 package by.onliner;
 
-import by.onliner.pages.Catalog;
+import by.onliner.pages.CatalogPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CatalogTest extends BaseTest{
-    Catalog catalog;
+    CatalogPage catalog;
 @Test
     public void testCatalogOpened(){
-    catalog = new Catalog(driver);
+    catalog = new CatalogPage(driver);
     catalog.openCatalogPage();
     String expectedCatalogHeaderText = "Каталог";
     String actualCatalogHeaderText = catalog.getCatalogPageHeader();
