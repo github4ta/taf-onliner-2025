@@ -8,7 +8,7 @@ public class CatalogPage {
     private final String GARDEN_AND_HOME = "//li[@data-id=\"5\"]";
     private final String DECOR_AND_INTERIOR = "//*[@id=\"container\"]/div/div/div/div/div[1]/div[4]/div/div[7]/div[1]/div/div[10]/div[1]";
     private final String HOME_FLOWERS = "//*[@id=\"container\"]/div/div/div/div/div[1]/div[4]/div/div[7]/div[1]/div/div[10]/div[2]/div/a[6]/span/span[2]";
-    WebDriver driver;
+    private WebDriver driver;
 
     public CatalogPage(WebDriver driver) {
         this.driver = driver;
