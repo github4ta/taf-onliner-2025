@@ -1,13 +1,14 @@
 package by.onliner.pages;
 
+import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class PkPage {
     private WebDriver driver;
 
-    public PkPage(WebDriver driver) {
-        this.driver = driver;
+    public PkPage() {
+        this.driver = Driver.getDriver();
     }
 
     public static final String LOCATION_POP_UP = "//span[@class='button-style button-style_primary button-style_small-alter catalog-form__button']";
@@ -17,6 +18,4 @@ public class PkPage {
     public String getHousePlantsHeader() {
         return driver.findElement(By.xpath(HOUSEPLANTS_HEADER)).getText();
     }
-
-
 }
