@@ -4,11 +4,8 @@ import by.onliner.pages.HomePage;
 import by.onliner.pages.ReturnPolicy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class ReturnPolicyTest extends BaseTest {
+public class PravilaVozvrataTovarovDenegTest extends BaseTest {
     @Test
     public void checkReturnPolicyTest() {
 
