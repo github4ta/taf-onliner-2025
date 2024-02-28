@@ -16,7 +16,6 @@ public class Users {
 
     private final String SURNAME_LIST_XPATH = "//ul/b/a";
 
-
     public String getRandomSurname() {
         driver.get("https://eslyes.com/namesdict/100_last_names.htm");
         List<WebElement> surnameList = driver.findElements(By.xpath(SURNAME_LIST_XPATH));
