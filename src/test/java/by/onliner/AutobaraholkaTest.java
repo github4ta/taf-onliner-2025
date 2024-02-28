@@ -25,11 +25,11 @@ public class AutobaraholkaTest extends BaseTest{
         HomePage homePage = new HomePage(driver);
         homePage.clickAutobaraholkaBtn();
         autobaraholka.clickAllCountry();
-        autobaraholka.clickNecessaryCountry();
+        autobaraholka.clickNecessaryCountry("Беларусь");
         autobaraholka.clickAllArea();
-        autobaraholka.clickNecessaryArea();
+        autobaraholka.clickNecessaryArea("Минская обл.");
         autobaraholka.clickAllCity();
-        autobaraholka.clickNecessaryCity();
+        autobaraholka.clickNecessaryCity("Минск");
         autobaraholka.clickBrand();
         autobaraholka.clickNecessaryBrand("Acura");
 
