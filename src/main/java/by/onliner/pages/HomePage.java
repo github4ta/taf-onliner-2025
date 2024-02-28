@@ -23,6 +23,7 @@ public class HomePage {
         policy.click();
     }
 
+
     public void clickServiceSection() {
         driver.findElement(By.xpath(HomePageLocator.SERVICE_SECTION)).click();
     }
@@ -40,6 +41,13 @@ public class HomePage {
         aboutCompanyLink.click();
     }
 
+    public void contactsClick() {
+        driver.findElement(By.xpath(CONTACTS_XPATH)).click();
+    }
+
+    public void clickReturnPolicy() {
+        driver.findElement(By.xpath(RETURN_POLICY)).click();
+
     public void contactsClick(){  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
     public void clickReturnPolicy(){
         driver.findElement(By.xpath(HomePageLocator.RETURN_POLICY)).click();
@@ -48,6 +56,26 @@ public class HomePage {
     public String getCopyrightsText() {
         return driver.findElement(By.cssSelector(COPYRIGHTS)).getText();
     }
+
+    public void clickAutobaraholkaBtn() {
+        driver.findElement(By.xpath(AUTOBARAHOLKA_XPATH)).click();
+    }
+
+    public void clickContactsOfEditorialOffice() {
+        ContactsPage contactsPage=new ContactsPage(driver);
+        driver.findElement(By.xpath(contactsPage.getCONTACTS_OF_EDITORIAL_OFFICE())).click();
+    }
+
+    public void clickTwentyFourHoursNews() {
+        WebElement twentyFourHoursNewsLink = driver.findElement(By.xpath(TWENTY_FOUR_HOURS_NEWS_XPATH));
+        twentyFourHoursNewsLink.click();
+    }
+
+    public void openCatalogItem() {
+        driver.findElement(By.cssSelector(CATALOG_ITEM)).click();
+    }
+    public void openCatalogPage() {
+        driver.findElement(By.cssSelector(CATALOG_BTN)).click();
 
     public void clickAutobaraholkaBtn(){driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }

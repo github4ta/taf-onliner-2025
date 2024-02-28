@@ -1,18 +1,29 @@
 package by.onliner;
 
-import by.onliner.pages.Baraholka;
-import by.onliner.pages.BaraholkaLocator;
+import by.onliner.driver.Driver;
+import by.onliner.pages.BaraholkaPage;
 import by.onliner.pages.HomePage;
-import by.onliner.pages.HomePageLocator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class BaraholkaTest extends BaseTest {
     @Test
     public void testBaraholkaOpened() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickBaraholkaButton();
-        Baraholka baraholka = new Baraholka(driver);
+        BaraholkaPage baraholka = new BaraholkaPage();
         Assertions.assertEquals("Барахолка", baraholka.getTextHeading());
+    }
+
+    @Test
+    public void testLaptopsItemExists(){
+        HomePage homePage=new HomePage();
+        homePage.clickBaraholkaButton();
+        BaraholkaPage baraholka=new BaraholkaPage();
+        baraholka.clickLaptops();
+        baraholka.clickBuyBtn();
+        baraholka.clickFirstItem();
+        String itemTitle=baraholka.getTextItemTitle();
+        Assertions.assertTrue(itemTitle.contains("Ноутбук"));
     }
 }

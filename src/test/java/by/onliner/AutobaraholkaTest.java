@@ -6,6 +6,8 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 
+import java.time.Duration;
+
 public class AutobaraholkaTest extends BaseTest{
 
     @Test
@@ -15,5 +17,24 @@ public class AutobaraholkaTest extends BaseTest{
         hp.clickAutobaraholkaBtn();
         autobaraholka.getAutobaraholkaTitle();
         Assertions.assertEquals("Автобарахолка", autobaraholka.getAutobaraholkaTitle());
+    }
+
+    @Test
+    public void testCorrectCity() {
+        AutobaraholkaPage autobaraholka = new AutobaraholkaPage(driver);
+        HomePage homePage = new HomePage(driver);
+        homePage.clickAutobaraholkaBtn();
+        autobaraholka.clickAllCountry();
+        autobaraholka.clickNecessaryCountry("Беларусь");
+        autobaraholka.clickAllArea();
+        autobaraholka.clickNecessaryArea("Минская обл.");
+        autobaraholka.clickAllCity();
+        autobaraholka.clickNecessaryCity("Минск");
+        autobaraholka.clickBrand();
+        autobaraholka.clickNecessaryBrand("Acura");
+
+        autobaraholka.clickFirstLine();
+        String itemTitle = autobaraholka.getTextItemTitle();
+        Assertions.assertTrue(itemTitle.contains("Acura"));
     }
 }
