@@ -17,14 +17,14 @@ public class Users {
     }
 
     private final String SURNAME_URL = "https://eslyes.com/namesdict/100_last_names.htm";
-    private final String SURNAME_LIST_XPATH = "//ul/a";
+    private final String SURNAME_LIST_XPATH = "//ul/b";
 
 
     public String getRandomSurname() {
         driver.get(SURNAME_URL);
         List<WebElement> surnameList = driver.findElements(By.xpath(SURNAME_LIST_XPATH));
         Random random = new Random();
-        WebElement randomSurnameIndex = surnameList.get(random.nextInt(surnameList.size()));
-        return randomSurnameIndex.getText();
+        WebElement randomSurnamePosition = surnameList.get(random.nextInt(surnameList.size()));
+        return randomSurnamePosition.getText();
     }
 }
