@@ -17,7 +17,7 @@ public class Users {
     }
 
     private final String SURNAME_URL = "https://eslyes.com/namesdict/100_last_names.htm";
-    private final String SURNAME_LIST_XPATH = "//ul/b";
+    private final String SURNAME_LIST_XPATH = "//ul/b/a";
 
 
     public String getRandomSurname() {
