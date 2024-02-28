@@ -1,6 +1,5 @@
 package by.onliner;
 
-import by.onliner.pages.About;
 import by.onliner.pages.AboutPage;
 import by.onliner.pages.HomePage;
 import org.junit.jupiter.api.*;
