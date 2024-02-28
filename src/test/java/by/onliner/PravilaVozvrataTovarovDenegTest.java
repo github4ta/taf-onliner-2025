@@ -2,13 +2,12 @@ package by.onliner;
 
 import by.onliner.pages.HomePage;
 import by.onliner.pages.PravilaVozvrataTovarovDenegPage;
-import by.onliner.pages.ReturnPolicy;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class PravilaVozvrataTovarovDenegTest extends BaseTest {
     @Test
-    public void checkReturnPolicyTest() {
+    public void testPravilaVozvrataTovarovIDenegOpened() {
 
         HomePage homePage = new HomePage(driver);
         homePage.clickReturnPolicy();
