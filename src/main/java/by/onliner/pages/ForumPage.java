@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,8 +8,8 @@ import org.openqa.selenium.WebElement;
 public class ForumPage {
     private WebDriver driver;
 
-    public ForumPage(WebDriver driver) {
-        this.driver = driver;
+    public ForumPage() {
+        this.driver = Driver.getDriver();
     }
 
     private final String TITLE_XPATH = "//h1[@class='m-title']";
