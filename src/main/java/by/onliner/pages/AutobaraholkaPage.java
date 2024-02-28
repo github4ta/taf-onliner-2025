@@ -8,11 +8,14 @@ import java.time.Duration;
 public class AutobaraholkaPage {
     private final String ACTUAL_TITLE_FOR_AUTOBARAHOLKA_XPATH = "//h1[@class='vehicle-form__title vehicle-form__title_big-alter']";
     private final String ALL_COUNTRY_FIELD_XPATH = "//div[@class='vehicle-form__row']/div[1]//div[2]/div[1]/div[1]/div[1]/div[1]";
-    private final String ALL_COUNTRY_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='Беларусь']";
+    //private final String ALL_COUNTRY_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='Беларусь']";
+    private final String ALL_COUNTRY_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='";
     private final String ALL_AREA_FIELD_XPATH = "//div[@class='vehicle-form__row']/div[1]//div[2]/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]//div[2]";
-    private final String ALL_AREA_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='Минская обл.']";
+    //private final String ALL_AREA_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='Минская обл.']";
+    private final String ALL_AREA_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='";
     private final String ALL_CITY_FIELD_XPATH = "//div[@class='vehicle-form__row']/div[1]/div[2]/div[1]/div[1]/div[1]/div[3]";
-    private final String ALL_CITY_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='Минск']";
+    //private final String ALL_CITY_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='Минск']";
+    private final String ALL_CITY_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='";
     private final String BRAND_FIELD_XPATH = "//div[@class='vehicle-form__filter-overflow js-results-container']/div[2]/div[2]//div[@class='vehicle-form__field']/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]";
     private final String BRAND_FIELD_VALUE_XPATH = "//div[@class='dropdown-style__container']//div[text()='";
     private final String FIRST_VEHICLE_FORM_XPATH = "//div[@class='vehicle-form__offers-list']/a[1]";
@@ -31,26 +34,30 @@ public class AutobaraholkaPage {
         driver.findElement(By.xpath(ALL_COUNTRY_FIELD_XPATH)).click();
     }
 
-    public void clickNecessaryCountry() {
-        driver.findElement(By.xpath(ALL_COUNTRY_FIELD_VALUE_XPATH)).click();
+    public void clickNecessaryCountry(String country) {
+        //driver.findElement(By.xpath(ALL_COUNTRY_FIELD_VALUE_XPATH)).click();
+        String necessaryCountry = ALL_COUNTRY_FIELD_VALUE_XPATH + country + "']";
+        driver.findElement(By.xpath(necessaryCountry)).click();
     }
 
     public void clickAllArea() {
         driver.findElement(By.xpath(ALL_AREA_FIELD_XPATH)).click();
     }
 
-    public void clickNecessaryArea() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.findElement(By.xpath(ALL_AREA_FIELD_VALUE_XPATH)).click();
+    public void clickNecessaryArea(String area) {
+        //driver.findElement(By.xpath(ALL_AREA_FIELD_VALUE_XPATH)).click();
+        String necessaryArea = ALL_AREA_FIELD_VALUE_XPATH + area + "']";
+        driver.findElement(By.xpath(necessaryArea)).click();
     }
 
     public void clickAllCity() {
         driver.findElement(By.xpath(ALL_CITY_FIELD_XPATH)).click();
     }
 
-    public void clickNecessaryCity() {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.findElement(By.xpath(ALL_CITY_FIELD_VALUE_XPATH)).click();
+    public void clickNecessaryCity(String city) {
+        //driver.findElement(By.xpath(ALL_CITY_FIELD_VALUE_XPATH)).click();
+        String necessaryCity = ALL_CITY_FIELD_VALUE_XPATH + city + "']";
+        driver.findElement(By.xpath(necessaryCity)).click();
     }
 
     public void clickBrand() {
@@ -58,7 +65,6 @@ public class AutobaraholkaPage {
     }
 
     public void clickNecessaryBrand(String brand) {
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         String necessaryBrand = BRAND_FIELD_VALUE_XPATH + brand + "']";
         driver.findElement(By.xpath(necessaryBrand)).click();
     }
