@@ -23,7 +23,6 @@ public class HomePage {
         policy.click();
     }
 
-
     public void clickServiceSection() {
         driver.findElement(By.xpath(HomePageLocator.SERVICE_SECTION)).click();
     }
@@ -40,15 +39,22 @@ public class HomePage {
         WebElement aboutCompanyLink = driver.findElement(By.xpath(HomePageLocator.aboutCompanyLinkXPath));
         aboutCompanyLink.click();
     }
+
     public void contactsClick(){  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
     public void clickReturnPolicy(){
         driver.findElement(By.xpath(HomePageLocator.RETURN_POLICY)).click();
-
     }
 
     public String getCopyrightsText() {
         return driver.findElement(By.cssSelector(COPYRIGHTS)).getText();
     }
+
     public void clickAutobaraholkaBtn(){driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }
+
+    public void clickUserSupport() {
+        driver.findElement(By.xpath(HomePageLocator.BTN_USER_SUPPORT)).click();
+    }
+
+
 }

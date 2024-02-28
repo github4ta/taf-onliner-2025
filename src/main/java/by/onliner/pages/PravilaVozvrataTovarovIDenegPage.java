@@ -3,11 +3,11 @@ package by.onliner.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PravilaVozvrataTovarovDenegPage {
+public class PravilaVozvrataTovarovIDenegPage {
 
     private WebDriver driver;
 
-    public PravilaVozvrataTovarovDenegPage(WebDriver driver) {
+    public PravilaVozvrataTovarovIDenegPage(WebDriver driver) {
         this.driver = driver;
     }
 
