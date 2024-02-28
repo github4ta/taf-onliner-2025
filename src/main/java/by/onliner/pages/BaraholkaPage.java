@@ -1,7 +1,12 @@
 package by.onliner.pages;
 
+import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class BaraholkaPage {
     private final By HEADING_XPATH = By.xpath("//h1[@class=\"m-title-i\"]");
@@ -12,11 +17,13 @@ public class BaraholkaPage {
 
     private WebDriver driver;
 
-    public BaraholkaPage(WebDriver driver) {
-        this.driver = driver;
+    public BaraholkaPage() {
+        this.driver = Driver.getDriver();
     }
 
     public String getTextHeading() {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+        wait.until(ExpectedConditions.visibilityOf(driver.findElement(HEADING_XPATH)));
         return driver.findElement(HEADING_XPATH).getText();
     }
 
