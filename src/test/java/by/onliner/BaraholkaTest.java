@@ -1,5 +1,6 @@
 package by.onliner;
 
+import by.onliner.driver.Driver;
 import by.onliner.pages.BaraholkaPage;
 import by.onliner.pages.HomePage;
 import org.junit.jupiter.api.Assertions;
@@ -8,17 +9,17 @@ import org.junit.jupiter.api.Test;
 public class BaraholkaTest extends BaseTest {
     @Test
     public void testBaraholkaOpened() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickBaraholkaButton();
-        BaraholkaPage baraholka = new BaraholkaPage(driver);
+        BaraholkaPage baraholka = new BaraholkaPage();
         Assertions.assertEquals("Барахолка", baraholka.getTextHeading());
     }
 
     @Test
     public void testLaptopsItemExists(){
-        HomePage homePage=new HomePage(driver);
+        HomePage homePage=new HomePage();
         homePage.clickBaraholkaButton();
-        BaraholkaPage baraholka=new BaraholkaPage(driver);
+        BaraholkaPage baraholka=new BaraholkaPage();
         baraholka.clickLaptops();
         baraholka.clickBuyBtn();
         baraholka.clickFirstItem();
