@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -7,8 +8,8 @@ public class AboutPage {
     private final By COMPANY_PAGE_TITTLE_CSS = By.cssSelector("div.news-header__title>h1");
     private WebDriver driver;
 
-    public AboutPage(WebDriver driver) {
-        this.driver = driver;
+    public AboutPage() {
+        this.driver = Driver.getDriver();
     }
 
     public String getTextCompanyPageTittle() {
