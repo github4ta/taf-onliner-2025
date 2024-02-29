@@ -16,12 +16,20 @@ public class Users {
 
     private final String SURNAME_LIST_XPATH = "//ul/b/a";
 
-    public String getRandomSurname() {
+    public String getRandomSurnameFromSite() {
         driver.get("https://eslyes.com/namesdict/100_last_names.htm");
         List<WebElement> surnameList = driver.findElements(By.xpath(SURNAME_LIST_XPATH));
         List<WebElement> newSurnameList = surnameList.subList(0, 50);
         Random random = new Random();
         WebElement randomSurname = newSurnameList.get(random.nextInt(newSurnameList.size()));
-        return randomSurname.getText();
+        String surnameText = randomSurname.getText();
+        Driver.quitDriver();
+        return  surnameText;
+    }
+    String[] surnameArray = {"Smith", "Johnson", "Williams", "Jones", "Brown", "Davis"};
+
+    public String getRandomSurname() {
+        Random random = new Random();
+        return surnameArray[random.nextInt(surnameArray.length)];
     }
 }
