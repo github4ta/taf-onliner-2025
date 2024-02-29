@@ -1,9 +1,11 @@
 package by.onliner.domain;
 
 import by.onliner.driver.Driver;
+import com.google.common.collect.Lists;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import java.util.List;
 import java.util.Random;
 
@@ -15,6 +17,7 @@ public class Users {
     }
 
     private final String SURNAME_LIST_XPATH = "//ul/b/a";
+    private final String NAME_MAN_LIST_Xpath = "//td[2]";
 
     public String getRandomSurnameFromSite() {
         driver.get("https://eslyes.com/namesdict/100_last_names.htm");
@@ -36,5 +39,14 @@ public class Users {
     public String getRandomSurname() {
         Random random = new Random();
         return surnameArray[random.nextInt(surnameArray.length)];
+    }
+
+    public String getRandomName() {
+        driver.get("https://www.ssa.gov/oact/babynames/decades/century.html");
+        List<WebElement> nameList = driver.findElements(By.xpath(NAME_MAN_LIST_Xpath));
+        Random name = new Random();
+        int randomElement = name.nextInt(100);
+        WebElement randomName = nameList.get(randomElement);
+        return randomName.getText();
     }
 }
