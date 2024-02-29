@@ -24,9 +24,14 @@ public class Users {
         WebElement randomSurname = newSurnameList.get(random.nextInt(newSurnameList.size()));
         String surnameText = randomSurname.getText();
         Driver.quitDriver();
-        return  surnameText;
+        return surnameText;
     }
-    String[] surnameArray = {"Smith", "Johnson", "Williams", "Jones", "Brown", "Davis"};
+
+    String[] surnameArray = {"Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor",
+            "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson",
+            "Clark", "Rodriguez", "Lewis", "Lee", "Walker", "Hall", "Allen", "Young", "Hernandez", "King", "Wright",
+            "Lopez", "Hill", "Scott", "Green", "Adams", "Baker", "Gonzalez", "Nelson", "Carter", "Mitchell", "Perez",
+            "Roberts", "Turner", "Phillips", "Campbell", "Parker", "Evans", "Edwards", "Collins"};
 
     public String getRandomSurname() {
         Random random = new Random();
