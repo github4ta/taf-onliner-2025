@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,8 +8,8 @@ import org.openqa.selenium.WebElement;
 public class HomePage {
     private WebDriver driver;
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
+    public HomePage() {
+        this.driver = Driver.getDriver();
     }
 
     private final String SERVICE_SECTION = "(//a[@href='https://s.onliner.by/tasks'])[2]";
