@@ -4,6 +4,7 @@ import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import java.util.List;
 import java.util.Random;
 
@@ -24,9 +25,14 @@ public class Users {
         WebElement randomSurname = newSurnameList.get(random.nextInt(newSurnameList.size()));
         String surnameText = randomSurname.getText();
         Driver.quitDriver();
-        return  surnameText;
+        return surnameText;
     }
-    String[] surnameArray = {"Smith", "Johnson", "Williams", "Jones", "Brown", "Davis"};
+
+    String[] surnameArray = {"Johnson", "Williams", "Jones", "Brown", "Davis", "Miller", "Wilson", "Moore", "Taylor",
+            "Anderson", "Thomas", "Jackson", "White", "Harris", "Martin", "Thompson", "Garcia", "Martinez", "Robinson",
+            "Clark", "Rodriguez", "Lewis", "Lee", "Walker", "Hall", "Allen", "Young", "Hernandez", "King", "Wright",
+            "Lopez", "Hill", "Scott", "Green", "Adams", "Baker", "Gonzalez", "Nelson", "Carter", "Mitchell", "Perez",
+            "Roberts", "Turner", "Phillips", "Campbell", "Parker", "Evans", "Edwards", "Collins"};
 
     public String getRandomSurname() {
         Random random = new Random();
