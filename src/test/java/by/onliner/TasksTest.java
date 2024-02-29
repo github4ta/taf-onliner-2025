@@ -9,16 +9,16 @@ public class TasksTest extends BaseTest {
 
     @Test
     public void testTasksOpened() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickServiceSection();
-        TasksPage tasks = new TasksPage(driver);
+        TasksPage tasks = new TasksPage();
         Assertions.assertEquals("Заказы", tasks.getTextHeader());
     }
 
     @Test
     public void testCompareTitle () throws InterruptedException{
-        HomePage homePage = new HomePage(driver);
-        TasksPage tasks = new TasksPage(driver);
+        HomePage homePage = new HomePage();
+        TasksPage tasks = new TasksPage();
         homePage.clickServiceSection();
         tasks.clickMinsk();
         tasks.clickForAnimals();
@@ -30,9 +30,9 @@ public class TasksTest extends BaseTest {
 
     @Test
     public void checkTaskDetailsTitle() throws InterruptedException {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickServiceSection();
-        TasksPage tasks = new TasksPage(driver);
+        TasksPage tasks = new TasksPage();
         tasks.selectSectionFromList();
         tasks.selectCheckbox();
         Thread.sleep(2000);
