@@ -48,6 +48,7 @@ public class Users {
         Random name = new Random();
         int randomElement = name.nextInt(100);
         WebElement randomName = nameList.get(randomElement);
+        Driver.quitDriver();
         return randomName.getText();
     }
 
@@ -59,6 +60,7 @@ public class Users {
         Random name = new Random();
         int randomElement = name.nextInt(50,150);
         WebElement randomName = nameManList.get(randomElement);
+        Driver.quitDriver();
         return randomName.getText();
     }
  }
