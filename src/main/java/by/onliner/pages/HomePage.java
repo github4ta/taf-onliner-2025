@@ -11,7 +11,6 @@ public class HomePage {
     public HomePage() {
         this.driver = Driver.getDriver();
     }
-
     private final String SERVICE_SECTION = "(//a[@href='https://s.onliner.by/tasks'])[2]";
     private final String LOCATOR = "you locator to the link web element";
     private final String CATALOG_BTN = ".b-top-menu a[href='https://catalog.onliner.by']";

@@ -9,7 +9,7 @@ import org.openqa.selenium.By;
 public class HomeTest extends BaseTest {
     @Test
     public void testHomePageOpened() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         Assertions.assertEquals("© 2001—2024 Onlíner", homePage.getCopyrightsText());
     }
 

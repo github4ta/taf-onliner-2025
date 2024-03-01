@@ -19,6 +19,7 @@ public class Users {
     private final String SURNAME_LIST_XPATH = "//ul/b/a";
     private final String NAME_MAN_LIST_Xpath = "//td[2]";
     private final String NAME_WOMAN_LIST_Xpath = "//td[4]";
+    private final String NAME_MAN_LIST_Xpath = "//td[2]";
 
     public String getRandomSurnameFromSite() {
         driver.get("https://eslyes.com/namesdict/100_last_names.htm");
@@ -64,3 +65,13 @@ public class Users {
         return randomName.getText();
     }
  }
+
+    public String getRandomName() {
+        driver.get("https://www.ssa.gov/oact/babynames/decades/century.html");
+        List<WebElement> nameList = driver.findElements(By.xpath(NAME_MAN_LIST_Xpath));
+        Random name = new Random();
+        int randomElement = name.nextInt(100);
+        WebElement randomName = nameList.get(randomElement);
+        return randomName.getText();
+    }
+}
