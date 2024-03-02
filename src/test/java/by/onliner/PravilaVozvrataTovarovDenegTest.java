@@ -9,7 +9,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
     @Test
     public void testPravilaVozvrataTovarovIDenegOpened() {
 
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickReturnPolicy();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         String expectedResult = "Правила возврата товаров и денег";
@@ -18,7 +18,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
 
     @Test
     public void testFieldName() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickUserSupport();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         Assertions.assertEquals("Ваше имя и фамилия:", pravilaVozvrataTovarovIDenegPage.getTextFieldName());
@@ -26,7 +26,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
 
     @Test
     public void testFieldEmail() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickUserSupport();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         Assertions.assertEquals("Электронная почта:", pravilaVozvrataTovarovIDenegPage.getTextFieldEmail());
@@ -34,7 +34,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
 
     @Test
     public void testFieldTypeOfProblem() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickUserSupport();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         Assertions.assertEquals("Тип проблемы:", pravilaVozvrataTovarovIDenegPage.getTextFieldTypeOfProblem());
@@ -42,7 +42,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
 
     @Test
     public void testFieldWhere() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickUserSupport();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         Assertions.assertEquals("Где:", pravilaVozvrataTovarovIDenegPage.getTextFieldWhere());
@@ -50,7 +50,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
 
     @Test
     public void testFieldShortDescription() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickUserSupport();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         Assertions.assertEquals("Краткое описание:", pravilaVozvrataTovarovIDenegPage.getTextFieldShortDescription());
@@ -58,7 +58,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
 
     @Test
     public void testFieldDetailedDescription() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickUserSupport();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         Assertions.assertEquals("Подробное описание:", pravilaVozvrataTovarovIDenegPage.getTextFieldDetailedDescription());
@@ -66,7 +66,7 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
 
     @Test
     public void testFieldCaptcha() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickUserSupport();
         PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         Assertions.assertEquals("Символы на картинке:", pravilaVozvrataTovarovIDenegPage.getTextFieldCaptcha());
