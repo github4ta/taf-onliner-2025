@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 public class BaraholkaTest extends BaseTest {
     @Test
     public void testBaraholkaOpened() {
-        HomePage homePage = new HomePage();
+        HomePage homePage = new HomePage(driver);
         homePage.clickBaraholkaButton();
         BaraholkaPage baraholka = new BaraholkaPage();
         Assertions.assertEquals("Барахолка", baraholka.getTextHeading());

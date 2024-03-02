@@ -5,8 +5,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import static by.onliner.pages.HomePageLocator.COPYRIGHTS;
-
 public class HomePage {
     WebDriver driver;
 
@@ -39,7 +37,6 @@ public class HomePage {
         policy.click();
     }
 
-
     public void clickServiceSection() {
         driver.findElement(By.xpath(HomePageLocator.SERVICE_SECTION)).click();
     }
@@ -58,47 +55,42 @@ public class HomePage {
     }
 
     public void contactsClick() {
-        driver.findElement(By.xpath(CONTACTS_XPATH)).click();
+        driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();
     }
 
     public void clickReturnPolicy() {
-        driver.findElement(By.xpath(RETURN_POLICY)).click();
-
-    public void contactsClick(){  driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();}
-    public void clickReturnPolicy(){
         driver.findElement(By.xpath(HomePageLocator.RETURN_POLICY)).click();
     }
 
-    public String getCopyrightsText() {
-        return driver.findElement(By.cssSelector(COPYRIGHTS)).getText();
+    public String getCopyrightsText () {
+        return driver.findElement(By.cssSelector(HomePageLocator.COPYRIGHTS)).getText();
     }
 
-    public void clickAutobaraholkaBtn() {
-        driver.findElement(By.xpath(AUTOBARAHOLKA_XPATH)).click();
+    public void clickAutobaraholkaBtn () {
+        driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }
 
-    public void clickContactsOfEditorialOffice() {
-        ContactsPage contactsPage=new ContactsPage(driver);
+    public void clickContactsOfEditorialOffice () {
+        ContactsPage contactsPage = new ContactsPage(driver);
         driver.findElement(By.xpath(contactsPage.getCONTACTS_OF_EDITORIAL_OFFICE())).click();
     }
 
-    public void clickTwentyFourHoursNews() {
+    public void clickTwentyFourHoursNews () {
         WebElement twentyFourHoursNewsLink = driver.findElement(By.xpath(TWENTY_FOUR_HOURS_NEWS_XPATH));
         twentyFourHoursNewsLink.click();
     }
 
-    public void openCatalogItem() {
+    public void openCatalogItem () {
         driver.findElement(By.cssSelector(CATALOG_ITEM)).click();
     }
-    public void openCatalogPage() {
-        driver.findElement(By.cssSelector(CATALOG_BTN)).click();
 
-    public void clickAutobaraholkaBtn(){driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
+    public void openCatalogPage () {
+        driver.findElement(By.cssSelector(CATALOG_BTN)).click();
     }
 
-    public void clickUserSupport() {
+    public void clickUserSupport () {
         driver.findElement(By.xpath(HomePageLocator.BTN_USER_SUPPORT)).click();
     }
 
-
 }
+

@@ -9,7 +9,7 @@ public class NewsTest extends BaseTest {
 
     @Test
     public void testNewsOpened() {
-        HomePage homePage = new HomePage();
+        HomePage homePage = new HomePage(driver);
         NewsPage newsPage = new NewsPage();
         homePage.clickTwentyFourHoursNews();
         Assertions.assertTrue(newsPage.getNewsTitleText("Новое за 24 часа"));
