@@ -1,7 +1,7 @@
 package by.onliner;
 
 import by.onliner.pages.HomePage;
-import by.onliner.pages.PravilaVozvrataTovarovDenegPage;
+import by.onliner.pages.PravilaVozvrataTovarovIDenegPage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -9,69 +9,67 @@ public class PravilaVozvrataTovarovDenegTest extends BaseTest {
     @Test
     public void testPravilaVozvrataTovarovIDenegOpened() {
 
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.clickReturnPolicy();
-
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
         String expectedResult = "Правила возврата товаров и денег";
-        Assertions.assertEquals(expectedResult, pravilaVozvrataTovarovDenegPage.getTextHeader());
-
+        Assertions.assertEquals(expectedResult, pravilaVozvrataTovarovIDenegPage.getTextHeader());
     }
 
     @Test
     public void testFieldName() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickReturnPolicy();
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
-        Assertions.assertEquals("Ваше имя и фамилия:", pravilaVozvrataTovarovDenegPage.getTextFieldName());
+        HomePage homePage = new HomePage();
+        homePage.clickUserSupport();
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
+        Assertions.assertEquals("Ваше имя и фамилия:", pravilaVozvrataTovarovIDenegPage.getTextFieldName());
     }
 
     @Test
     public void testFieldEmail() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickReturnPolicy();
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
-        Assertions.assertEquals("Электронная почта:", pravilaVozvrataTovarovDenegPage.getTextFieldEmail());
+        HomePage homePage = new HomePage();
+        homePage.clickUserSupport();
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
+        Assertions.assertEquals("Электронная почта:", pravilaVozvrataTovarovIDenegPage.getTextFieldEmail());
     }
 
     @Test
     public void testFieldTypeOfProblem() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickReturnPolicy();
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
-        Assertions.assertEquals("Тип проблемы:", pravilaVozvrataTovarovDenegPage.getTextFieldTypeOfProblem());
+        HomePage homePage = new HomePage();
+        homePage.clickUserSupport();
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
+        Assertions.assertEquals("Тип проблемы:", pravilaVozvrataTovarovIDenegPage.getTextFieldTypeOfProblem());
     }
 
     @Test
     public void testFieldWhere() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickReturnPolicy();
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
-        Assertions.assertEquals("Где:", pravilaVozvrataTovarovDenegPage.getTextFieldWhere());
+        HomePage homePage = new HomePage();
+        homePage.clickUserSupport();
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
+        Assertions.assertEquals("Где:", pravilaVozvrataTovarovIDenegPage.getTextFieldWhere());
     }
 
     @Test
     public void testFieldShortDescription() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickReturnPolicy();
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
-        Assertions.assertEquals("Краткое описание:", pravilaVozvrataTovarovDenegPage.getTextFieldShortDescription());
+        HomePage homePage = new HomePage();
+        homePage.clickUserSupport();
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
+        Assertions.assertEquals("Краткое описание:", pravilaVozvrataTovarovIDenegPage.getTextFieldShortDescription());
     }
 
     @Test
     public void testFieldDetailedDescription() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickReturnPolicy();
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
-        Assertions.assertEquals("Краткое описание:", pravilaVozvrataTovarovDenegPage.getTextFieldDetailedDescription());
+        HomePage homePage = new HomePage();
+        homePage.clickUserSupport();
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
+        Assertions.assertEquals("Подробное описание:", pravilaVozvrataTovarovIDenegPage.getTextFieldDetailedDescription());
     }
 
     @Test
     public void testFieldCaptcha() {
-        HomePage homePage = new HomePage(driver);
-        homePage.clickReturnPolicy();
-        PravilaVozvrataTovarovDenegPage pravilaVozvrataTovarovDenegPage = new PravilaVozvrataTovarovDenegPage(driver);
-        Assertions.assertEquals("Символы на картинке:", pravilaVozvrataTovarovDenegPage.getTextFieldCaptcha());
+        HomePage homePage = new HomePage();
+        homePage.clickUserSupport();
+        PravilaVozvrataTovarovIDenegPage pravilaVozvrataTovarovIDenegPage = new PravilaVozvrataTovarovIDenegPage(driver);
+        Assertions.assertEquals("Символы на картинке:", pravilaVozvrataTovarovIDenegPage.getTextFieldCaptcha());
     }
 
 }
