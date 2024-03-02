@@ -6,11 +6,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class HomePage {
-    private WebDriver driver;
+    WebDriver driver;
 
     public HomePage() {
         this.driver = Driver.getDriver();
     }
+
     private final String SERVICE_SECTION = "(//a[@href='https://s.onliner.by/tasks'])[2]";
     private final String LOCATOR = "you locator to the link web element";
     private final String CATALOG_BTN = ".b-top-menu a[href='https://catalog.onliner.by']";
@@ -27,62 +28,69 @@ public class HomePage {
     private final String CATALOG_ITEM = ".b-top-menu a[href='https://catalog.onliner.by']";
 
     public void openForum() {
-        WebElement forumBtn = driver.findElement(By.xpath(FORUM_XPATH));
+        WebElement forumBtn = driver.findElement(By.xpath(HomePageLocator.FORUM_XPATH));
         forumBtn.click();
     }
 
     public void clickPolicy() {
-        WebElement policy = driver.findElement(By.xpath(PERSONAL_DATA_XPATH));
+        WebElement policy = driver.findElement(By.xpath(HomePageLocator.PERSONAL_DATA_XPATH));
         policy.click();
     }
 
     public void clickServiceSection() {
-        driver.findElement(By.xpath(SERVICE_SECTION)).click();
+        driver.findElement(By.xpath(HomePageLocator.SERVICE_SECTION)).click();
     }
 
     public void vacancyBtnClick() {
-        driver.findElement(By.xpath(VACANCY_BTN)).click();
+        driver.findElement(By.xpath(HomePageLocator.VACANCY_BTN)).click();
     }
 
-    public void clickBaraholkaButton() {
-        driver.findElement(BARAHOLKA_BUTTON_XPATH).click();
+    public void clickBaraholkaButton(){
+        driver.findElement(HomePageLocator.BARAHOLKA_BUTTON_XPATH).click();
     }
 
     public void openAboutCompanyPage() {
-        WebElement aboutCompanyLink = driver.findElement(By.xpath(aboutCompanyLinkXPath));
+        WebElement aboutCompanyLink = driver.findElement(By.xpath(HomePageLocator.aboutCompanyLinkXPath));
         aboutCompanyLink.click();
     }
 
     public void contactsClick() {
-        driver.findElement(By.xpath(CONTACTS_XPATH)).click();
+        driver.findElement(By.xpath(HomePageLocator.CONTACTS_XPATH)).click();
     }
 
     public void clickReturnPolicy() {
-        driver.findElement(By.xpath(RETURN_POLICY)).click();
+        driver.findElement(By.xpath(HomePageLocator.RETURN_POLICY)).click();
     }
 
-    public String getCopyrightsText() {
-        return driver.findElement(By.cssSelector(COPYRIGHTS)).getText();
+    public String getCopyrightsText () {
+        return driver.findElement(By.cssSelector(HomePageLocator.COPYRIGHTS)).getText();
     }
 
-    public void clickAutobaraholkaBtn() {
-        driver.findElement(By.xpath(AUTOBARAHOLKA_XPATH)).click();
+    public void clickAutobaraholkaBtn () {
+        driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }
 
-    public void clickContactsOfEditorialOffice() {
-        ContactsPage contactsPage=new ContactsPage(driver);
+    public void clickContactsOfEditorialOffice () {
+        ContactsPage contactsPage = new ContactsPage(driver);
         driver.findElement(By.xpath(contactsPage.getCONTACTS_OF_EDITORIAL_OFFICE())).click();
     }
 
-    public void clickTwentyFourHoursNews() {
+    public void clickTwentyFourHoursNews () {
         WebElement twentyFourHoursNewsLink = driver.findElement(By.xpath(TWENTY_FOUR_HOURS_NEWS_XPATH));
         twentyFourHoursNewsLink.click();
     }
 
-    public void openCatalogItem() {
+    public void openCatalogItem () {
         driver.findElement(By.cssSelector(CATALOG_ITEM)).click();
     }
-    public void openCatalogPage() {
+
+    public void openCatalogPage () {
         driver.findElement(By.cssSelector(CATALOG_BTN)).click();
     }
+
+    public void clickUserSupport () {
+        driver.findElement(By.xpath(HomePageLocator.BTN_USER_SUPPORT)).click();
+    }
+
 }
+

@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -11,8 +12,8 @@ public class CatalogPage {
     private final String PRIVACY_POLICY_ACCEPT = "/html/body/div[6]/div[2]/div[1]/div[2]/div[2]/button[1]/p";
     private WebDriver driver;
 
-    public CatalogPage(WebDriver driver) {
-        this.driver = driver;
+    public CatalogPage() {
+        this.driver = Driver.getDriver();
     }
 
     public String getCatalogPageHeader() {
