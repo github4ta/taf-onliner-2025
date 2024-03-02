@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import by.onliner.driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,9 +10,24 @@ import static by.onliner.pages.HomePageLocator.COPYRIGHTS;
 public class HomePage {
     WebDriver driver;
 
-    public HomePage(WebDriver driver) {
-        this.driver = driver;
+    public HomePage() {
+        this.driver = Driver.getDriver();
     }
+
+    private final String SERVICE_SECTION = "(//a[@href='https://s.onliner.by/tasks'])[2]";
+    private final String LOCATOR = "you locator to the link web element";
+    private final String CATALOG_BTN = ".b-top-menu a[href='https://catalog.onliner.by']";
+    private final String AUTOBARAHOLKA_XPATH = "//ul[@class='b-main-navigation']/li[3]/a";
+    private String aboutCompanyLinkXPath = "//a[@href='https://blog.onliner.by/about']";
+    private final String VACANCY_BTN = "//a[@href='https://blog.onliner.by/vacancy']";
+    private final By BARAHOLKA_BUTTON_XPATH = By.xpath("//a[@href=\"https://baraholka.onliner.by/\"]");
+    private final String CONTACTS_XPATH = "//a[@href='https://people.onliner.by/contacts']";
+    private final String RETURN_POLICY = "//a[@href='https://blog.onliner.by/pravila-vozvrata-tovarov-i-deneg']";
+    private static String FORUM_XPATH = "//a[@href='https://forum.onliner.by/']/span[@class='b-main-navigation__text']";
+    private static String PERSONAL_DATA_XPATH = "//button[@aria-label='Соглашаюсь']/p[@class='fc-button-label']";
+    private final String COPYRIGHTS = ".footer-style__copy";
+    private final String TWENTY_FOUR_HOURS_NEWS_XPATH = "//a[text()='Новое за 24 часа']";
+    private final String CATALOG_ITEM = ".b-top-menu a[href='https://catalog.onliner.by']";
 
     public void openForum() {
         WebElement forumBtn = driver.findElement(By.xpath(HomePageLocator.FORUM_XPATH));

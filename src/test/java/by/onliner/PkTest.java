@@ -9,14 +9,14 @@ import org.junit.jupiter.api.Test;
 public class PkTest extends BaseTest{
     @Test
     public void testPkOpened() {
-        HomePage homePage = new HomePage(driver);
+        HomePage homePage = new HomePage();
         homePage.openCatalogItem();
-        CatalogPage catalog = new CatalogPage(driver);
+        CatalogPage catalog = new CatalogPage();
         catalog.acceptPrivacyPolicy();
         catalog.clickGardenAndHomeMenu();
         catalog.clickDecorAndInteriorItem();
         catalog.clickHouseFlowersItem();
-        PkPage pkPage = new PkPage(driver);
+        PkPage pkPage = new PkPage();
         Assertions.assertTrue(pkPage.getHousePlantsHeader().contains("Комнатные растения, флорариумы"));
     }
 }
