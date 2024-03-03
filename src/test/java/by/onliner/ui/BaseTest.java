@@ -1,4 +1,4 @@
-package by.onliner;
+package by.onliner.ui;
 
 import by.onliner.driver.Driver;
 import org.junit.jupiter.api.AfterEach;

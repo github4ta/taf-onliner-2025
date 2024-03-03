@@ -1,4 +1,4 @@
-package by.onliner;
+package by.onliner.ui;
 
 import by.onliner.pages.HomePage;
 import by.onliner.pages.NewsPage;

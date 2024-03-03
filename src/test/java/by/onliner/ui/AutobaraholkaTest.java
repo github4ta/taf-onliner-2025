@@ -1,12 +1,9 @@
-package by.onliner;
+package by.onliner.ui;
 
 import by.onliner.pages.AutobaraholkaPage;
 import by.onliner.pages.HomePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.WebDriver;
-
-import java.time.Duration;
 
 public class AutobaraholkaTest extends BaseTest{
 

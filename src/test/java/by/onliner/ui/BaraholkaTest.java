@@ -1,6 +1,5 @@
-package by.onliner;
+package by.onliner.ui;
 
-import by.onliner.driver.Driver;
 import by.onliner.pages.BaraholkaPage;
 import by.onliner.pages.HomePage;
 import org.junit.jupiter.api.Assertions;
