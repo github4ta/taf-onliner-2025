@@ -58,4 +58,18 @@ public class LoginTest {
             body("property[0]", equalTo("Password")).
             body("error[0]", equalTo("'Password' must not be empty."));
     }
+    @Test
+    @DisplayName("Check authorisation with non-existent user")
+    public void testLogin7(){
+        String body = "{\n" +
+                "\"email\": \"test@test.com\",\n" +
+                "\"password\": 1234567\"}";
+        given().
+                contentType("application/json").
+                body(body).
+                when().
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                then().
+                statusCode(415);
+    }
 }
