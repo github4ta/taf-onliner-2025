@@ -71,7 +71,7 @@ public class HomePage {
     }
 
     public void clickContactsOfEditorialOffice () {
-        ContactsPage contactsPage = new ContactsPage(driver);
+        ContactsPage contactsPage = new ContactsPage();
         driver.findElement(By.xpath(contactsPage.getCONTACTS_OF_EDITORIAL_OFFICE())).click();
     }
 
