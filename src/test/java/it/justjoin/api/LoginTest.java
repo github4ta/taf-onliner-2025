@@ -16,9 +16,9 @@ public class LoginTest {
                 "}";
         given().body(body).contentType("application/json").
                 when().
-                    post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
                 then().log().all().
-                    statusCode(401);
+                statusCode(401);
     }
 
     @Test
@@ -33,9 +33,9 @@ public class LoginTest {
         given().
                 body(bodyLogin2).
                 contentType("application/json").
-        when().
+                when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
-        then().
+                then().
                 statusCode(422).
                 body("[0].property", equalTo("Email")).
                 body("[0].error", equalTo("'Email' must not be empty."));
@@ -49,21 +49,38 @@ public class LoginTest {
                 "\"password\": \"\"\n" +
                 "}";
         given().
-            contentType("application/json").
+                contentType("application/json").
                 body(body).
-        when().
-            post("https://profile.justjoin.it/api/justjoinit/authentication/login").
-        then().
-            statusCode(422).
-            body("property[0]", equalTo("Password")).
-            body("error[0]", equalTo("'Password' must not be empty."));
+                when().
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                then().
+                statusCode(422).
+                body("property[0]", equalTo("Password")).
+                body("error[0]", equalTo("'Password' must not be empty."));
     }
+
     @Test
     @DisplayName("Check authorisation with non-existent user")
-    public void testLogin7(){
+    public void testLogin7() {
         String body = "{\n" +
                 "\"email\": \"test@test.com\",\n" +
                 "\"password\": 1234567\"}";
+        given().
+                contentType("application/json").
+                body(body).
+                when().
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                then().
+                statusCode(415);
+    }
+
+    @Test
+    @DisplayName("Check 415 Unsupported Media Type")
+    public void testLogin9() {
+        String body = "{\n" +
+                "    \"email\": \"test@test.com\",\n" +
+                "    \"password\": \"1w1ws1we1e\"\n" +
+                "}";
         given().
                 contentType("application/json").
                 body(body).
