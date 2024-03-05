@@ -40,8 +40,9 @@ public class LoginTest {
                 body("[0].property", equalTo("Email")).
                 body("[0].error", equalTo("'Email' must not be empty."));
     }
-    @DisplayName("Login with empty password field")
+
     @Test
+    @DisplayName("Login with empty password field")
     public void testLogin3() {
         String body = "{\n" +
                 "\"email\": \"test@test.com\",\n" +
