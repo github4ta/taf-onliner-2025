@@ -40,4 +40,21 @@ public class LoginTest {
                 body("[0].property", equalTo("Email")).
                 body("[0].error", equalTo("'Email' must not be empty."));
     }
+    @DisplayName("Login with empty password field")
+    @Test
+    public void testLogin3() {
+        String body = "{\n" +
+                "\"email\": \"test@test.com\",\n" +
+                "\"password\": \"\"\n" +
+                "}";
+        given().
+            contentType("application/json").
+                body(body).
+        when().
+            post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+        then().
+            statusCode(422).
+            body("property[0]", equalTo("Password")).
+            body("error[0]", equalTo("'Password' must not be empty."));
+    }
 }
