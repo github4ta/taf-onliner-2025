@@ -3,6 +3,7 @@ package it.justjoin.api;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static com.google.common.base.Predicates.equalTo;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -58,6 +59,21 @@ public class LoginTest {
                 body("property[0]", equalTo("Password")).
                 body("error[0]", equalTo("'Password' must not be empty."));
     }
+    @Test
+    @DisplayName("Login with incorrect Email and password fields")
+    public void testLogin5(){
+        String body = "{\n" +
+                "\"email\": \"test\",\n" +
+                "\"password\": \"1q2w3e4r5t\"\n" +
+                "}";
+        given().
+                body(body).
+                contentType("application/json").
+        when().
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+        then().
+                statusCode(401);
+    }
 
     @Test
     @DisplayName("Check authorisation with non-existent user")
@@ -89,4 +105,5 @@ public class LoginTest {
                 then().
                 statusCode(415);
     }
+
 }
