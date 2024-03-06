@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class PanelPage {
-    WebDriver driver;
+    private WebDriver driver;
 
-    public PanelPage(WebDriver driver) {
+    public PanelPage() {
         this.driver = Driver.getDriver();
     }
 
@@ -16,6 +16,8 @@ public class PanelPage {
     private final String EMAIL_FIELD = "#email";
     private final String PASSWORD_FIELD = "#password";
     private final String SIGN_IN = "//button [@type='submit']";
+    private final By EMAIL_ERROR_MESSAGE=By.cssSelector("#email-helper-text");
+    private final By PASSWORD_ERROR_MESSAGE=By.cssSelector("#password-helper-text");
     public String getPageHeader(){
         return driver.findElement(By.cssSelector(PAGE_HEADER)).getText();
     }
@@ -28,7 +30,13 @@ public class PanelPage {
     public void inputPassword(String str){
         driver.findElement(By.cssSelector(PASSWORD_FIELD)).sendKeys(str);
     }
-    public void clickSignIn(String str){
+    public void clickSignIn(){
         driver.findElement(By.xpath(SIGN_IN)).click();
+    }
+    public String getTextEmailErrorMessage(){
+        return driver.findElement(EMAIL_ERROR_MESSAGE).getText();
+    }
+    public String getTextPasswordErrorMessage(){
+        return driver.findElement(PASSWORD_ERROR_MESSAGE).getText();
     }
 }
