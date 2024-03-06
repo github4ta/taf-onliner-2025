@@ -7,11 +7,14 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Candidate login with empty Password field")
-    public void testLoginWithEmptyPassword(){
+    public void testLoginWithEmptyPassword() {
         HomePage homePage = new HomePage();
         homePage.clickSignInBtn();
         homePage.clickSignInCandidateBtn();
@@ -21,6 +24,7 @@ public class LoginTest extends BaseTest {
         profilePage.clickSingInBtn();
         Assertions.assertEquals("This field is required.", profilePage.getPasswordValidationMsgText());
     }
+
     @Test
     @DisplayName("Sign in Employer panel with empty Email and Password fields")
     public void testEmployerLoginWithEmptyEmailAndPassword() {
@@ -32,16 +36,6 @@ public class LoginTest extends BaseTest {
         Assertions.assertEquals("This field is required\n" +
                 "This field is required", panelPage.getTextEmailErrorMessage() + "\n" + panelPage.getTextPasswordErrorMessage());
     }
-import it.justjoin.pages.HomePage;
-import it.justjoin.pages.ProfilePage;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
-
-public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Check page header and url")
