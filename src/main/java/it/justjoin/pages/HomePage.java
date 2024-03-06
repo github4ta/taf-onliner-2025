@@ -11,9 +11,9 @@ public class HomePage {
         this.driver = Driver.getDriver();
     }
 
-    public static final String SIGN_IN_XPATH = "(//div[@class='css-15rg8cp'])[2]";
-    public static final String SIGN_IN_CANDIDATE_XPATH = "(//button[@class='css-1espnff'])[1]";
-    public static final String SIGN_IN_EMPLOYER_XPATH = "(//button[@class='css-1espnff'])[2]";
+    public static final String SIGN_IN_XPATH = "//button[@name='sidebar-open']/parent::div/div/div[4]";
+    public static final String SIGN_IN_CANDIDATE_XPATH = "(//ul[@role='menu']//button)[1]";
+    public static final String SIGN_IN_EMPLOYER_XPATH = "(//ul[@role='menu']//button)[2]";
 
     public void clickSignInBtn() {
         driver.findElement(By.xpath(SIGN_IN_XPATH)).click();
