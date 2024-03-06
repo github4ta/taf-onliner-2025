@@ -154,4 +154,22 @@ public class LoginTest {
                 .statusCode(422)
                 .assertThat().body(equalTo(expectedError));
     }
+
+    @Test
+    @DisplayName("415 Unsupported Media Type (text/plain)")
+    public void testLogin11(){
+        String BASE_URL = "https://profile.justjoin.it";
+        String email = "testtest3@test.com";
+        String password = "password1";
+        String body = email + "\n" + password;
+
+        given()
+                .contentType("text/plain")
+                .body(body)
+                .when()
+                .post(BASE_URL + "/api/justjoinit/authentication/login")
+                .then()
+                .statusCode(415);
+    }
+
 }
