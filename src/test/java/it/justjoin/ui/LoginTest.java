@@ -1,5 +1,6 @@
 package it.justjoin.ui;
 
+import by.onliner.ui.BaseTest;
 import it.justjoin.pages.HomePage;
 import it.justjoin.pages.ProfilePage;
 import org.junit.jupiter.api.Assertions;
