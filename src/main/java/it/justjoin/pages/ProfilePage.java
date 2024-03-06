@@ -16,6 +16,7 @@ public class ProfilePage {
     private final By EMAIL_FIELD_NAME = By.name("email");
     private final By PASSWORD_FIELD_NAME = By.name("password");
     private final By SIGN_IN_BTN_XPATH = By.xpath("//button[@class=\"MuiButtonBase-root MuiButton-root MuiButton-solid MuiButton-solidPrimary MuiButton-sizeLarge MuiButton-solidSizeLarge MuiButton-fullWidth MuiButton-root MuiButton-solid MuiButton-solidPrimary MuiButton-sizeLarge MuiButton-solidSizeLarge MuiButton-fullWidth css-ttne5e\"]");
+    private final By PASSWORD_FIELD_VALIDATION_MSG = By.xpath("//span[@class='css-w6gvpm']");
 
     public void clickSignInUsingAddressEmailBtn() {
         driver.findElement(SIGN_IN_USING_ADDRESS_EMAIL_BTN_NAME).click();
@@ -35,5 +36,9 @@ public class ProfilePage {
 
     public void clickSingInBtn() {
         driver.findElement(SIGN_IN_BTN_XPATH).click();
+    }
+
+    public String getPasswordValidationMsgText() {
+        return driver.findElement(PASSWORD_FIELD_VALIDATION_MSG).getText();
     }
 }
