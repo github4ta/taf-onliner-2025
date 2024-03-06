@@ -1,6 +1,6 @@
 package by.onliner.ui;
 
-import by.onliner.driver.Driver;
+import driver.Driver;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.WebDriver;
