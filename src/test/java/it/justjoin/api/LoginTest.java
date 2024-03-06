@@ -3,7 +3,6 @@ package it.justjoin.api;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static com.google.common.base.Predicates.equalTo;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -59,6 +58,7 @@ public class LoginTest {
                 body("property[0]", equalTo("Password")).
                 body("error[0]", equalTo("'Password' must not be empty."));
     }
+
     @Test
     @DisplayName("Login with incorrect Email and password fields")
     public void testLogin5(){
@@ -106,4 +106,38 @@ public class LoginTest {
                 statusCode(415);
     }
 
+    @Test
+    @DisplayName("Авторизация без логина и пароля")
+    public void testLogin10(){
+        String requestBody="{}";
+        String contentType = "application/json";
+        String responseBody = "[{\"property\":\"Email\",\"error\":\"'Email' must not be empty.\"},{\"property\":\"Password\",\"error\":\"'Password' must not be empty.\"}]";
+        given()
+            .contentType(contentType)
+            .body(requestBody)
+        .when()
+            .post("https://profile.justjoin.it/api/justjoinit/authentication/login")
+        .then()
+            .statusCode(422)
+            .body(equalTo(responseBody));
+    }
+
+    @DisplayName("Login with empty 'email' and 'password' values.")
+    @Test
+    public void testLogin4() {
+        String expectedError = "[{\"property\":\"Email\",\"error\":\"'Email' must not be empty.\"}," +
+                "{\"property\":\"Password\",\"error\":\"'Password' must not be empty.\"}]";
+
+        given()
+                .header("content-Type", "application/json")
+                .body("{\n" +
+                        "    \"email\": \"\",\n" +
+                        "    \"password\": \"\"\n" +
+                        "}")
+                .when()
+                .post("https://profile.justjoin.it/api/justjoinit/authentication/login")
+                .then()
+                .statusCode(422)
+                .assertThat().body(equalTo(expectedError));
+    }
 }
