@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class LoginTest {
+public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Candidate login with empty Password field")
