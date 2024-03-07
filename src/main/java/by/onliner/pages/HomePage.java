@@ -70,10 +70,7 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }
 
-    public void clickContactsOfEditorialOffice () {
-        ContactsPage contactsPage = new ContactsPage();
-        driver.findElement(By.xpath(contactsPage.getCONTACTS_OF_EDITORIAL_OFFICE())).click();
-    }
+
 
     public void clickTwentyFourHoursNews () {
         WebElement twentyFourHoursNewsLink = driver.findElement(By.xpath(TWENTY_FOUR_HOURS_NEWS_XPATH));
