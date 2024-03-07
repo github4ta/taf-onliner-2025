@@ -73,8 +73,9 @@ public class LoginTest extends BaseTest {
         homePage.clickSignInEmployerBtn();
         PanelPage panelPage = new PanelPage();
         assertAll(
+
                 () -> assertEquals("Employer panel",panelPage.getEmployerPanelTitle()),
-                () -> assertEquals("https://profile.justjoin.it/login", panelPage.getLoginEmployerURL())
+                () -> assertEquals("https://panel.justjoin.it/login", panelPage.getLoginEmployerURL())
         );
     }
 
