@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -7,8 +8,8 @@ public class PravilaVozvrataTovarovIDenegPage {
 
     private WebDriver driver;
 
-    public PravilaVozvrataTovarovIDenegPage(WebDriver driver) {
-        this.driver = driver;
+    public PravilaVozvrataTovarovIDenegPage() {
+        this.driver = Driver.getDriver();
     }
 
     private static final String NEWS_HEADER_TITLE = "//div[@class='news-header__title']";

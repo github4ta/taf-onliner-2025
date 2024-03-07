@@ -1,4 +1,4 @@
-package by.onliner.ui;
+package it.justjoin.ui;
 
 import driver.Driver;
 import org.junit.jupiter.api.AfterEach;
@@ -11,7 +11,7 @@ public class BaseTest {
     @BeforeEach
     public void warmUp() {
         driver = Driver.getDriver();
-        driver.get("https://www.onliner.by/");
+        driver.get("https://profile.justjoin.it/");
     }
 
     @AfterEach

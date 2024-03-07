@@ -1,7 +1,6 @@
 package by.onliner.domain;
 
-import by.onliner.driver.Driver;
-import com.google.common.collect.Lists;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

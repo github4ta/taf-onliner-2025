@@ -1,6 +1,6 @@
 package by.onliner.pages;
 
-import by.onliner.driver.Driver;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -70,10 +70,7 @@ public class HomePage {
         driver.findElement(By.xpath(HomePageLocator.AUTOBARAHOLKA_XPATH)).click();
     }
 
-    public void clickContactsOfEditorialOffice () {
-        ContactsPage contactsPage = new ContactsPage(driver);
-        driver.findElement(By.xpath(contactsPage.getCONTACTS_OF_EDITORIAL_OFFICE())).click();
-    }
+
 
     public void clickTwentyFourHoursNews () {
         WebElement twentyFourHoursNewsLink = driver.findElement(By.xpath(TWENTY_FOUR_HOURS_NEWS_XPATH));
