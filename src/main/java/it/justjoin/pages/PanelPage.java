@@ -18,6 +18,7 @@ public class PanelPage {
     private final String SIGN_IN = "//button [@type='submit']";
     private final By EMAIL_ERROR_MESSAGE=By.cssSelector("#email-helper-text");
     private final By PASSWORD_ERROR_MESSAGE=By.cssSelector("#password-helper-text");
+    private final String EMPLOYER_PANEL_TITLE ="//h1[@class ='MuiTypography-root MuiTypography-h1 css-14dw42d']";
     public String getPageHeader(){
         return driver.findElement(By.cssSelector(PAGE_HEADER)).getText();
     }
@@ -38,5 +39,11 @@ public class PanelPage {
     }
     public String getTextPasswordErrorMessage(){
         return driver.findElement(PASSWORD_ERROR_MESSAGE).getText();
+    }
+    public String getEmployerPanelTitle(){
+        return driver.findElement(By.xpath(EMPLOYER_PANEL_TITLE)).getText();
+    }
+    public String getLoginEmployerURL(){
+        return driver.getCurrentUrl();
     }
 }

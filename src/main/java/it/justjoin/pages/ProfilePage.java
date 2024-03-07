@@ -17,6 +17,7 @@ public class ProfilePage {
     private final By PASSWORD_FIELD_NAME = By.name("password");
     private final By PASSWORD_FIELD_VALIDATION_MSG = By.xpath("//span[text()='This field is required.']");
     private final By SIGN_IN_BTN_XPATH = By.xpath("//button[@type='submit']");
+    private final By ACCOUNT_NOT_VERIFIED_MSG = By.xpath("//div[@class='MuiBox-root css-bo64g9']");
 
     public void clickSignInUsingAddressEmailBtn() {
         driver.findElement(SIGN_IN_USING_ADDRESS_EMAIL_BTN_NAME).click();
@@ -45,4 +46,9 @@ public class ProfilePage {
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
+
+    public String getAccountNotVerifiedMsg() {
+        return driver.findElement(ACCOUNT_NOT_VERIFIED_MSG).getText();
+    }
+
 }
