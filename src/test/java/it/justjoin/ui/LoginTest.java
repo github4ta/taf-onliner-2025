@@ -50,4 +50,19 @@ public class LoginTest extends BaseTest {
                 () -> assertEquals("https://profile.justjoin.it/login", profilePage.getCurrentUrl())
         );
     }
+
+    @Test
+    @DisplayName("Check login with not verified account")
+    public void testLoginWithNotVerifiedAccount() {
+        HomePage homePage = new HomePage();
+        homePage.clickSignInBtn();
+        homePage.clickSignInCandidateBtn();
+        ProfilePage profilePage = new ProfilePage();
+        profilePage.clickSignInUsingAddressEmailBtn();
+        profilePage.sendKeysEmailField("test@test.com");
+        profilePage.sendKeysPasswordField("12345678");
+        profilePage.clickSingInBtn();
+        Assertions.assertEquals("An error has occurred.\n" +
+                "Account not verified", profilePage.getAccountNotVerifiedMsg());
+    }
 }
