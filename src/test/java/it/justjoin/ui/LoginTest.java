@@ -1,6 +1,7 @@
 package it.justjoin.ui;
 
 import it.justjoin.pages.HomePage;
+import it.justjoin.pages.LoginPage;
 import it.justjoin.pages.PanelPage;
 import it.justjoin.pages.ProfilePage;
 import org.junit.jupiter.api.Assertions;
@@ -90,5 +91,15 @@ public class LoginTest extends BaseTest {
         panelPage.inputEmail("test@test.com");
         panelPage.clickSignIn();
         Assertions.assertEquals("This field is required", panelPage.getTextPasswordErrorMessage());
+    }
+    @Test
+    @DisplayName("Check Sign In text when we click Sign In and chose Candidat's profile")
+    public void testSignIn(){
+        LoginPage lp  = new LoginPage();
+        lp.openSite();
+        lp.clickSignInBtn();
+        lp.choseCandidate();
+        lp.choseEnterWithEmailAddress();
+        Assertions.assertEquals("Sign in to account",lp.checkTextSignIn());
     }
 }
