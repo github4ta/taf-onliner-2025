@@ -1,5 +1,6 @@
 package by.onliner.pages;
 
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,6 +9,9 @@ public class ContactsPage {
     private final String CONTACTS_OF_EDITORIAL_OFFICE = "//div[@class='footer-style__part footer-style__part_1']/ul/li[2]/a";
     private final String EMAIL_OF_ONLINER = "//div[@class='news-text']/p[7]/strong/a";
     private WebDriver driver;
+    public ContactsPage() {
+        this.driver = Driver.getDriver();
+    }
 
     public ContactsPage(WebDriver driver) {
         this.driver = driver;
@@ -27,5 +31,8 @@ public class ContactsPage {
 
     public String getEMAIL_OF_ONLINER() {
         return EMAIL_OF_ONLINER;
+    }
+    public void clickContactsOfEditorialOffice () {
+        driver.findElement(By.xpath(CONTACTS_OF_EDITORIAL_OFFICE)).click();;
     }
 }
