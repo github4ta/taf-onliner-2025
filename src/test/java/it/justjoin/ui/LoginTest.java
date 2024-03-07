@@ -65,18 +65,30 @@ public class LoginTest extends BaseTest {
         Assertions.assertEquals("An error has occurred.\n" +
                 "Account not verified", profilePage.getAccountNotVerifiedMsg());
     }
+
     @Test
     @DisplayName("Verify title at the page and URL address")
-    public void testEmployerLoginPage(){
+    public void testEmployerLoginPage() {
         HomePage homePage = new HomePage();
         homePage.clickSignInBtn();
         homePage.clickSignInEmployerBtn();
         PanelPage panelPage = new PanelPage();
         assertAll(
 
-                () -> assertEquals("Employer panel",panelPage.getEmployerPanelTitle()),
+                () -> assertEquals("Employer panel", panelPage.getEmployerPanelTitle()),
                 () -> assertEquals("https://panel.justjoin.it/login", panelPage.getLoginEmployerURL())
         );
     }
 
+    @Test
+    @DisplayName("Verify empty password error messages")
+    public void testLoginInvalid() {
+        HomePage homePage = new HomePage();
+        homePage.clickSignInBtn();
+        homePage.clickSignInEmployerBtn();
+        PanelPage panelPage = new PanelPage();
+        panelPage.inputEmail("test@test.com");
+        panelPage.clickSignIn();
+        Assertions.assertEquals("This field is required", panelPage.getTextPasswordErrorMessage());
+    }
 }
