@@ -1,6 +1,6 @@
 package by.onliner.pages;
 
-import by.onliner.driver.Driver;
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;

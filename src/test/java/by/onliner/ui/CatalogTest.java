@@ -6,10 +6,10 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class CatalogTest extends BaseTest{
-    CatalogPage catalog;
+
 @Test
     public void testCatalogOpened(){
-    HomePage homePage =new HomePage(driver);
+    HomePage homePage =new HomePage();
     homePage.openCatalogPage();
     CatalogPage catalogPage = new CatalogPage();
     Assertions.assertTrue(catalogPage.getCatalogPageHeader().contains("Каталог"));
