@@ -19,6 +19,7 @@ public class PanelPage {
     private final By EMAIL_ERROR_MESSAGE=By.cssSelector("#email-helper-text");
     private final By PASSWORD_ERROR_MESSAGE=By.cssSelector("#password-helper-text");
     private final String EMPLOYER_PANEL_TITLE ="//h1[@class ='MuiTypography-root MuiTypography-h1 css-14dw42d']";
+    private final String COOKIES_ACCEPT_BTN = "//div[@id='cookiescript_accept']";
     public String getPageHeader(){
         return driver.findElement(By.cssSelector(PAGE_HEADER)).getText();
     }
@@ -45,5 +46,8 @@ public class PanelPage {
     }
     public String getLoginEmployerURL(){
         return driver.getCurrentUrl();
+    }
+    public void clickCookiesBtn() {
+        driver.findElement(By.xpath(COOKIES_ACCEPT_BTN)).click();
     }
 }

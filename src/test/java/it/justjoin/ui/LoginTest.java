@@ -91,4 +91,18 @@ public class LoginTest extends BaseTest {
         panelPage.clickSignIn();
         Assertions.assertEquals("This field is required", panelPage.getTextPasswordErrorMessage());
     }
+
+    @Test
+    @DisplayName("Verify empty email error messages")
+    public void testLoginWithoutEmail() {
+        HomePage homePage = new HomePage();
+        homePage.clickSignInBtn();
+        homePage.clickSignInEmployerBtn();
+        PanelPage panelPage = new PanelPage();
+        panelPage.inputPassword("12345678");
+        panelPage.clickCookiesBtn();
+        panelPage.clickSignIn();
+        Assertions.assertEquals("This field is required", panelPage.getTextEmailErrorMessage());
+    }
+
 }
