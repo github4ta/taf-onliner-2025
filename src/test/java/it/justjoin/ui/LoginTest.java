@@ -102,4 +102,17 @@ public class LoginTest extends BaseTest {
         lp.choseEnterWithEmailAddress();
         Assertions.assertEquals("Sign in to account",lp.checkTextSignIn());
     }
+    @Test
+    @DisplayName("Check error message with invalid credentials")
+    public void testErrorMessageWithInvalidCredentials(){
+        HomePage homePage = new HomePage();
+        homePage.acceptCookie();
+        homePage.clickSignInBtn();
+        homePage.clickSignInEmployerBtn();
+        PanelPage panelPage=new PanelPage();
+        panelPage.inputEmail("test@test.com");
+        panelPage.inputPassword("12345678");
+        panelPage.clickSignIn();
+        Assertions.assertEquals("Invalid Email or password.", panelPage.getErrorMessageText());
+    }
 }
