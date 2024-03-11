@@ -170,4 +170,13 @@ public class LoginTest {
                 .statusCode(422)
                 .assertThat().body(equalTo(expectedError));
     }
+    @Test
+    @DisplayName("POST: 415 status code- Unsupported Media Type")
+    public void testLogin11() {
+        given().
+        when().
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+        then().
+                statusCode(415);
+    }
 }
