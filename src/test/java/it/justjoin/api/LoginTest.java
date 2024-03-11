@@ -22,10 +22,8 @@ public class LoginTest {
     }
 
     @Test
-    @DisplayName("Login with empty Email field")
-
+    @DisplayName("POST: 422 status code- Login with empty Email field")
     public void testLogin2() {
-
         String bodyLogin2 = "{\n" +
                 "    \"email\": \"\",\n" +
                 "    \"password\": \"1w1ws1we1e\"\n" +
