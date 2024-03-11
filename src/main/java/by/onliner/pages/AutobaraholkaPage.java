@@ -1,9 +1,8 @@
 package by.onliner.pages;
 
+import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import java.time.Duration;
 
 public class AutobaraholkaPage {
     private final String ACTUAL_TITLE_FOR_AUTOBARAHOLKA_XPATH = "//h1[@class='vehicle-form__title vehicle-form__title_big-alter']";
@@ -19,8 +18,8 @@ public class AutobaraholkaPage {
     private final String VEHICLE_FORM_TITLE = "//h1[@class='vehicle-form__title vehicle-form__title_big-alter vehicle-form__title_condensed-other']";
     WebDriver driver;
 
-    public AutobaraholkaPage(WebDriver driver) {
-        this.driver = driver;
+    public AutobaraholkaPage() {
+        this.driver = Driver.getDriver();
     }
 
     public String getAutobaraholkaTitle() {

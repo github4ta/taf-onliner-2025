@@ -17,8 +17,7 @@ public class CatalogPage {
     }
 
     public String getCatalogPageHeader() {
-        String headerText = driver.findElement(By.xpath(CATALOG_HEADER)).getText();
-        return headerText;
+        return driver.findElement(By.xpath(CATALOG_HEADER)).getText();
     }
 
     public void clickGardenAndHomeMenu() {
@@ -32,6 +31,7 @@ public class CatalogPage {
     public void clickHouseFlowersItem() {
         driver.findElement(By.xpath(HOME_FLOWERS)).click();
     }
+
     public void acceptPrivacyPolicy() {
         driver.findElement(By.xpath(PRIVACY_POLICY_ACCEPT)).click();
     }

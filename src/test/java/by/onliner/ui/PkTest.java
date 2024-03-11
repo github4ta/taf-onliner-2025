@@ -12,7 +12,7 @@ public class PkTest extends BaseTest{
         HomePage homePage = new HomePage();
         homePage.openCatalogItem();
         CatalogPage catalog = new CatalogPage();
-        catalog.acceptPrivacyPolicy();
+      //  catalog.acceptPrivacyPolicy();
         catalog.clickGardenAndHomeMenu();
         catalog.clickDecorAndInteriorItem();
         catalog.clickHouseFlowersItem();
