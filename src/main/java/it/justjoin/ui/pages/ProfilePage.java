@@ -1,4 +1,4 @@
-package it.justjoin.pages;
+package it.justjoin.ui.pages;
 
 import driver.Driver;
 import org.openqa.selenium.By;

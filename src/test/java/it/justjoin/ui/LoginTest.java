@@ -1,9 +1,9 @@
 package it.justjoin.ui;
 
-import it.justjoin.pages.HomePage;
-import it.justjoin.pages.LoginPage;
-import it.justjoin.pages.PanelPage;
-import it.justjoin.pages.ProfilePage;
+import it.justjoin.ui.pages.HomePage;
+import it.justjoin.ui.pages.LoginPage;
+import it.justjoin.ui.pages.PanelPage;
+import it.justjoin.ui.pages.ProfilePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
