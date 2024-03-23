@@ -27,4 +27,10 @@ public class LoginService {
                 "}";
         return body;
     }
+    public static String getBody(String email, String password){
+        return String.format("{\n" +
+                "\"email\": \"%s\",\n" +
+                "\"password\": \"%s\"\n" +
+                "}", email, password);
+    }
 }
