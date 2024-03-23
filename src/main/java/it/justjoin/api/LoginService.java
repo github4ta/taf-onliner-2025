@@ -10,4 +10,13 @@ public class LoginService {
             "    \"email\": \"\",\n" +
             "    \"password\": \"1w1ws1we1e\"\n" +
             "}";
+
+    private static final String BODY_3 = "{\n" +
+            "\"email\": \"test@test.com\",\n" +
+            "\"password\": \"\"\n" +
+            "}";
+
+    public static String getBody3(){
+        return BODY_3;
+    }
 }
