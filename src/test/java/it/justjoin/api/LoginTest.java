@@ -10,7 +10,7 @@ public class LoginTest {
     @Test
     @DisplayName("Check 401 Unauthorized status code")
     public void testLogin1() {
-        given().body(LoginService.BODY_1).contentType("application/json").
+        given().body(LoginService.getBody("test@test.com", "parol111")).contentType("application/json").
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
                 then().log().all().
@@ -21,7 +21,7 @@ public class LoginTest {
     @DisplayName("POST: 422 status code- Login with empty Email field")
     public void testLogin2() {
         given().
-                body(LoginService.BODY_2).
+                body(LoginService.getBody("", "parol111")).
                 contentType("application/json").
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
@@ -36,7 +36,7 @@ public class LoginTest {
     public void testLogin3() {
         given().
                 contentType("application/json").
-                body(LoginService.getBody3()).
+                body(LoginService.getBody("test1@test.com", "")).
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
                 then().
@@ -48,8 +48,8 @@ public class LoginTest {
     @Test
     @DisplayName("Login with incorrect Email and password fields")
     public void testLogin5() {
-         given().
-                body(LoginService.getBody4()).
+        given().
+                body(LoginService.getBody("test", "parol111")).
                 contentType("application/json").
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
@@ -72,12 +72,9 @@ public class LoginTest {
     @Test
     @DisplayName("Check authorisation with non-existent user")
     public void testLogin7() {
-        String body = "{\n" +
-                "\"email\": \"test@test.com\",\n" +
-                "\"password\": 1234567\"}";
         given().
                 contentType("application/json").
-                body(body).
+                body(LoginService.getBody("test4@test.com", 1653845)).
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
                 then().
@@ -87,29 +84,9 @@ public class LoginTest {
     @Test
     @DisplayName("Check 415 Unsupported Media Type")
     public void testLogin8() {
-        String body = "{\n" +
-                "    \"email\": 1234567,\n" +
-                "    \"password\": \"1q2w3e4r5t56y6\"\n" +
-                "}";
         given().
                 contentType("application/json").
-                body(body).
-                when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
-                then().
-                statusCode(415);
-    }
-
-    @Test
-    @DisplayName("Check 415 Unsupported Media Type")
-    public void testLogin9() {
-        String body = "{\n" +
-                "    \"email\": \"test@test.com\",\n" +
-                "    \"password\": \"1w1ws1we1e\"\n" +
-                "}";
-        given().
-                contentType("application/json").
-                body(body).
+                body(LoginService.getBody(734635,"7t235er3")).
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
                 then().
@@ -140,10 +117,7 @@ public class LoginTest {
 
         given()
                 .header("content-Type", "application/json")
-                .body("{\n" +
-                        "    \"email\": \"\",\n" +
-                        "    \"password\": \"\"\n" +
-                        "}")
+                .body(LoginService.getBody("",""))
                 .when()
                 .post("https://profile.justjoin.it/api/justjoinit/authentication/login")
                 .then()
