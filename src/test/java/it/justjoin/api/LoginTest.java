@@ -10,7 +10,9 @@ public class LoginTest {
     @Test
     @DisplayName("Check 401 Unauthorized status code")
     public void testLogin1() {
-        given().body(LoginService.BODY_1).contentType("application/json").
+        given().
+                body(LoginService.getBody("test@test.com","1w1ws1we1e")).
+                contentType("application/json").
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
                 then().log().all().
