@@ -48,12 +48,8 @@ public class LoginTest {
     @Test
     @DisplayName("Login with incorrect Email and password fields")
     public void testLogin5() {
-        String body = "{\n" +
-                "\"email\": \"test\",\n" +
-                "\"password\": \"1q2w3e4r5t\"\n" +
-                "}";
-        given().
-                body(body).
+         given().
+                body(LoginService.getBody4()).
                 contentType("application/json").
                 when().
                 post("https://profile.justjoin.it/api/justjoinit/authentication/login").
