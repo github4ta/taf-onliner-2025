@@ -10,9 +10,9 @@ public class LoginTest {
     @Test
     @DisplayName("Check 401 Unauthorized status code")
     public void testLogin1() {
-        given().body(LoginService.getBody("test@test.com", "parol111")).contentType("application/json").
+        given().body(LoginService.getBody("test@test8878.com", "parol111")).contentType("application/json").
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().log().all().
                 statusCode(401);
     }
@@ -22,9 +22,9 @@ public class LoginTest {
     public void testLogin2() {
         given().
                 body(LoginService.getBody("", "parol111")).
-                contentType("application/json").
+                headers(LoginService.getHeaders()).
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().
                 statusCode(422).
                 body("[0].property", equalTo("Email")).
@@ -35,10 +35,10 @@ public class LoginTest {
     @DisplayName("Login with empty password field")
     public void testLogin3() {
         given().
-                contentType("application/json").
+                headers(LoginService.getHeaders()).
                 body(LoginService.getBody("test1@test.com", "")).
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().
                 statusCode(422).
                 body("property[0]", equalTo("Password")).
@@ -50,9 +50,9 @@ public class LoginTest {
     public void testLogin5() {
         given().
                 body(LoginService.getBody("test", "parol111")).
-                contentType("application/json").
+                headers(LoginService.getHeaders()).
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().
                 statusCode(401);
     }
@@ -62,9 +62,9 @@ public class LoginTest {
     public void testLogin6() {
         given().
                 body(LoginService.getBody("123456", "1q2w3e4r5t")).
-                contentType("application/json").
+                headers(LoginService.getHeaders()).
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().
                 statusCode(401);
     }
@@ -73,10 +73,10 @@ public class LoginTest {
     @DisplayName("Check authorisation with non-existent user")
     public void testLogin7() {
         given().
-                contentType("application/json").
+                headers(LoginService.getHeaders()).
                 body(LoginService.getBody("test4@test.com", 1653845)).
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().
                 statusCode(415);
     }
@@ -85,25 +85,24 @@ public class LoginTest {
     @DisplayName("Check 415 Unsupported Media Type")
     public void testLogin8() {
         given().
-                contentType("application/json").
+                headers(LoginService.getHeaders()).
                 body(LoginService.getBody(734635,"7t235er3")).
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().
                 statusCode(415);
     }
 
     @Test
-    @DisplayName("Авторизация без логина и пароля")
+    @DisplayName("??????????? ??? ?????? ? ??????")
     public void testLogin10() {
         String requestBody = "{}";
-        String contentType = "application/json";
         String responseBody = "[{\"property\":\"Email\",\"error\":\"'Email' must not be empty.\"},{\"property\":\"Password\",\"error\":\"'Password' must not be empty.\"}]";
         given()
-                .contentType(contentType)
+                .headers(LoginService.getHeaders())
                 .body(requestBody)
                 .when()
-                .post("https://profile.justjoin.it/api/justjoinit/authentication/login")
+                .post(LoginService.URL)
                 .then()
                 .statusCode(422)
                 .body(equalTo(responseBody));
@@ -116,10 +115,10 @@ public class LoginTest {
                 "{\"property\":\"Password\",\"error\":\"'Password' must not be empty.\"}]";
 
         given()
-                .header("content-Type", "application/json")
+                .headers(LoginService.getHeaders())
                 .body(LoginService.getBody("",""))
                 .when()
-                .post("https://profile.justjoin.it/api/justjoinit/authentication/login")
+                .post(LoginService.URL)
                 .then()
                 .statusCode(422)
                 .assertThat().body(equalTo(expectedError));
@@ -130,7 +129,7 @@ public class LoginTest {
     public void testLogin11() {
         given().
                 when().
-                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+                post(LoginService.URL).
                 then().
                 statusCode(415);
     }
