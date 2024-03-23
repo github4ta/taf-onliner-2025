@@ -19,4 +19,12 @@ public class LoginService {
     public static String getBody3(){
         return BODY_3;
     }
+
+    public static String getBody4(){
+        String body = "{\n" +
+                "\"email\": \"test\",\n" +
+                "\"password\": \"1q2w3e4r5t\"\n" +
+                "}";
+        return body;
+    }
 }
