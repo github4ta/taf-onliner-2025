@@ -9,7 +9,7 @@ public class AutobaraholkaTest extends BaseTest{
 
     @Test
     public void testAutobaraholkaOpened() {
-        AutobaraholkaPage autobaraholka = new AutobaraholkaPage(driver);
+        AutobaraholkaPage autobaraholka = new AutobaraholkaPage();
         HomePage hp = new HomePage();
         hp.clickAutobaraholkaBtn();
         autobaraholka.getAutobaraholkaTitle();
@@ -18,7 +18,7 @@ public class AutobaraholkaTest extends BaseTest{
 
     @Test
     public void testCorrectCity() {
-        AutobaraholkaPage autobaraholka = new AutobaraholkaPage(driver);
+        AutobaraholkaPage autobaraholka = new AutobaraholkaPage();
         HomePage homePage = new HomePage();
         homePage.clickAutobaraholkaBtn();
         autobaraholka.clickAllCountry();

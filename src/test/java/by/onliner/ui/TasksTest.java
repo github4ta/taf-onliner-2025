@@ -25,7 +25,7 @@ public class TasksTest extends BaseTest {
         tasks.clickHaircutForAnimals();
         tasks.clickActiveStatus();
         tasks.clickFirstItemInSearch();
-        Assertions.assertEquals("Стрижка шпиц гигиеническая", tasks.compareTitle());
+        Assertions.assertEquals("Стрижка собаки порода ши-тцу", tasks.compareTitle());
     }
 
     @Test

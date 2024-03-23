@@ -1,9 +1,9 @@
 package it.justjoin.ui;
 
-import it.justjoin.pages.HomePage;
-import it.justjoin.pages.LoginPage;
-import it.justjoin.pages.PanelPage;
-import it.justjoin.pages.ProfilePage;
+import it.justjoin.ui.pages.HomePage;
+import it.justjoin.ui.pages.LoginPage;
+import it.justjoin.ui.pages.PanelPage;
+import it.justjoin.ui.pages.ProfilePage;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -101,5 +101,18 @@ public class LoginTest extends BaseTest {
         lp.choseCandidate();
         lp.choseEnterWithEmailAddress();
         Assertions.assertEquals("Sign in to account",lp.checkTextSignIn());
+    }
+    @Test
+    @DisplayName("Check error message with invalid credentials")
+    public void testErrorMessageWithInvalidCredentials(){
+        HomePage homePage = new HomePage();
+        homePage.acceptCookie();
+        homePage.clickSignInBtn();
+        homePage.clickSignInEmployerBtn();
+        PanelPage panelPage=new PanelPage();
+        panelPage.inputEmail("test@test.com");
+        panelPage.inputPassword("12345678");
+        panelPage.clickSignIn();
+        Assertions.assertEquals("Invalid Email or password.", panelPage.getErrorMessageText());
     }
 }

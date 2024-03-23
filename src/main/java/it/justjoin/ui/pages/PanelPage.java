@@ -1,8 +1,13 @@
-package it.justjoin.pages;
+package it.justjoin.ui.pages;
 
 import driver.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class PanelPage {
     private WebDriver driver;
@@ -19,6 +24,7 @@ public class PanelPage {
     private final By EMAIL_ERROR_MESSAGE=By.cssSelector("#email-helper-text");
     private final By PASSWORD_ERROR_MESSAGE=By.cssSelector("#password-helper-text");
     private final String EMPLOYER_PANEL_TITLE ="//h1[@class ='MuiTypography-root MuiTypography-h1 css-14dw42d']";
+    private final String ERROR_MESSAGE= ".MuiFormControl-root #password-helper-text span";
     public String getPageHeader(){
         return driver.findElement(By.cssSelector(PAGE_HEADER)).getText();
     }
@@ -45,5 +51,10 @@ public class PanelPage {
     }
     public String getLoginEmployerURL(){
         return driver.getCurrentUrl();
+    }
+    public String getErrorMessageText(){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        WebElement errorMessage =wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector(ERROR_MESSAGE))));
+        return errorMessage.getText();
     }
 }

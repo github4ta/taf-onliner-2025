@@ -22,10 +22,8 @@ public class LoginTest {
     }
 
     @Test
-    @DisplayName("Login with empty Email field")
-
+    @DisplayName("POST: 422 status code- Login with empty Email field")
     public void testLogin2() {
-
         String bodyLogin2 = "{\n" +
                 "    \"email\": \"\",\n" +
                 "    \"password\": \"1w1ws1we1e\"\n" +
@@ -106,6 +104,22 @@ public class LoginTest {
 
     @Test
     @DisplayName("Check 415 Unsupported Media Type")
+    public void testLogin8() {
+        String body = "{\n" +
+                "    \"email\": 1234567,\n" +
+                "    \"password\": \"1q2w3e4r5t56y6\"\n" +
+                "}";
+        given().
+                contentType("application/json").
+                body(body).
+        when().
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+        then().
+                statusCode(415);
+    }
+
+    @Test
+    @DisplayName("Check 415 Unsupported Media Type")
     public void testLogin9() {
         String body = "{\n" +
                 "    \"email\": \"test@test.com\",\n" +
@@ -153,5 +167,14 @@ public class LoginTest {
                 .then()
                 .statusCode(422)
                 .assertThat().body(equalTo(expectedError));
+    }
+    @Test
+    @DisplayName("POST: 415 status code- Unsupported Media Type")
+    public void testLogin11() {
+        given().
+        when().
+                post("https://profile.justjoin.it/api/justjoinit/authentication/login").
+        then().
+                statusCode(415);
     }
 }
